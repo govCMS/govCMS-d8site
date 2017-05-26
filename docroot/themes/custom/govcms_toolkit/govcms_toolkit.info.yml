@@ -1,0 +1,15 @@
+name: govcms_toolkit
+type: theme
+description: "Website theme for govcms.gov.au uses govcms-ui as base"
+core: 8.x
+base theme: govcms-ui
+libraries: []
+regions:
+  branding: Branding
+  header: Header
+  pre_content: 'Pre content'
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar secoind'
+  post_content: 'Post content'
+  footer: Footer
