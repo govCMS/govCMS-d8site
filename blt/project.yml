@@ -1,6 +1,6 @@
 project:
   machine_name: govcms-gov-au
-  prefix: GOVCMS
+  prefix: GDE
   human_name: 'govCMS.gov.au Drupal 8'
   profile:
     name: lightning

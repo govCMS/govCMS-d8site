@@ -317,45 +317,20 @@
  * Some examples appear below.  Remove the leading hash signs to enable.
  */
 
-#$aliases['stage'] = array(
-#    'uri' => 'http://stage.example.com',
-#    'root' => '/path/to/remote/drupal/root',
-#    'remote-host' => 'mystagingserver.myisp.com',
-#    'remote-user' => 'publisher',
-#    'os' => 'Linux',
-#    'path-aliases' => array(
-#      '%drush' => '/path/to/drush',
-#      '%drush-script' => '/path/to/drush/drush',
-#      '%files' => 'sites/mydrupalsite.com/files',
-#      '%custom' => '/my/custom/path',
-#     ),
-#     'variables' => array(
-#        'site_name' => 'My Drupal site',
-#      ),
-#     'command-specific' => array (
-#       'sql-sync' => array (
-#         'no-dump' => TRUE,
-#       ),
-#     ),
-#     # This shell alias will run `mycommand` when executed via
-#     # `drush @stage site-specific-alias`
-#     'shell-aliases' => array (
-#       'site-specific-alias' => '!mycommand',
-#     ),
-#  );
-#$aliases['dev'] = array(
-#    'uri' => 'http://dev.example.com',
-#    'root' => '/path/to/drupal/root',
-#    'variables' => array(
-#      'mail_system' => array('default-system' => 'DevelMailLog'),
-#    ),
-#  );
-#$aliases['server'] = array(
-#    'remote-host' => 'mystagingserver.myisp.com',
-#    'remote-user' => 'publisher',
-#    'os' => 'Linux',
-#  );
-#$aliases['live'] = array(
-#    'uri' => 'http://example.com',
-#    'root' => $aliases['dev']['root'],
-#  ) + $aliases['server'];
+if (!isset($drush_major_version)) {
+  $drush_version_components = explode('.', DRUSH_VERSION);
+  $drush_major_version = $drush_version_components[0];
+}
+
+$aliases['govcms.beta.dev'] = [
+  'root' => '/var/www/html/dofsb1.dev/docroot',
+  'ac-site' => 'dofsb1',
+  'ac-env' => 'dev',
+  'ac-realm' => 'prod',
+  'uri' => 'dofsb1dev.prod.acquia-sites.com',
+  'site' => 'dofsb1',
+  'env' => 'dev',
+  'remote-host' => 'staging-21756.prod.hosting.acquia.com',
+  'remote-user' => 'dofsb1.dev',
+  'path-aliases' => ['%drush-script' => 'drush' . $drush_major_version],
+];
