@@ -1,0 +1,30 @@
+uuid: e787c3f5-9be9-4525-946e-9a3da4adbd4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_document_status
+field_name: field_document_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Draft
+      label: Draft
+    -
+      value: Final
+      label: Final
+    -
+      value: 'Under Review'
+      label: 'Under REview'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

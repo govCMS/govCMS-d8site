@@ -1,0 +1,19 @@
+uuid: 8844c884-21da-4340-8377-27dba653b3fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+    - field.storage.contact_message.field_email_address
+id: contact_message.apply_for_a_siteno.field_email_address
+field_name: field_email_address
+entity_type: contact_message
+bundle: apply_for_a_siteno
+label: 'Email address'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

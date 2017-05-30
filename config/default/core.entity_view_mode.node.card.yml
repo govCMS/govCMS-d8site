@@ -1,0 +1,14 @@
+uuid: 07ad99d9-2bb7-434c-9e22-f397877b44f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Displays the content using the UI-toolkit''s card layout.'
+id: node.card
+label: Card
+targetEntityType: node
+cache: true

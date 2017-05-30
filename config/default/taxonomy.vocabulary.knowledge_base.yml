@@ -1,0 +1,9 @@
+uuid: 4921327a-1a51-4a04-9d3b-b02d56d109ee
+langcode: en
+status: true
+dependencies: {  }
+name: 'Knowledge Base'
+vid: knowledge_base
+description: ''
+hierarchy: 0
+weight: 0

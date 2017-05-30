@@ -1,0 +1,28 @@
+uuid: b07a11d4-409b-43ba-afe0-c9548e3765ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.news_article
+    - taxonomy.vocabulary.tags
+id: node.news_article.field_tags
+field_name: field_tags
+entity_type: node
+bundle: news_article
+label: Tags
+description: 'Enter a comma-separated list of words to describe your content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

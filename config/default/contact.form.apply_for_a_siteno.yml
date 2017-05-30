@@ -1,0 +1,20 @@
+uuid: 4fdd66bc-0ad4-48dc-ad74-a9c5619d0c8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact_storage
+third_party_settings:
+  contact_storage:
+    submit_text: 'Apply now'
+    show_preview: false
+    disabled_form_message: 'This contact form has been disabled.'
+    maximum_submissions_user: 0
+id: apply_for_a_siteno
+label: 'Apply for a site'
+recipients:
+  - noreply@govcms.com
+reply: ''
+weight: 0
+message: ''
+redirect: ''

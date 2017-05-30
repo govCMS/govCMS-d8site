@@ -1,0 +1,14 @@
+uuid: cc46ca6b-688d-4ada-81c4-d94709547199
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - taxonomy
+third_party_settings:
+  lightning_core:
+    description: 'Used to display the taxonomy term in a list.'
+id: taxonomy_term.list
+label: List
+targetEntityType: taxonomy_term
+cache: true

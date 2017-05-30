@@ -1,0 +1,28 @@
+uuid: d6254108-0b9e-4cba-ac94-a4788a1e165a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_reference
+    - node.type.knowledge_base
+    - taxonomy.vocabulary.knowledge_base
+id: node.knowledge_base.field_document_reference
+field_name: field_document_reference
+entity_type: node
+bundle: knowledge_base
+label: 'Document reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      knowledge_base: knowledge_base
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

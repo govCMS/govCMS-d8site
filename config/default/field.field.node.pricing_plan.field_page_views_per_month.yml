@@ -1,0 +1,19 @@
+uuid: 2b064660-dc6b-4dc1-9d32-511de8f6d1a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_views_per_month
+    - node.type.pricing_plan
+id: node.pricing_plan.field_page_views_per_month
+field_name: field_page_views_per_month
+entity_type: node
+bundle: pricing_plan
+label: 'Page views per month'
+description: 'Page views expected per month, examples, 15k, 125k, 600k, 2m'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

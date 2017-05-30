@@ -1,0 +1,22 @@
+uuid: 1ea79620-8168-4967-a178-0c3479a449fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - govcmsui
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: govcmsui_help
+theme: govcmsui
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

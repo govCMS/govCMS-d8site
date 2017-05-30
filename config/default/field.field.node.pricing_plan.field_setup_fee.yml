@@ -1,0 +1,19 @@
+uuid: b987a4a6-9abc-43c6-b38a-9fcf6c121d73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_setup_fee
+    - node.type.pricing_plan
+id: node.pricing_plan.field_setup_fee
+field_name: field_setup_fee
+entity_type: node
+bundle: pricing_plan
+label: 'Setup fee'
+description: 'Per site setup fee e.g. 2,500'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

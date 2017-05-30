@@ -1,0 +1,14 @@
+uuid: 93ad77b9-db42-48cc-bafe-5f784bffc2fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.site_logo
+label: 'Site Logo'
+targetEntityType: node
+cache: true

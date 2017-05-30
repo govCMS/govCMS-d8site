@@ -1,0 +1,25 @@
+uuid: 71aacce5-b233-43ab-a06c-70f29c3ea2b4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_with_background:e1caf220-07dd-4a8a-890d-896aecee5088'
+  module:
+    - block_content
+  theme:
+    - cog
+id: cog_calltoactionreadytogo
+theme: cog
+region: branding
+weight: -3
+provider: null
+plugin: 'block_content:e1caf220-07dd-4a8a-890d-896aecee5088'
+settings:
+  id: 'block_content:e1caf220-07dd-4a8a-890d-896aecee5088'
+  label: 'Call to action: Ready to go'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

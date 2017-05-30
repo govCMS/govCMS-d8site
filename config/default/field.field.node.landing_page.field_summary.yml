@@ -1,0 +1,21 @@
+uuid: 1b221d6f-6251-4a23-b708-78dfcff74eb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.field_summary
+field_name: field_summary
+entity_type: node
+bundle: landing_page
+label: 'Lead in'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

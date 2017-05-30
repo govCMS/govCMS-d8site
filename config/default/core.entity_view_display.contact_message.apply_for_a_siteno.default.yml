@@ -1,0 +1,86 @@
+uuid: 08c6aa8f-f654-4107-94c1-a81094f8e251
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+    - field.field.contact_message.apply_for_a_siteno.field_additional_comments_such_a
+    - field.field.contact_message.apply_for_a_siteno.field_agency_organisation
+    - field.field.contact_message.apply_for_a_siteno.field_email_address
+    - field.field.contact_message.apply_for_a_siteno.field_migrating_existing_sites
+    - field.field.contact_message.apply_for_a_siteno.field_name
+    - field.field.contact_message.apply_for_a_siteno.field_page_views_month
+    - field.field.contact_message.apply_for_a_siteno.field_phone_number
+    - field.field.contact_message.apply_for_a_siteno.field_urls
+  module:
+    - options
+id: contact_message.apply_for_a_siteno.default
+targetEntityType: contact_message
+bundle: apply_for_a_siteno
+mode: default
+content:
+  field_additional_comments_such_a:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_agency_organisation:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email_address:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_migrating_existing_sites:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_page_views_month:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone_number:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_urls:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  mail: true
+  message: true
+  name: true
+  subject: true

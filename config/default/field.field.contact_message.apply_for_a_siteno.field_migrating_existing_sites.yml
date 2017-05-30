@@ -1,0 +1,21 @@
+uuid: aa069a2d-e66f-4706-ba78-ec58e3b0ac93
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+    - field.storage.contact_message.field_migrating_existing_sites
+  module:
+    - options
+id: contact_message.apply_for_a_siteno.field_migrating_existing_sites
+field_name: field_migrating_existing_sites
+entity_type: contact_message
+bundle: apply_for_a_siteno
+label: 'If Migrating existing sites, which CMSs are currently used?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

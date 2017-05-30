@@ -1,0 +1,19 @@
+uuid: c0eb871c-38a7-49ae-bc41-1257d0855c91
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+    - field.storage.contact_message.field_phone_number
+id: contact_message.apply_for_a_siteno.field_phone_number
+field_name: field_phone_number
+entity_type: contact_message
+bundle: apply_for_a_siteno
+label: 'Phone Number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

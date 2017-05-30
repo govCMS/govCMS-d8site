@@ -1,7 +1,7 @@
 project:
   machine_name: govcms-gov-au
-  prefix: BLT
-  human_name: 'BLTed 8'
+  prefix: GOVCMS
+  human_name: 'govCMS.gov.au Drupal 8'
   profile:
     name: lightning
   local:
@@ -9,7 +9,10 @@ project:
     hostname: 'local.${project.machine_name}.com'
 git:
   default_branch: master
-  remotes: {  }
+  remotes:
+    - dofsb1@svn-3849.prod.hosting.acquia.com:dofsb1.git
+cm:
+  strategy: config-split
 drush:
   aliases:
     remote: '${project.machine_name}.test'
@@ -38,7 +41,7 @@ target-hooks:
 import: null
 modules:
   local:
-    enable: [dblog, devel, seckit, views_ui]
+    enable: [dblog, devel, kint, seckit, views_ui]
     uninstall: [acsf, acquia_connector, shield]
   ci:
     enable: {  }

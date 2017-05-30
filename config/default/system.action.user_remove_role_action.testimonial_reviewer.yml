@@ -1,0 +1,14 @@
+uuid: 9f12861f-1034-4b57-a3e5-bd43d32434dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.testimonial_reviewer
+  module:
+    - user
+id: user_remove_role_action.testimonial_reviewer
+label: 'Remove the Testimonial reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: testimonial_reviewer

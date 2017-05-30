@@ -1,0 +1,62 @@
+uuid: 9a9be637-ad1f-4b0e-969d-39d5b0af3dab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pricing_plan.field_additional_site_cap
+    - field.field.node.pricing_plan.field_additional_sites_per_year
+    - field.field.node.pricing_plan.field_cost_per_year
+    - field.field.node.pricing_plan.field_page_views_per_month
+    - field.field.node.pricing_plan.field_setup_fee
+    - node.type.pricing_plan
+  module:
+    - user
+id: node.pricing_plan.default
+targetEntityType: node
+bundle: pricing_plan
+mode: default
+content:
+  field_additional_site_cap:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_additional_sites_per_year:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_cost_per_year:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_page_views_per_month:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_setup_fee:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

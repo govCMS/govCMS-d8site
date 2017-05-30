@@ -1,0 +1,37 @@
+uuid: d01acf34-ea85-4a6e-9a6a-260cafa8c58d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.site_logo
+    - field.field.node.site.body
+    - field.field.node.site.field_agency
+    - field.field.node.site.field_environment
+    - field.field.node.site.field_link
+    - field.field.node.site.field_status
+    - node.type.site
+  module:
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.site.site_logo
+targetEntityType: node
+bundle: site
+mode: site_logo
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_agency: true
+  field_environment: true
+  field_link: true
+  field_status: true

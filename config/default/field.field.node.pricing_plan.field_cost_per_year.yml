@@ -1,0 +1,19 @@
+uuid: b46bbaf3-67a1-4ba8-8e64-c0e66e14a093
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cost_per_year
+    - node.type.pricing_plan
+id: node.pricing_plan.field_cost_per_year
+field_name: field_cost_per_year
+entity_type: node
+bundle: pricing_plan
+label: 'Cost per year'
+description: 'e.g. 10,500'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

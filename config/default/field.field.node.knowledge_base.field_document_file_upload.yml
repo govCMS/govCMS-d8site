@@ -1,0 +1,27 @@
+uuid: 26974287-7fb1-441a-be94-ec63a26b2ff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_file_upload
+    - node.type.knowledge_base
+  module:
+    - file
+id: node.knowledge_base.field_document_file_upload
+field_name: field_document_file_upload
+entity_type: node
+bundle: knowledge_base
+label: 'Document file upload'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt jpg png docx pdf gif'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

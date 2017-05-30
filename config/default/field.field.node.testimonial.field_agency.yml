@@ -1,0 +1,28 @@
+uuid: 6aa56810-eda6-4106-92ca-ae951a13986b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agency
+    - node.type.testimonial
+    - taxonomy.vocabulary.agency
+id: node.testimonial.field_agency
+field_name: field_agency
+entity_type: node
+bundle: testimonial
+label: Agency
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      agency: agency
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

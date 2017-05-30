@@ -1,0 +1,19 @@
+uuid: 4b6a1657-bc8a-4d27-a55b-d1f73ed2da94
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+id: contact_message.field_additional_comments_such_a
+field_name: field_additional_comments_such_a
+entity_type: contact_message
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 12e140b6-a02c-4538-a7ab-dc22e8d42142
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_sites_per_year
+    - node.type.pricing_plan
+id: node.pricing_plan.field_additional_sites_per_year
+field_name: field_additional_sites_per_year
+entity_type: node
+bundle: pricing_plan
+label: 'Additional sites per year'
+description: 'e.g. 3,000'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

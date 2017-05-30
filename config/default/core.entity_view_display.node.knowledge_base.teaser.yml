@@ -1,0 +1,28 @@
+uuid: ed8fb139-73d0-47c6-8c8b-311004916a14
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.knowledge_base.body
+    - node.type.knowledge_base
+  module:
+    - text
+    - user
+id: node.knowledge_base.teaser
+targetEntityType: node
+bundle: knowledge_base
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

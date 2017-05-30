@@ -1,0 +1,32 @@
+uuid: 58742008-98c7-4fe0-b978-4d09c2eb9a94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.agency.field_logo
+    - taxonomy.vocabulary.agency
+  module:
+    - image
+    - panelizer
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.agency.default
+targetEntityType: taxonomy_term
+bundle: agency
+mode: default
+content:
+  field_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  description: true

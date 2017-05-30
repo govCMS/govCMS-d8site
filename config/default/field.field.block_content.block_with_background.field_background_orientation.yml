@@ -1,0 +1,23 @@
+uuid: db9455df-a3f8-4c8d-81fc-007b364b1533
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_background
+    - field.storage.block_content.field_background_orientation
+  module:
+    - options
+id: block_content.block_with_background.field_background_orientation
+field_name: field_background_orientation
+entity_type: block_content
+bundle: block_with_background
+label: 'Background orientation'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: vertical
+default_value_callback: ''
+settings: {  }
+field_type: list_string

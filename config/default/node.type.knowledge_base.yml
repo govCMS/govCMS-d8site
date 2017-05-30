@@ -1,0 +1,18 @@
+uuid: 32dda753-578a-49af-949a-ea077d6512bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Knowledge base'
+type: knowledge_base
+description: 'Use this to create the Knowledge Base records'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

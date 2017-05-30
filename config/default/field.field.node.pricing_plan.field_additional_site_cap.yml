@@ -1,0 +1,19 @@
+uuid: 3c282cf6-d7ae-406d-8c36-e3ea50604c60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_site_cap
+    - node.type.pricing_plan
+id: node.pricing_plan.field_additional_site_cap
+field_name: field_additional_site_cap
+entity_type: node
+bundle: pricing_plan
+label: 'Additional site cap'
+description: 'e.g. 9,000 (usually 3 x Cost per year)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

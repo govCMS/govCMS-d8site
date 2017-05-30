@@ -1,0 +1,19 @@
+uuid: e58a71ba-ee87-41fe-b5f3-7e4889ff93d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+    - field.storage.contact_message.field_additional_comments_such_a
+id: contact_message.apply_for_a_siteno.field_additional_comments_such_a
+field_name: field_additional_comments_such_a
+entity_type: contact_message
+bundle: apply_for_a_siteno
+label: 'Additional comments (such as timelines)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

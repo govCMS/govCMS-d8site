@@ -1,0 +1,25 @@
+uuid: a0801ac7-5f81-4723-aa87-f29f24a971ca
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_with_background:e1caf220-07dd-4a8a-890d-896aecee5088'
+  module:
+    - block_content
+  theme:
+    - govcmsui
+id: calltoactionreadytogo
+theme: govcmsui
+region: jumbo_footer_1
+weight: -3
+provider: null
+plugin: 'block_content:e1caf220-07dd-4a8a-890d-896aecee5088'
+settings:
+  id: 'block_content:e1caf220-07dd-4a8a-890d-896aecee5088'
+  label: 'Call to action: Ready to go'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

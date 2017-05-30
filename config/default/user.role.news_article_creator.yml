@@ -1,0 +1,26 @@
+uuid: ae890b24-b942-4e4e-9581-b0cb77c110b8
+langcode: en
+status: true
+dependencies: {  }
+id: news_article_creator
+label: 'News Article creator'
+weight: 15
+is_admin: null
+permissions:
+  - 'access image_browser entity browser pages'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'administer panelizer node news_article content'
+  - 'administer panelizer node news_article layout'
+  - 'change layouts in place editing'
+  - 'create news_article content'
+  - 'create url aliases'
+  - 'edit own news_article content'
+  - 'use draft_draft transition'
+  - 'use draft_needs_review transition'
+  - 'use needs_review_needs_review transition'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view news_article revisions'
+  - 'view own unpublished content'

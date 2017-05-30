@@ -1,0 +1,19 @@
+uuid: f3ef6ff7-49b9-46e0-90d0-6da72f4d4e3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+    - field.storage.contact_message.field_agency_organisation
+id: contact_message.apply_for_a_siteno.field_agency_organisation
+field_name: field_agency_organisation
+entity_type: contact_message
+bundle: apply_for_a_siteno
+label: Agency/organisation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

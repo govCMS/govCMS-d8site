@@ -1,0 +1,88 @@
+uuid: 24068880-3c9f-450f-b8c1-3a31b29e9ff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+    - field.field.contact_message.apply_for_a_siteno.field_additional_comments_such_a
+    - field.field.contact_message.apply_for_a_siteno.field_agency_organisation
+    - field.field.contact_message.apply_for_a_siteno.field_email_address
+    - field.field.contact_message.apply_for_a_siteno.field_migrating_existing_sites
+    - field.field.contact_message.apply_for_a_siteno.field_name
+    - field.field.contact_message.apply_for_a_siteno.field_page_views_month
+    - field.field.contact_message.apply_for_a_siteno.field_phone_number
+    - field.field.contact_message.apply_for_a_siteno.field_urls
+id: contact_message.apply_for_a_siteno.default
+targetEntityType: contact_message
+bundle: apply_for_a_siteno
+mode: default
+content:
+  field_additional_comments_such_a:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_agency_organisation:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: 'Agency or organisation you represent'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email_address:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: you@agency.gov.au
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_migrating_existing_sites:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: 'Your name'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_page_views_month:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone_number:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: 'Your phone number - 02 6222 2222'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_urls:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+hidden:
+  copy: true
+  mail: true
+  message: true
+  name: true
+  preview: true
+  subject: true

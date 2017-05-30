@@ -1,0 +1,42 @@
+uuid: 5cbe5909-c1ca-4345-ab6d-9c9b5179d2da
+langcode: en
+status: true
+dependencies:
+  module:
+    - contact
+    - options
+id: contact_message.field_migrating_existing_sites
+field_name: field_migrating_existing_sites
+entity_type: contact_message
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Drupal
+      label: Drupal
+    -
+      value: WordPress
+      label: WordPress
+    -
+      value: Joomla
+      label: Joomla
+    -
+      value: SharePoint
+      label: SharePoint
+    -
+      value: Dreamweaver
+      label: Dreamweaver
+    -
+      value: 'Static HTML Website'
+      label: 'Static HTML Website'
+    -
+      value: Other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,28 @@
+uuid: 671cd1e5-2f20-4ab4-971a-785a66b19638
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_environment
+    - node.type.site
+    - taxonomy.vocabulary.environment
+id: node.site.field_environment
+field_name: field_environment
+entity_type: node
+bundle: site
+label: Environment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      environment: environment
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Template to display a site node in a card format.
+ *
+ * @ingroup themeable
+ * @see https://api.drupal.org/api/drupal/core!modules!node!templates!node.html.twig/8.2.x
+ */
+#}
+
+<div class="card">
+
+  <a href="{{ content.field_link.0['#url'] }}" title="{{ node.label }}">
+    {{ content.field_screenshot }}
+  </a>
+
+  <h3>{{ label }}</h3>
+
+  <i class="icon-external-link do-fade faded"></i>
+  <span class="sr-only"> external resource</span>
+
+</div>

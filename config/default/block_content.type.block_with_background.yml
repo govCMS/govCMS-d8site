@@ -1,0 +1,8 @@
+uuid: cc6b6e54-a628-46d3-89d9-eb90b49f826b
+langcode: en
+status: true
+dependencies: {  }
+id: block_with_background
+label: 'Block with background'
+revision: 1
+description: 'A basic block that allows the content editor to control the background colour via the UI.'

@@ -1,0 +1,22 @@
+uuid: a3e06aeb-2cc7-42d6-85c1-39143e7d5085
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cog
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: cog_content
+theme: cog
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 0e8db450-e7de-42a2-a108-3660ddcbd4e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_background_orientation
+field_name: field_background_orientation
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: vertical
+      label: Vertical
+    -
+      value: horizontal
+      label: Horizontal
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

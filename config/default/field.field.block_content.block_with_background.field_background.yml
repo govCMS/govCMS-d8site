@@ -1,0 +1,21 @@
+uuid: dbe1085e-e97a-4a3b-88d1-d3b6297b97d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_background
+    - field.storage.block_content.field_background
+  module:
+    - options
+id: block_content.block_with_background.field_background
+field_name: field_background
+entity_type: block_content
+bundle: block_with_background
+label: Background
+description: 'Choose which background colour to apply to the block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

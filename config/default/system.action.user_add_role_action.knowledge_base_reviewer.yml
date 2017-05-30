@@ -1,0 +1,14 @@
+uuid: 7a358457-4d6f-445b-8c26-a8be1064ffc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.knowledge_base_reviewer
+  module:
+    - user
+id: user_add_role_action.knowledge_base_reviewer
+label: 'Add the Knowledge base reviewer role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: knowledge_base_reviewer

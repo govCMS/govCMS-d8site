@@ -1,0 +1,17 @@
+uuid: a8628187-78df-444e-839d-51a291838e9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Pricing plan'
+type: pricing_plan
+description: 'Use <em>Pricing Plan</em> to create a new pricing plan for govCMS, this will appear on the pricing page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

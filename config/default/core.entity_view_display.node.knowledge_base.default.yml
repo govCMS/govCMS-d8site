@@ -1,0 +1,67 @@
+uuid: 674f4f04-2592-41cb-93b9-158af6d24b53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.knowledge_base.body
+    - field.field.node.knowledge_base.field_document_file_upload
+    - field.field.node.knowledge_base.field_document_reference
+    - field.field.node.knowledge_base.field_document_status
+    - field.field.node.knowledge_base.field_document_url
+    - node.type.knowledge_base
+  module:
+    - file
+    - link
+    - options
+    - text
+    - user
+id: node.knowledge_base.default
+targetEntityType: node
+bundle: knowledge_base
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_document_file_upload:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_document_reference:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_document_status:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_document_url:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

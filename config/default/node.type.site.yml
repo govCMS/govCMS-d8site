@@ -1,0 +1,17 @@
+uuid: 1e51f2c3-686a-4c5d-8b98-27bc37680aac
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Site
+type: site
+description: 'Contains information relating to past, present and future projects for govCMS.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

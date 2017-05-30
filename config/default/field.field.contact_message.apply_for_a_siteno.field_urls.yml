@@ -1,0 +1,19 @@
+uuid: 59ee16cb-ec76-4bc7-8f9d-5e9e4c26473c
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+    - field.storage.contact_message.field_urls
+id: contact_message.apply_for_a_siteno.field_urls
+field_name: field_urls
+entity_type: contact_message
+bundle: apply_for_a_siteno
+label: URLs
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

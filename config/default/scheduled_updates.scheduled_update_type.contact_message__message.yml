@@ -1,0 +1,16 @@
+uuid: 96f0a36f-c8b5-40e5-afa1-e8318998ebac
+langcode: en
+status: true
+dependencies: {  }
+id: contact_message__message
+label: 'Contact message - Message'
+update_entity_type: contact_message
+update_types_supported:
+  - embedded
+field_map:
+  field_message: message
+update_runner:
+  id: default_embedded
+  after_run: DELETE
+  invalid_update_behavior: DELETE
+  update_user: USER_UPDATE_RUNNER

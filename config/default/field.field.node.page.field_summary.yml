@@ -1,0 +1,21 @@
+uuid: b87d11c8-27d2-4fe1-84f7-d02698831154
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.page
+  module:
+    - text
+id: node.page.field_summary
+field_name: field_summary
+entity_type: node
+bundle: page
+label: 'Lead in'
+description: 'Lead in for the article, will be displayed at the top of the page under the title.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,26 @@
+uuid: 96ea1267-d1bb-4c46-925d-04d08d89afff
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pricing_plan.field_additional_sites_per_year
+    - field.field.node.pricing_plan.field_cost_per_year
+    - field.field.node.pricing_plan.field_page_views_per_month
+    - field.field.node.pricing_plan.field_setup_fee
+    - node.type.pricing_plan
+  module:
+    - user
+id: node.pricing_plan.teaser
+targetEntityType: node
+bundle: pricing_plan
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_additional_sites_per_year: true
+  field_cost_per_year: true
+  field_page_views_per_month: true
+  field_setup_fee: true

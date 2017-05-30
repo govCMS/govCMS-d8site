@@ -1,0 +1,19 @@
+uuid: a1623513-c271-4ed8-ac06-a093c548044b
+langcode: en
+status: true
+dependencies:
+  module:
+    - scheduled_updates
+id: scheduled_update.field_message
+field_name: field_message
+entity_type: scheduled_update
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
