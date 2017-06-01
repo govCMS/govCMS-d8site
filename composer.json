@@ -6,7 +6,8 @@
     "prefer-stable": true,
     "require": {
         "acquia/blt": "^8.3",
-        "govcms/govcms-ui": "dev-master"
+        "govcms/govcms-ui": "dev-master",
+        "drupal/password_policy": "^3.0@alpha"
     },
     "require-dev": {},
     "extra": {

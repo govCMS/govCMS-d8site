@@ -5,6 +5,7 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
+  config_update: 0
   contact: 0
   contact_storage: 0
   contextual: 0
@@ -21,10 +22,13 @@ module:
   entity_browser: 0
   entity_embed: 0
   entity_reference: 0
+  features: 0
+  features_ui: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  govcms_password_policy: 0
   help: 0
   history: 0
   image: 0
@@ -62,6 +66,12 @@ module:
   panelizer_quickedit: 0
   panels: 0
   panels_ipe: 0
+  password_policy: 0
+  password_policy_character_types: 0
+  password_policy_characters: 0
+  password_policy_history: 0
+  password_policy_length: 0
+  password_policy_username: 0
   path: 0
   quickedit: 0
   rdf: 0
