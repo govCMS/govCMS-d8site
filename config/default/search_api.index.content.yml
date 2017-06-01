@@ -64,7 +64,8 @@ datasource_settings:
   'entity:node':
     bundles:
       default: true
-      selected: {  }
+      selected:
+        - site
     languages:
       default: true
       selected: {  }
@@ -157,6 +158,16 @@ processor_settings:
     weights:
       preprocess_index: -4
       preprocess_query: -3
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
 tracker_settings:
   default: {  }
 options:

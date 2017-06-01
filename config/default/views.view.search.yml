@@ -76,25 +76,69 @@ display:
           default_row_class: true
           uses_fields: false
       row:
-        type: search_api
+        type: fields
         options:
-          view_modes:
-            'entity:node':
-              page: teaser
-              landing_page: teaser
-              site: default
-              testimonial: default
-              knowledge_base: default
-              pricing_plan: default
-              news_article: default
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
       fields:
-        rendered:
+        label:
+          id: label
           table: search_api_index_content
-          field: rendered
-          id: rendered
-          entity_type: null
-          entity_field: null
+          field: label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h3
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: false
+          multi_type: separator
+          multi_separator: ', '
           plugin_id: search_api
+        search_api_excerpt:
+          id: search_api_excerpt
+          table: search_api_index_content
+          field: search_api_excerpt
           relationship: none
           group_type: group
           admin_label: ''
@@ -131,7 +175,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -142,6 +186,59 @@ display:
           link_to_item: false
           multi_type: separator
           multi_separator: ', '
+          plugin_id: search_api
+        label_1:
+          id: label_1
+          table: search_api_index_content
+          field: label
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: 'Read more'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          link_to_item: true
+          multi_type: separator
+          multi_separator: ', '
+          plugin_id: search_api
       filters:
         search_api_fulltext:
           id: search_api_fulltext
