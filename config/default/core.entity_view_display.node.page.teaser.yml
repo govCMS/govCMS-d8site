@@ -11,6 +11,12 @@ dependencies:
   module:
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 _core:
   default_config_hash: rN2zrScZAJ9xB16hm_Deb9QJKy6JXnn0PdI2n5Z3KRs
 id: node.page.teaser
@@ -34,4 +40,6 @@ content:
     region: content
 hidden:
   field_meta_tags: true
+  field_summary: true
+  panelizer: true
   scheduled_update: true
