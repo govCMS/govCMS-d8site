@@ -1,0 +1,11 @@
+name: 'govCMS Linkit'
+description: 'Linkit profiles for govCMS content authoring.'
+type: module
+core: 8.x
+dependencies:
+  - file
+  - linkit
+  - node
+  - scheduled_updates
+  - taxonomy
+version: 8.x-1.0

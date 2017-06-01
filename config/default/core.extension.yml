@@ -28,6 +28,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  govcms_linkit: 0
   govcms_password_policy: 0
   help: 0
   history: 0
@@ -50,6 +51,7 @@ module:
   lightning_search: 0
   lightning_workflow: 0
   link: 0
+  linkit: 0
   media_entity: 0
   media_entity_document: 0
   media_entity_image: 0

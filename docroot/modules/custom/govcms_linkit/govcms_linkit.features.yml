@@ -1,0 +1,3 @@
+excluded:
+  - scheduled_updates.scheduled_update_type.contact_message__message
+required: true
