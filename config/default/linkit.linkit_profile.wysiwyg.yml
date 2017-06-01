@@ -1,0 +1,52 @@
+uuid: 75242c44-4bd3-49fc-a328-1016cb23fb7a
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+    - taxonomy
+_core:
+  default_config_hash: 3rLJaD6LN2Nb5Fi2UV536BRFdTB8D5iMWo8Buep7m2Q
+id: wysiwyg
+label: WYSIWYG
+description: 'Default WYSIWYG Profile'
+attributes: {  }
+matchers:
+  89a002f6-a344-474a-9359-b9461ac2eca1:
+    uuid: 89a002f6-a344-474a-9359-b9461ac2eca1
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+      include_unpublished: false
+  d5cfaf29-c7ad-4867-9370-dbc7cf127d2f:
+    uuid: d5cfaf29-c7ad-4867-9370-dbc7cf127d2f
+    id: 'entity:taxonomy_term'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+  8844d40c-51d4-490a-8d2e-fd080ab6e443:
+    uuid: 8844d40c-51d4-490a-8d2e-fd080ab6e443
+    id: 'entity:file'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: null
+      group_by_bundle: null
+      images:
+        show_dimensions: false
+        show_thumbnail: false
+        thumbnail_image_style: null
+  1f948d23-61e7-4939-8bae-a7d6782ad54d:
+    uuid: 1f948d23-61e7-4939-8bae-a7d6782ad54d
+    id: 'entity:media'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false

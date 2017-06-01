@@ -27,6 +27,7 @@ settings:
         -
           name: Linking
           items:
+            - Linkit
             - DrupalLink
             - DrupalUnlink
         -
@@ -55,6 +56,8 @@ settings:
       language_list: un
     stylescombo:
       styles: ''
+    linkit:
+      linkit_profile: wysiwyg
 image_upload:
   status: true
   scheme: public
