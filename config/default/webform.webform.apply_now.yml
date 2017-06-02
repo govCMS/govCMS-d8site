@@ -1,0 +1,97 @@
+uuid: f5f175ae-3eca-453e-9b82-aafb19d8eae2
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: apply_now
+title: 'Apply now'
+description: 'The apply now form for govCMS'
+category: ''
+elements: "your_name:\n  '#type': textfield\n  '#title': 'Your name'\n  '#title_display': before\n  '#description_display': invisible\n  '#placeholder': 'Your name'\n  '#required': true\nphone_number:\n  '#type': textfield\n  '#title': 'Phone number'\n  '#title_display': before\n  '#description_display': invisible\n  '#placeholder': 'Your phone number - 02 6222 2222'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email address'\n  '#title_display': before\n  '#placeholder': you@agency.gov.au\n  '#required': true\nagency_organisation:\n  '#type': textfield\n  '#title': Agency/Organisation\n  '#title_display': before\n  '#placeholder': 'Agency or organisation you represent'\n  '#required': true\ntell_about_site:\n  '#type': processed_text\n  '#text': \"<h2>Tell us about your site/s</h2>\\r\\n\"\n  '#format': rich_text\n  sites:\n    '#type': webform_link\n    '#title': Sites\n    '#multiple': true\n    '#multiple__header': true\n    '#title__title': 'Page views'\n    '#title__placeholder': '10,000'\n    '#title__description': 'Average number of page views for this domain'\n    '#url__title': URL\n    '#url__placeholder': 'Site URL'\n    '#url__description': 'The site URL'\n    '#required': true\n  migrating_from_system:\n    '#type': checkboxes\n    '#title': 'If migrating existing sites, which CMSs are currently used?'\n    '#title_display': before\n    '#options':\n      Drupal: Drupal\n      WordPress: WordPress\n      Joomla: Joomla\n      SharePoint: SharePoint\n      Dreamweaver: Dreamweaver\n      'Static HTML Website': 'Static HTML Website'\n      Other: Other\n  other_migrating_system:\n    '#type': textfield\n    '#title': 'Please specify'\n    '#title_display': before\n    '#placeholder': 'Please enter the system that you''ll be migrating from'\n    '#states':\n      visible:\n        ':input[name=\"migrating_from_system[Other]\"]':\n          checked: true\n      required:\n        ':input[name=\"migrating_from_system[Other]\"]':\n          checked: true\nanything_else:\n  '#type': processed_text\n  '#text': \"<h2>Anything else?</h2>\\r\\n\"\n  '#format': rich_text\n  additional_comments:\n    '#type': textarea\n    '#title': 'Additional comments (such as any timelines)'\n    '#title_display': before\n"
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_log: false
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  draft: none
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: all
+  purge_days: 1
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers: {  }
