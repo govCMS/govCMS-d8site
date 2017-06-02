@@ -57,7 +57,7 @@
             "replace": true
         },
         "patches": {
-            "drupal/drupal": {
+            "drupal/core": {
                 "2033275: Contextual links broken because of JS error": "https://www.drupal.org/files/issues/contextual_links_broken-2033275-10.patch"
             }
         }
