@@ -1,0 +1,8 @@
+services:
+  govcms_user_actions.subscriber:
+    class: 'Drupal\govcms_user_actions\EventSubscriber\EventSubscriber'
+    arguments:
+      - '@current_user'
+      - '@event_dispatcher'
+    tags:
+      - { name: event_subscriber }
