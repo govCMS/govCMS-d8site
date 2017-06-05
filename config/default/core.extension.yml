@@ -4,6 +4,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  comment: 0
   config: 0
   config_update: 0
   contact: 0
@@ -30,6 +31,7 @@ module:
   filter: 0
   govcms_linkit: 0
   govcms_password_policy: 0
+  govcms_user_actions: 0
   help: 0
   history: 0
   image: 0
@@ -52,6 +54,8 @@ module:
   lightning_workflow: 0
   link: 0
   linkit: 0
+  log_entity: 0
+  log_entity_login_attempts: 0
   media_entity: 0
   media_entity_document: 0
   media_entity_image: 0
@@ -87,6 +91,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  tracker: 0
   user: 0
   video_embed_field: 0
   video_embed_media: 0

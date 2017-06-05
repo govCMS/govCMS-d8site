@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Entity CRUD hooks for logging.
+ */
+
+use Drupal\govcms_user_actions\Event\EntityEvent;
+use Drupal\log_entity\LogEntityEvents;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_node_insert().
+ */
+function govcms_user_actions_node_insert(EntityInterface $entity) {
+  $user = \Drupal::currentUser();
+  $event = new EntityEvent('node', $user, $entity);
+  \Drupal::service('event_dispatcher')->dispatch(LogEntityEvents::LOG_EVENT, $event);
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function govcms_user_actions_node_update(EntityInterface $entity) {
+  $user = \Drupal::currentUser();
+  $event = new EntityEvent('node', $user, $entity, 'update');
+  \Drupal::service('event_dispatcher')->dispatch(LogEntityEvents::LOG_EVENT, $event);
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function govcms_user_actions_node_delete(EntityInterface $entity) {
+  $user = \Drupal::currentUser();
+  $event = new EntityEvent('node', $user, $entity, 'delete');
+  \Drupal::service('event_dispatcher')->dispatch(LogEntityEvents::LOG_EVENT, $event);
+}
+
+/**
+ * Implements hook_taxonomy_term_insert().
+ */
+function govcms_user_actions_taxonomy_term_insert(EntityInterface $entity) {
+  $user = \Drupal::currentUser();
+  $event = new EntityEvent('taxonomy_term', $user, $entity, 'insert');
+  \Drupal::service('event_dispatcher')->dispatch(LogEntityEvents::LOG_EVENT, $event);
+}
+
+/**
+ * Implements hook_taxonomy_term_update().
+ */
+function govcms_user_action_taxonomy_term_update(EntityInterface $entity) {
+  $user = \Drupal::currentUser();
+  $event = new EntityEvent('taxonomy_term', $user, $entity, 'update');
+  \Drupal::service('event_dispatcher')->dispatch(LogEntityEvents::LOG_EVENT, $event);
+}
+
+/**
+ * Implements hook_taxonomy_term_delete().
+ */
+function govcms_user_actions_taxonomy_term_delete(EntityInterface $entity) {
+  $user = \Drupal::currentUser();
+  $event = new EntityEvent('taxonomy_term', $user, $entity, 'delete');
+  \Drupal::service('event_dispatcher')->dispatch(LogEntityEvents::LOG_EVENT, $event);
+}

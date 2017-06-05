@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "970ca7708dbb16eeda8076bb58653602",
+    "content-hash": "767210105a77452f42a0d6440ed2e13d",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2922,6 +2922,49 @@
             }
         },
         {
+            "name": "drupal/log_entity",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/log_entity",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/log_entity-8.x-1.0-alpha1.zip",
+                "reference": null,
+                "shasum": "45dadeb32ed734c6965398ae2b9392fa3accd442"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1489555984"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "benjy",
+                    "homepage": "https://www.drupal.org/user/1852732"
+                }
+            ],
+            "description": "Provides a content entity to capture arbitrary events.",
+            "homepage": "https://www.drupal.org/project/log_entity",
+            "support": {
+                "source": "http://cgit.drupalcode.org/log_entity"
+            }
+        },
+        {
             "name": "drupal/media_entity",
             "version": "1.6.0",
             "source": {
@@ -3308,7 +3351,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.1.zip",
-                "reference": null,
+                "reference": "8.x-1.1",
                 "shasum": "bb9b608879e2f7d8086a0e6606286086f5009d71"
             },
             "require": {
@@ -4235,7 +4278,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.0-beta13.zip",
-                "reference": null,
+                "reference": "8.x-5.0-beta13",
                 "shasum": "d71e4cc7a1820729e6efa26d07c862e3db364bb1"
             },
             "require": {
@@ -9861,6 +9904,7 @@
         "govcms/govcms-ui": 20,
         "drupal/password_policy": 15,
         "drupal/webform": 10,
+        "drupal/log_entity": 15,
         "drupal/memcache": 20
     },
     "prefer-stable": true,

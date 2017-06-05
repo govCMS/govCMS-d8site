@@ -1,0 +1,7 @@
+name: 'govCMS User Actions'
+description: 'Provides a report of user actions.'
+type: module
+core: 8.x
+dependencies:
+  - log_entity
+version: 8.x-1.0
