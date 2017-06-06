@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "767210105a77452f42a0d6440ed2e13d",
+    "content-hash": "606b330949e4af6cf229843904f2bc18",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2759,6 +2759,57 @@
             }
         },
         {
+            "name": "drupal/govcms_dlm",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/govcms_dlm",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/govcms_dlm-8.x-1.1.zip",
+                "reference": null,
+                "shasum": "b36fa2d311ea2fc1beff1bc58de8b387a349651a"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1493852285"
+                },
+                "patches_applied": {
+                    "2883963: Hook Help": "https://www.drupal.org/files/issues/hook-help-d8-api-2883963-1.patch",
+                    "2883967: module.permissions.yml": "https://www.drupal.org/files/issues/module-permissions-yml-2883967-1.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "pkil",
+                    "homepage": "https://www.drupal.org/user/2327222"
+                },
+                {
+                    "name": "wiifm",
+                    "homepage": "https://www.drupal.org/user/358731"
+                }
+            ],
+            "description": "Add optional DLM to emails sent from drupal mail",
+            "homepage": "https://www.drupal.org/project/govcms_dlm",
+            "support": {
+                "source": "http://cgit.drupalcode.org/govcms_dlm"
+            }
+        },
+        {
             "name": "drupal/inline_entity_form",
             "version": "1.0.0-beta1",
             "source": {
@@ -2932,7 +2983,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/log_entity-8.x-1.0-alpha1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha1",
                 "shasum": "45dadeb32ed734c6965398ae2b9392fa3accd442"
             },
             "require": {
