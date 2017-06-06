@@ -10,7 +10,8 @@
         "drupal/password_policy": "^3.0@alpha",
         "drupal/linkit": "^4.3",
         "drupal/webform": "^5.0@beta",
-        "drupal/log_entity": "^1.0@alpha"
+        "drupal/log_entity": "^1.0@alpha",
+        "drupal/govcms_dlm": "^1.1"
     },
     "require-dev": {},
     "extra": {
@@ -60,6 +61,10 @@
         "patches": {
             "drupal/core": {
                 "2033275: Contextual links broken because of JS error": "https://www.drupal.org/files/issues/contextual_links_broken-2033275-10.patch"
+            },
+            "drupal/govcms_dlm": {
+                "2883963: Hook Help": "https://www.drupal.org/files/issues/hook-help-d8-api-2883963-1.patch",
+                "2883967: module.permissions.yml": "https://www.drupal.org/files/issues/module-permissions-yml-2883967-1.patch"
             }
         }
     }
