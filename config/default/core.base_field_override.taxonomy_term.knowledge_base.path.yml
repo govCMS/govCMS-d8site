@@ -1,0 +1,20 @@
+uuid: df7174bf-bd7b-4e62-b620-e42f06039d3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.knowledge_base
+  module:
+    - path
+id: taxonomy_term.knowledge_base.path
+field_name: path
+entity_type: taxonomy_term
+bundle: knowledge_base
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,11 @@
+uuid: cb177d90-316b-4c40-8dce-38028d35fbbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - log_entity
+id: log_entity.log_entity
+target_entity_type_id: log_entity
+target_bundle: log_entity
+default_langcode: site_default
+language_alterable: false

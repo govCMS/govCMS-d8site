@@ -1,0 +1,20 @@
+uuid: a86a6e27-23d5-4b1f-b934-8146a8ed5bb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.status
+  module:
+    - text
+id: taxonomy_term.status.description
+field_name: description
+entity_type: taxonomy_term
+bundle: status
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

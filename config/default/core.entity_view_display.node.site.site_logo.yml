@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.site.field_agency
     - field.field.node.site.field_environment
     - field.field.node.site.field_link
+    - field.field.node.site.field_screenshot
     - field.field.node.site.field_status
     - node.type.site
   module:
@@ -34,4 +35,6 @@ hidden:
   field_agency: true
   field_environment: true
   field_link: true
+  field_screenshot: true
   field_status: true
+  langcode: true

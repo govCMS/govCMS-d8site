@@ -1,0 +1,20 @@
+uuid: 1b816f72-2e58-49db-b4db-7ed0b4ee963e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.site
+  module:
+    - path
+id: node.site.path
+field_name: path
+entity_type: node
+bundle: site
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

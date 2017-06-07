@@ -1,0 +1,20 @@
+uuid: 2aaf903c-4c37-48a2-a769-6dfbcad3d7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+id: node.knowledge_base.moderation_state
+field_name: moderation_state
+entity_type: node
+bundle: knowledge_base
+label: 'Moderation state'
+description: 'The moderation state of this piece of content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

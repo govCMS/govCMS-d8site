@@ -1,0 +1,16 @@
+uuid: 351c3e52-1c70-4650-94d2-c5dc2de7b0f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.knowledge_base
+target_entity_type_id: node
+target_bundle: knowledge_base
+default_langcode: site_default
+language_alterable: false

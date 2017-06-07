@@ -1,0 +1,20 @@
+uuid: fbd4513a-8fb3-4f31-b380-e2cfe4c7d2bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+  module:
+    - path
+id: node.knowledge_base.path
+field_name: path
+entity_type: node
+bundle: knowledge_base
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -1,0 +1,18 @@
+uuid: 0f99ad46-c7dd-4e3f-8318-b7f3b10ada56
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.agency
+id: taxonomy_term.agency.name
+field_name: name
+entity_type: taxonomy_term
+bundle: agency
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 92a0f99e-0cf7-4626-86e0-5d72bc329ea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testimonial
+id: node.testimonial.moderation_state
+field_name: moderation_state
+entity_type: node
+bundle: testimonial
+label: 'Moderation state'
+description: 'The moderation state of this piece of content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

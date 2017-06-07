@@ -1,0 +1,18 @@
+uuid: 6e2d45b5-d5dc-43e2-8d7f-1b3d8833f3c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.knowledge_base
+id: taxonomy_term.knowledge_base.name
+field_name: name
+entity_type: taxonomy_term
+bundle: knowledge_base
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

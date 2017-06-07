@@ -1,0 +1,22 @@
+uuid: 29b0c492-60a3-41fc-b443-f432fe4d2f67
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+id: node.knowledge_base.status
+field_name: status
+entity_type: node
+bundle: knowledge_base
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

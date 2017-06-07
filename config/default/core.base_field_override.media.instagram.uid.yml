@@ -1,0 +1,20 @@
+uuid: e7dc6a27-559b-4a76-b6c1-745fd9a2a49b
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.instagram
+id: media.instagram.uid
+field_name: uid
+entity_type: media
+bundle: instagram
+label: 'Publisher ID'
+description: 'The user ID of the media publisher.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media_entity\Entity\Media::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

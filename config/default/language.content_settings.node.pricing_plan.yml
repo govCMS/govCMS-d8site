@@ -1,0 +1,16 @@
+uuid: 5c425673-3256-473b-9fc9-dc6352fdeb35
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pricing_plan
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.pricing_plan
+target_entity_type_id: node
+target_bundle: pricing_plan
+default_langcode: site_default
+language_alterable: false

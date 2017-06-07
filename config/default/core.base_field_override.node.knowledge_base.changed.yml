@@ -1,0 +1,18 @@
+uuid: 0b440110-29d4-448d-a1ca-ea63eb594db6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+id: node.knowledge_base.changed
+field_name: changed
+entity_type: node
+bundle: knowledge_base
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

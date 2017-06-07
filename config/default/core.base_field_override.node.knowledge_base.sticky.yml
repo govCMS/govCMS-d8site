@@ -1,0 +1,22 @@
+uuid: 39280d97-97de-43d0-87a8-5344c580ccbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+id: node.knowledge_base.sticky
+field_name: sticky
+entity_type: node
+bundle: knowledge_base
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
