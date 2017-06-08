@@ -11,7 +11,7 @@ bundle: block_with_background
 label: Changed
 description: 'The time that the custom block was last edited.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

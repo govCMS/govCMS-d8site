@@ -14,7 +14,7 @@ bundle: block_with_background
 label: 'Background orientation'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: vertical

@@ -16,7 +16,7 @@ bundle: landing_page
 label: Description
 description: 'A description of this page, for use in teasers and lists of content.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
