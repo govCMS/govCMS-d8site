@@ -1,0 +1,103 @@
+diff --git a/core/modules/contextual/js/contextual.js b/core/modules/contextual/js/contextual.js
+index 558ea10..dad93ed 100644
+--- a/core/modules/contextual/js/contextual.js
++++ b/core/modules/contextual/js/contextual.js
+@@ -160,6 +160,8 @@
+         ids.push($(this).attr('data-contextual-id'));
+       });
+ 
++      ids = _.uniq(ids);
++
+       // Update all contextual links placeholders whose HTML is cached.
+       var uncachedIDs = _.filter(ids, function initIfCached(contextualID) {
+         var html = storage.getItem('Drupal.contextual.' + contextualID);
+diff --git a/core/modules/views/src/Element/View.php b/core/modules/views/src/Element/View.php
+index 43d1058..8a585cc 100644
+--- a/core/modules/views/src/Element/View.php
++++ b/core/modules/views/src/Element/View.php
+@@ -80,15 +80,6 @@ public static function preRenderViewElement($element) {
+         if (isset($element['view_build']['#title'])) {
+           $element['#title'] = &$element['view_build']['#title'];
+         }
+-
+-        if (empty($view->display_handler->getPluginDefinition()['returns_response'])) {
+-          // views_add_contextual_links() needs the following information in
+-          // order to be attached to the view.
+-          $element['#view_id'] = $view->storage->id();
+-          $element['#view_display_show_admin_links'] = $view->getShowAdminLinks();
+-          $element['#view_display_plugin_id'] = $view->display_handler->getPluginId();
+-          views_add_contextual_links($element, 'view', $view->current_display);
+-        }
+       }
+       if (empty($view->display_handler->getPluginDefinition()['returns_response'])) {
+         $element['#attributes']['class'][] = 'views-element-container';
+diff --git a/core/modules/views/src/Plugin/Block/ViewsBlock.php b/core/modules/views/src/Plugin/Block/ViewsBlock.php
+index 34738cd..a065799 100644
+--- a/core/modules/views/src/Plugin/Block/ViewsBlock.php
++++ b/core/modules/views/src/Plugin/Block/ViewsBlock.php
+@@ -49,10 +49,6 @@ public function build() {
+     // entry for the view output by passing FALSE, because we're going to cache
+     // the whole block instead.
+     if ($output = $this->view->buildRenderable($this->displayID, array_values($args), FALSE)) {
+-      // Before returning the block output, convert it to a renderable array
+-      // with contextual links.
+-      $this->addContextualLinks($output);
+-
+       // Block module expects to get a final render array, without another
+       // top-level #pre_render callback. So, here we make sure that Views'
+       // #pre_render callback has already been applied.
+diff --git a/core/modules/views/src/Plugin/Block/ViewsBlockBase.php b/core/modules/views/src/Plugin/Block/ViewsBlockBase.php
+index 4e3020c..1771720 100644
+--- a/core/modules/views/src/Plugin/Block/ViewsBlockBase.php
++++ b/core/modules/views/src/Plugin/Block/ViewsBlockBase.php
+@@ -186,24 +186,10 @@ public function blockSubmit($form, FormStateInterface $form_state) {
+    * @param string $block_type
+    *   The type of the block. If it's 'block' it's a regular views display,
+    *   but 'exposed_filter' exist as well.
++   *
++   * @deprecated Contextual links now applied via DisplayPluginBase.
+    */
+   protected function addContextualLinks(&$output, $block_type = 'block') {
+-    // Do not add contextual links to an empty block.
+-    if (!empty($output)) {
+-      // Contextual links only work on blocks whose content is a renderable
+-      // array, so if the block contains a string of already-rendered markup,
+-      // convert it to an array.
+-      if (is_string($output)) {
+-        $output = ['#markup' => $output];
+-      }
+-
+-      // views_add_contextual_links() needs the following information in
+-      // order to be attached to the view.
+-      $output['#view_id'] = $this->view->storage->id();
+-      $output['#view_display_show_admin_links'] = $this->view->getShowAdminLinks();
+-      $output['#view_display_plugin_id'] = $this->view->display_handler->getPluginId();
+-      views_add_contextual_links($output, $block_type, $this->displayID);
+-    }
+   }
+ 
+ }
+diff --git a/core/modules/views/src/Plugin/views/display/DisplayPluginBase.php b/core/modules/views/src/Plugin/views/display/DisplayPluginBase.php
+index e31b5a2..5292c81 100644
+--- a/core/modules/views/src/Plugin/views/display/DisplayPluginBase.php
++++ b/core/modules/views/src/Plugin/views/display/DisplayPluginBase.php
+@@ -2323,6 +2323,9 @@ public function buildRenderable(array $args = [], $cache = TRUE) {
+       '#embed' => FALSE,
+       '#view' => $this->view,
+       '#cache_properties' => ['#view_id', '#view_display_show_admin_links', '#view_display_plugin_id'],
++      '#view_display_show_admin_links' => $this->view->getShowAdminLinks(),
++      '#view_display_plugin_id' => $this->display['display_plugin'],
++      '#view_id' => $this->view->storage->id(),
+     ];
+ 
+     // When something passes $cache = FALSE, they're asking us not to create our
+@@ -2344,6 +2347,9 @@ public function buildRenderable(array $args = [], $cache = TRUE) {
+       unset($this->view->element['#cache']['keys']);
+     }
+ 
++    // Attach the contextual links directly to the view.
++    views_add_contextual_links($this->view->element, "block", $this->display['id']);
++
+     return $this->view->element;
+   }
+ 
