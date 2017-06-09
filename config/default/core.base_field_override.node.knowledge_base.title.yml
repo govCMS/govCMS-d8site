@@ -1,0 +1,18 @@
+uuid: 65d372b1-2c61-4c45-a75a-6645a0f25570
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+id: node.knowledge_base.title
+field_name: title
+entity_type: node
+bundle: knowledge_base
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

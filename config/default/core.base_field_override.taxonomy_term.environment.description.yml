@@ -1,0 +1,20 @@
+uuid: 5cdc2df1-62f0-4e03-bdcd-fc69f26da707
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.environment
+  module:
+    - text
+id: taxonomy_term.environment.description
+field_name: description
+entity_type: taxonomy_term
+bundle: environment
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

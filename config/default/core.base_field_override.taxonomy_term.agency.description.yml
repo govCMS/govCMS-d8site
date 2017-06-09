@@ -1,0 +1,20 @@
+uuid: ab57254f-63a9-4af2-b158-72053ac048a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.agency
+  module:
+    - text
+id: taxonomy_term.agency.description
+field_name: description
+entity_type: taxonomy_term
+bundle: agency
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

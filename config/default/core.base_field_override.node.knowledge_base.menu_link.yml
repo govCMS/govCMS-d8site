@@ -1,0 +1,20 @@
+uuid: f702bc70-29cd-4212-82d5-7b6657fdfbe0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+id: node.knowledge_base.menu_link
+field_name: menu_link
+entity_type: node
+bundle: knowledge_base
+label: 'Menu link'
+description: 'Computed menu link for the node (only available during node saving).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

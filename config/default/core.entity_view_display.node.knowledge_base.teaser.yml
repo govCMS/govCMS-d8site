@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.knowledge_base.body
+    - field.field.node.knowledge_base.field_document_file_upload
+    - field.field.node.knowledge_base.field_document_reference
+    - field.field.node.knowledge_base.field_document_status
+    - field.field.node.knowledge_base.field_document_url
     - node.type.knowledge_base
   module:
     - text
@@ -25,4 +29,9 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_document_file_upload: true
+  field_document_reference: true
+  field_document_status: true
+  field_document_url: true
+  langcode: true

@@ -58,3 +58,4 @@ hidden:
   field_agency: true
   field_environment: true
   field_status: true
+  langcode: true

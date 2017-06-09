@@ -1,0 +1,20 @@
+uuid: fb937b92-f65b-4c75-b233-f030d379b523
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.knowledge_base
+id: node.knowledge_base.uid
+field_name: uid
+entity_type: node
+bundle: knowledge_base
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

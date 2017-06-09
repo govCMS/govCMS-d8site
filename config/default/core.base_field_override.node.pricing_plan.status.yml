@@ -1,0 +1,22 @@
+uuid: 55b9f562-8a40-4ffc-bceb-e11292275f25
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pricing_plan
+id: node.pricing_plan.status
+field_name: status
+entity_type: node
+bundle: pricing_plan
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

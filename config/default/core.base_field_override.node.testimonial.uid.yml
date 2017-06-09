@@ -1,0 +1,20 @@
+uuid: 65c3b353-1866-4824-8dc2-ca23c98695b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testimonial
+id: node.testimonial.uid
+field_name: uid
+entity_type: node
+bundle: testimonial
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

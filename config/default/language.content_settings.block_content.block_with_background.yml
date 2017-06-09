@@ -1,0 +1,16 @@
+uuid: b812c2c2-7df6-482e-bc32-10ec324b7b27
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_background
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.block_with_background
+target_entity_type_id: block_content
+target_bundle: block_with_background
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,22 @@
+uuid: d17c553f-6706-474b-a667-a2525f6f24cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pricing_plan
+id: node.pricing_plan.sticky
+field_name: sticky
+entity_type: node
+bundle: pricing_plan
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.pricing_plan.field_additional_site_cap
     - field.field.node.pricing_plan.field_additional_sites_per_year
     - field.field.node.pricing_plan.field_cost_per_year
     - field.field.node.pricing_plan.field_page_views_per_month
@@ -20,7 +21,9 @@ content:
     weight: 100
     region: content
 hidden:
+  field_additional_site_cap: true
   field_additional_sites_per_year: true
   field_cost_per_year: true
   field_page_views_per_month: true
   field_setup_fee: true
+  langcode: true

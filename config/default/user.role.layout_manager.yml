@@ -14,6 +14,7 @@ label: 'Layout manager'
 weight: 2
 is_admin: false
 permissions:
+  - 'administer govcms_dlm'
   - 'administer node display'
   - 'administer panelizer'
   - 'administer panelizer node knowledge_base defaults'

@@ -6,6 +6,7 @@ module:
   ckeditor: 0
   comment: 0
   config: 0
+  config_translation: 0
   config_update: 0
   contact: 0
   contact_storage: 0
@@ -29,6 +30,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  govcms_dlm: 0
   govcms_linkit: 0
   govcms_password_policy: 0
   govcms_user_actions: 0
@@ -37,6 +39,7 @@ module:
   image: 0
   inline_entity_form: 0
   kint: 0
+  language: 0
   layout_discovery: 0
   lightning_contact_form: 0
   lightning_core: 0
@@ -54,6 +57,7 @@ module:
   lightning_workflow: 0
   link: 0
   linkit: 0
+  locale: 0
   log_entity: 0
   log_entity_login_attempts: 0
   media_entity: 0
@@ -103,6 +107,7 @@ module:
   workflows: 0
   menu_link_content: 1
   pathauto: 1
+  content_translation: 10
   views: 10
   lightning: 1000
 theme:

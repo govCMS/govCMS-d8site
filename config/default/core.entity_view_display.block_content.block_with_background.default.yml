@@ -24,3 +24,4 @@ content:
 hidden:
   field_background: true
   field_background_orientation: true
+  langcode: true

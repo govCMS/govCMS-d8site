@@ -5,6 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.site.body
+    - field.field.node.site.field_agency
+    - field.field.node.site.field_environment
+    - field.field.node.site.field_link
+    - field.field.node.site.field_screenshot
+    - field.field.node.site.field_status
     - node.type.site
   module:
     - text
@@ -25,4 +30,10 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_agency: true
+  field_environment: true
+  field_link: true
+  field_screenshot: true
+  field_status: true
+  langcode: true

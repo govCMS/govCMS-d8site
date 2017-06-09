@@ -1,0 +1,18 @@
+uuid: d86f01b7-bdfe-474b-a466-fb8210573923
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.instagram
+id: media.instagram.created
+field_name: created
+entity_type: media
+bundle: instagram
+label: Created
+description: 'The time that the media was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

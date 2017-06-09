@@ -1,0 +1,18 @@
+uuid: 48c50122-d7f7-43ec-86da-b4c0501c4af3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.knowledge_base
+id: taxonomy_term.knowledge_base.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: knowledge_base
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

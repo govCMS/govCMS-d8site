@@ -14,7 +14,7 @@ bundle: block_with_background
 label: Background
 description: 'Choose which background colour to apply to the block.'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

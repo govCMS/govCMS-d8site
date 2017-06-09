@@ -1,0 +1,16 @@
+uuid: 685cb0bc-c2f8-400f-bcfb-ebc05d0ff53c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.knowledge_base
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: taxonomy_term.knowledge_base
+target_entity_type_id: taxonomy_term
+target_bundle: knowledge_base
+default_langcode: site_default
+language_alterable: false

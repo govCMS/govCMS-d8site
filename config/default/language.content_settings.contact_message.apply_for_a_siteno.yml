@@ -1,0 +1,11 @@
+uuid: 38bc1ec0-9865-4117-9533-b0d301e17806
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.apply_for_a_siteno
+id: contact_message.apply_for_a_siteno
+target_entity_type_id: contact_message
+target_bundle: apply_for_a_siteno
+default_langcode: site_default
+language_alterable: false

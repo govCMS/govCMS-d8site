@@ -1,0 +1,6 @@
+display:
+  default:
+    display_options:
+      footer:
+        result:
+          content: '<div class="grid-item"><span class="int"><span class="fancyCounter do-fade faded counted">@total</span></span><h3>代理商使用</h3></div>'

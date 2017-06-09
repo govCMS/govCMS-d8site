@@ -1,0 +1,20 @@
+uuid: 6041cfbf-09f4-4de8-b16b-146fa72cf398
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pricing_plan
+  module:
+    - path
+id: node.pricing_plan.path
+field_name: path
+entity_type: node
+bundle: pricing_plan
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

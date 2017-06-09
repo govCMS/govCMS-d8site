@@ -3,16 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.image_browser
     - field.field.node.site.body
     - field.field.node.site.field_agency
     - field.field.node.site.field_environment
     - field.field.node.site.field_link
     - field.field.node.site.field_screenshot
     - field.field.node.site.field_status
-    - image.style.thumbnail
     - node.type.site
   module:
-    - image
+    - entity_browser
     - link
     - path
     - text
@@ -75,6 +75,7 @@ content:
       open: true
       selection_mode: selection_append
     third_party_settings: {  }
+    region: content
   field_status:
     weight: 37
     settings:
@@ -84,6 +85,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   path:
     type: path
     weight: 30
