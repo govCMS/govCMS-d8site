@@ -28,6 +28,10 @@ docroot/themes/custom/*/node_modules
 docroot/themes/custom/*/css
 docroot/themes/custom/*/styleguide
 
+# Ignore custom theme uikit build artifacts
+docroot/themes/custom/*/uikit/pancake
+docroot/themes/custom/*/uikit/node_modules
+
 # Ignore build artifacts
 /deploy
 bin/*

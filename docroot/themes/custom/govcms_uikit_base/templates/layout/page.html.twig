@@ -1,9 +1,10 @@
-<div {{ attributes.setAttribute('id', 'pg__c') }}>
+<div{{ attributes.setAttribute('id', 'pg__c') }}>
+
 
     <!-- ______________________ BRANDING _______________________ -->
 
     <header id="branding">
-        <div class="cog--mq mq-branding">
+        <div class="cog--mq">
             {% if page.branding %}
                 <div id="branding-region">
                     {{ page.branding }}
@@ -16,8 +17,8 @@
 
     <!-- ______________________ HEADER _______________________ -->
 
-    <header id="header">
-        <div class="cog--mq mq-header">
+    <header id="header" class="uikit-header">
+        <div class="cog--mq">
             {% if page.header %}
                 <div id="header-region">
                     {{ page.header }}
@@ -30,7 +31,7 @@
     <!-- ______________________ Pre content _______________________ -->
     {% if page.pre_content %}
         <div class="clearfix pre-content" id="pre-content">
-            <div class="cog--mq mq-precontent">
+            <div class="cog--mq">
                 {{ page.pre_content }}
             </div>
         </div>
@@ -39,7 +40,7 @@
     <!-- ______________________ MAIN _______________________ -->
 
     <div class="clearfix" id="main">
-        <div class="cog--mq mq-main">
+        <div class="cog--mq">
 
             {% if page.sidebar_first %}
                 <aside class="sidebar-first sidebars" id="sidebar-first">
@@ -62,7 +63,7 @@
                         {{ title_prefix }}
 
                         {% if title %}
-                            <h1 class="title">{{ title }}</h1>
+                            <h1 class="title uikit-header-heading">{{ title }}</h1>
                         {% endif %}
 
                         {{ title_suffix }}
@@ -106,7 +107,7 @@
 
     {% if page.post_content %}
         <div class="clearfix post-content" id="post-content">
-            <div class="cog--mq mq-postcontent">
+            <div class="cog--mq">
                 {{ page.post_content }}
             </div>
         </div>
@@ -115,8 +116,8 @@
     <!-- ______________________ FOOTER _______________________ -->
 
     {% if page.footer %}
-        <footer id="footer">
-            <div class="cog--mq mq-footer">
+        <footer id="footer" class="uikit-footer">
+            <div class="cog--mq">
                 {{ page.footer }}
             </div>
         </footer>

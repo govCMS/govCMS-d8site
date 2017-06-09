@@ -1,0 +1,22 @@
+name: govCMS UI Kit Base
+type: theme
+description: 'Acquia D8 base theme for govCMS projects'
+package: Core
+# core: 8.x
+libraries:
+  - cog/lib
+regions:
+  branding: Branding
+  header: Header
+  pre_content: Pre content
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  post_content: Post content
+  footer: Footer
+
+# Information added by Drupal.org packaging script on 2017-03-31
+version: '8.x-1.7'
+core: '8.x'
+project: 'govcms_uikit_base'
+datestamp: 1490994489

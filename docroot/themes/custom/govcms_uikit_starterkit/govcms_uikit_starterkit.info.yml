@@ -1,0 +1,23 @@
+name: govcms_uikit_starterkit
+type: theme
+description: 'Starter Kit for govCMS UI Kit Base'
+# core: 8.x
+base theme: govcms_uikit_base
+libraries:
+  - govcms_uikit_starterkit/fonts
+  - govcms_uikit_starterkit/global_styles
+regions:
+  branding: Branding
+  header: Header
+  pre_content: 'Pre content'
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  post_content: 'Post content'
+  footer: Footer
+
+# Information added by Drupal.org packaging script on 2017-03-31
+version: '8.x-1.7'
+core: '8.x'
+project: 'govcms_uikit_base'
+datestamp: 1490994489
