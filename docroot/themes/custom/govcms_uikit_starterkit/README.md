@@ -4,6 +4,7 @@
   * [Create Cog Sub-Theme](#create-cog-sub-theme)
   * [Setup Local Development](#setup-local-development)
 * [Theme Overview](#overview)
+  * [UI Kit](#ui-kit)
   * [Folder Structure](#folder-structure)
   * [Sass Structure](#sass-structure)
   * [Gulp](#gulp)
@@ -65,6 +66,32 @@ contrib/ (theme folder)
 custom/ (theme folder)
 |-- mytheme/ (cloned from starterkit) 
 ```
+
+### UI Kit
+
+The theme includes modules provided by the [gov.au UI-kit](https://github.com/govau/uikit/). These modules are built during `npm install` and are included via the themes `styles.scss`.
+
+#### Files
+
+```
+|-- css/
+    |-- uikit.css
+|-- sass/
+    |-- _uikit.scss
+|--- js/
+    |-- uikit.min.js
+```
+
+#### Removing modules
+
+The UI Kit has been defined using different modules from the `@govau` namespace which are all defined in `package.json`. If your theme does not require all the modules defined by the UI Kit you can remove them from by:
+
+- Updating `package.json` and removing the modules that you don't need
+- Running `npm run uikit-refresh`
+
+#### Configuration
+
+Configuration for the UI Kit modules can be defined in `sass/_config.scss`. For more information on available configuration and custom mixins that have been defined by UI Kit see the [Core module's _global.scss page](https://github.com/govau/uikit/blob/master/packages/core/src/sass/_globals.scss).
 
 ### Folder Structure
 

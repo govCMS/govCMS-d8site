@@ -11,3 +11,13 @@ global_styles:
   js:
     js/external_links.js: {}
     js/uikit.min.js: {}
+
+uikit:
+  version: 2.0
+  css:
+    theme:
+      css/uikit.css: {}
+  js:
+    js/uikit.min.js: {}
+  dependencies:
+    core/jquery

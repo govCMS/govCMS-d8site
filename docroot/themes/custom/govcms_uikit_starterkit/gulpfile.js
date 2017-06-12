@@ -127,7 +127,8 @@ var options = {
     files: {
       theme: [
         paths.scripts + '**/*.js',
-        '!' + paths.scripts + '**/*.min.js'
+        '!' + paths.scripts + '**/*.min.js',
+        '!' + paths.scripts + '**/uikit*.js'
       ],
       gulp: [
         'gulpfile.js',
@@ -135,6 +136,14 @@ var options = {
       ]
     }
 
+  },
+
+  // ----- sasslint ------ //
+  cssLinting: {
+    files: [
+      paths.styles.source + '**/*.scss',
+      '!' + paths.styles.source + '**/*uikit.scss'
+    ]
   },
 
   // ----- KSS Node ----- //

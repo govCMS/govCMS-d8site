@@ -7,9 +7,7 @@ module.exports = function (gulp, plugins, options) {
   'use strict';
 
   gulp.task('compile:sass', function () {
-    return gulp.src([
-      options.sass.files
-    ])
+    return gulp.src(options.sass.files)
       .pipe(plugins.plumber({
         errorHandler: function (e) {
 

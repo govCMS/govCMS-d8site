@@ -8,15 +8,19 @@
 @import "reset";
 
 /**
- * GOV AU UI KIT 2.0 include.
- * You must run `npm install` within /uikit before this file will be available.
- */
-@import '../uikit/pancake/sass/uikit.scss';
-
-/**
-  Config file that contains centralized variables
+Config file that contains centralized variables
 */
 @import "config";
+
+// GOV.AU UI Kit
+//
+// Includes the UI kit modules that have been compiled during install into _uikit.scss.
+//
+// Configuration for the UI kit is included in _config.scss and can be used to override the defaults provided by the
+// UI kit modules.
+//
+// @see https://github.com/govau/uikit
+@import 'uikit';
 
 // Base
 //
