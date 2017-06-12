@@ -1,0 +1,61 @@
+// Used as part of cog panel layouts
+@import '../node_modules/susy/sass/susy';
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+/**
+  Normal reset
+*/
+@import "reset";
+
+/**
+Config file that contains centralized variables
+*/
+@import "config";
+
+// GOV.AU UI Kit
+//
+// Includes the UI kit modules that have been compiled during install into _uikit.scss.
+//
+// Configuration for the UI kit is included in _config.scss and can be used to override the defaults provided by the
+// UI kit modules.
+//
+// @see https://github.com/govau/uikit
+@import 'uikit';
+
+// Base
+//
+// These are the default base styles applied to HTML elements.
+//
+// Component classes can override these styles, but if no class applies a style
+// to an HTML element, these styles will be the ones displayed.
+//
+// Style guide: base
+@import "base/**/*";
+
+// Form
+//
+// These are the default form styles applied to HTML elements.
+//
+// Style guide: form
+
+// Layout
+//
+// These are the layout rules.
+//
+// Style guide: layout
+@import "layout/**/*";
+
+// Components
+//
+// Design components are reusable styling that can be applied using just the CSS
+// class names specified in the component. Also known as design 'modules'.
+//
+// Style guide: components
+@import "components/**/*";
+
+// States
+//
+// States are variations that are usually applied via js, such as `.is-active`.
+// 
+// Style guide: states
+@import "state/**/*";

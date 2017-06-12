@@ -1,0 +1,23 @@
+fonts:
+  version: VERSION
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Open+Sans:400,700,300': {type: external} # external font
+global_styles:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    js/external_links.js: {}
+    js/uikit.min.js: {}
+
+uikit:
+  version: 2.0
+  css:
+    theme:
+      css/uikit.css: {}
+  js:
+    js/uikit.min.js: {}
+  dependencies:
+    core/jquery
