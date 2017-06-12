@@ -1,0 +1,29 @@
+uuid: 1594832a-0749-4aa7-a48c-d9f516915a81
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.knowledge_base
+  module:
+    - system
+    - views
+  theme:
+    - govcms_uikit_starterkit
+id: govcms_uikit_starterkit_exposedformknowledge_basepage_1
+theme: govcms_uikit_starterkit
+region: pre_content
+weight: -4
+provider: null
+plugin: 'views_exposed_filter_block:knowledge_base-page_1'
+settings:
+  id: 'views_exposed_filter_block:knowledge_base-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /support/knowledge-base
+    negate: false
+    context_mapping: {  }

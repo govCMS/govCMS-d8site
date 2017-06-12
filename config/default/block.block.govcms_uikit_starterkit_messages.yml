@@ -1,0 +1,22 @@
+uuid: 6e70b8bd-2ab1-4888-ad95-1c1e42eba6da
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - govcms_uikit_starterkit
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: govcms_uikit_starterkit_messages
+theme: govcms_uikit_starterkit
+region: content
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

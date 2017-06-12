@@ -1,0 +1,22 @@
+uuid: 555344b3-04fe-49e3-921b-c2baba2229a6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - govcms_uikit_base
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: govcms_uikit_base_local_tasks
+theme: govcms_uikit_base
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

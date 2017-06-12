@@ -1,0 +1,20 @@
+uuid: 44244829-75ca-4eb6-9e40-60bc6aecbe5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - govcms_uikit_starterkit
+id: govcms_uikit_starterkit_languageswitcher
+theme: govcms_uikit_starterkit
+region: footer
+weight: -6
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }
