@@ -1,22 +1,22 @@
-uuid: a2e5b126-a29b-4ace-915e-f7e4fa164448
+uuid: b3990bb8-8894-4a5f-9d50-843e06b0318f
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:6c898a34-ba89-4e83-bdb3-63151f5a8e5d'
+    - 'block_content:block_with_background:ad155092-26d3-456a-9640-7a9acda71848'
   module:
     - block_content
     - system
   theme:
-    - govcms
+    - govcms_uikit_starterkit
 id: calltoactioninterested
-theme: govcms
+theme: govcms_uikit_starterkit
 region: post_content
 weight: 0
 provider: null
-plugin: 'block_content:6c898a34-ba89-4e83-bdb3-63151f5a8e5d'
+plugin: 'block_content:ad155092-26d3-456a-9640-7a9acda71848'
 settings:
-  id: 'block_content:6c898a34-ba89-4e83-bdb3-63151f5a8e5d'
+  id: 'block_content:ad155092-26d3-456a-9640-7a9acda71848'
   label: 'Call to action: Interested'
   provider: block_content
   label_display: '0'

@@ -1,9 +1,9 @@
-uuid: 1939a71c-57be-43f1-9c6c-1303188daf68
+uuid: a98d5b84-72de-4a45-84de-55d9f733de92
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:366a2898-e92d-493b-b74c-ffd5c7143913'
+    - 'block_content:basic:44b4cbac-d52a-4342-9d40-91db6fb1bce4'
   module:
     - block_content
   theme:
@@ -13,9 +13,9 @@ theme: govcms_uikit_starterkit
 region: footer
 weight: -8
 provider: null
-plugin: 'block_content:366a2898-e92d-493b-b74c-ffd5c7143913'
+plugin: 'block_content:44b4cbac-d52a-4342-9d40-91db6fb1bce4'
 settings:
-  id: 'block_content:366a2898-e92d-493b-b74c-ffd5c7143913'
+  id: 'block_content:44b4cbac-d52a-4342-9d40-91db6fb1bce4'
   label: 'Social Block'
   provider: block_content
   label_display: '0'
