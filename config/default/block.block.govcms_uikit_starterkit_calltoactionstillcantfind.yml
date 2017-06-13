@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "support/talk-community\r\nsupport/knowledge-base"
+    pages: "/support/talk-community\r\n/support/knowledge-base"
     negate: false
     context_mapping: {  }
