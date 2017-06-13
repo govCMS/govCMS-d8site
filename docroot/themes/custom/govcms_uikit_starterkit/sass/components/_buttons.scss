@@ -1,0 +1,22 @@
+//
+// @file
+// Extends for button styles to override where needed.
+//
+
+%uikit-btn {
+  color: $white;
+}
+
+%uikit-btn-bg-none {
+  background: none;
+  border: 1px solid $white;
+  color: $white;
+
+  &:hover {
+    background: $uikit-colour-Link;
+  }
+}
+
+%uikit-btn-sm {
+  padding: 0.5em 1em;
+}

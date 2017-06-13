@@ -56,6 +56,7 @@ function govcms_uikit_base_preprocess_menu(&$variables) {
 function govcms_uikit_base_preprocess_block(&$variables) {
   // Custom block type helper classes.
   if (isset($variables['elements']['content']['#block_content'])) {
+    $variables['entity'] = $variables['elements']['content']['#block_content'];
     $bundle = $variables['elements']['content']['#block_content']->bundle();
     $bundle_class = str_replace('_', '-', $bundle);
     if (isset($variables['attributes']['class'])) {
@@ -72,5 +73,17 @@ function govcms_uikit_base_preprocess_node(&$variables) {
   // Helper variables for multiple nodes.
   if (!empty($variables['elements']['#entity_type'])) {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('entity--type-' . $variables['elements']['#entity_type']);
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function govcms_uikit_base_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  // Add a suggestion for the custom block type.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    /** @var \Drupal\block\Entity\Block $block */
+    $block = $variables['elements']['content']['#block_content'];
+    array_unshift($suggestions, 'block__' . $block->bundle());
   }
 }

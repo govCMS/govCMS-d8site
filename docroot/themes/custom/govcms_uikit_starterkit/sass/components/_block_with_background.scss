@@ -1,0 +1,63 @@
+//
+// @file
+// Block with background styles.
+//
+
+%block-bg-fonts {
+  $font-colour: $white;
+
+  h1 { color: $font-colour; }
+  h3 { color: $font-colour; }
+  h4 { color: $font-colour; }
+  h5 { color: $font-colour; }
+
+  p {
+    color: $font-colour;
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+
+  h2 {
+    color: $font-colour;
+    font-size: 24px;
+  }
+}
+
+%block-bg-btns {
+  .uikit-btn {
+    @extend %uikit-btn;
+    @extend %uikit-btn-sm;
+
+    color: $white;
+
+    &:not(.uikit-btn--secondary) {
+      @extend %uikit-btn-bg-none;
+    }
+  }
+}
+
+.block--background-primary {
+  @extend %block-bg-fonts;
+  @extend %block-bg-btns;
+
+  &.block--background--direction-vertical {
+    @include gradient-vertical($uikit-colour-Hero, $uikit-colour-Primary);
+  }
+
+  &.block--background--direction-horizontal {
+    @include gradient-horizontal($uikit-colour-Hero, $uikit-colour-Primary);
+  }
+}
+
+.block--background-secondary {
+  @extend %block-bg-fonts;
+  @extend %block-bg-btns;
+
+  &.block--background--direction-vertical {
+    @include gradient-vertical($uikit-colour-Secondary, $uikit-colour-Background);
+  }
+
+  &.block--background--direction-horizontal {
+    @include gradient-horizontal($uikit-colour-Secondary, $uikit-colour-Background);
+  }
+}
