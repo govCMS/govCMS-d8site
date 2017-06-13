@@ -1,0 +1,20 @@
+//
+// @file
+// Styles relating to section after the content block.
+//
+
+.post-content {
+  text-align: center;
+
+  .block {
+    overflow: hidden;
+    padding: uikit-space(2) 0 uikit-space(1.5);
+  }
+
+  #block-govcms-uikit-starterkit-calltoactionreadytogo {
+    .uikit-btn {
+      top: -0.3em;
+      position: relative;
+    }
+  }
+}
