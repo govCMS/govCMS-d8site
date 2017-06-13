@@ -1,0 +1,9 @@
+# Ignore theme build artifacts.
+css
+sass/*uikit.scss
+node_modules
+styleguide
+npm-debug.log
+
+# Directory-based project formats:
+.idea/
