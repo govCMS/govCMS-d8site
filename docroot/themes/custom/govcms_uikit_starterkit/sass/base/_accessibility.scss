@@ -1,0 +1,9 @@
+//
+// @file
+// Styles that relate to helping accessibility of content.
+//
+a[rel~='external'] {
+  &.hide-external::after {
+    display: none;
+  }
+}

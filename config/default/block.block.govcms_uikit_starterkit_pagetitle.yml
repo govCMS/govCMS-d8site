@@ -1,0 +1,18 @@
+uuid: c3b703e4-db6b-409d-bb95-543a898a2924
+langcode: en
+status: true
+dependencies:
+  theme:
+    - govcms_uikit_starterkit
+id: govcms_uikit_starterkit_pagetitle
+theme: govcms_uikit_starterkit
+region: pre_content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: 879026d1-b479-4a6b-9c2e-503798c0969e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_with_background:e1caf220-07dd-4a8a-890d-896aecee5088'
+  module:
+    - block_content
+    - system
+  theme:
+    - govcms_uikit_base
+id: govcms_uikit_base_calltoactionreadytogo
+theme: govcms_uikit_base
+region: post_content
+weight: -3
+provider: null
+plugin: 'block_content:e1caf220-07dd-4a8a-890d-896aecee5088'
+settings:
+  id: 'block_content:e1caf220-07dd-4a8a-890d-896aecee5088'
+  label: 'Call to action: Ready to go'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/support/talk-community\r\n/support/knowledge-base\r\n/features\r\n"
+    negate: true
+    context_mapping: {  }

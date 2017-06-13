@@ -1,0 +1,25 @@
+uuid: 4faaff47-5c7d-47fd-8460-7ba51136b372
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - govcms_uikit_base
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: govcms_uikit_base_branding
+theme: govcms_uikit_base
+region: branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

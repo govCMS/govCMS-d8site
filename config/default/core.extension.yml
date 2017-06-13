@@ -117,6 +117,8 @@ theme:
   govcmsui: 0
   cog: 0
   govcms: 0
+  govcms_uikit_base: 0
+  govcms_uikit_starterkit: 0
 profile: lightning
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -1,0 +1,22 @@
+uuid: 78a7654c-2484-48fd-a7b6-0edb06888d1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - govcms_uikit_starterkit
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: govcms_uikit_starterkit_help
+theme: govcms_uikit_starterkit
+region: content
+weight: -1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

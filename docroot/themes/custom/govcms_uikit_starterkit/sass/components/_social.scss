@@ -1,0 +1,17 @@
+//
+// @file
+// Styles for social links.
+//
+
+.social {
+  a {
+    border-bottom: none;
+    color: $uikit-colour-Hero;
+    text-decoration: none;
+
+    &:hover {
+      background: none;
+      color: $uikit-colour-Primary;
+    }
+  }
+}
