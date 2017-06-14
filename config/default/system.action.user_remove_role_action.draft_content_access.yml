@@ -1,0 +1,14 @@
+uuid: e5a525ac-7936-4f6c-b8ed-8d538881e378
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.draft_content_access
+  module:
+    - user
+id: user_remove_role_action.draft_content_access
+label: 'Remove the Draft content access role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: draft_content_access

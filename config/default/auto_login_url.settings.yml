@@ -1,0 +1,6 @@
+secret: qBGnzY59kgEqtVladNLWg4MhEwL05mgHU2SXh2dSPZ9jWyrZu0xXtpBRZjbu1rEk
+expiration: 2592000
+delete: false
+token_length: 64
+_core:
+  default_config_hash: gc2e5HZ1VFTAxYuLWgCnHw08cwwQpNB0akfTl3eTesQ

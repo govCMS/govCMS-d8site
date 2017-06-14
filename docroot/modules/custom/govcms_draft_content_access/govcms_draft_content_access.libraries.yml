@@ -1,0 +1,9 @@
+govcms-dca:
+  js:
+    js/clipboard.min.js: {}  
+    js/govcms_dca.js : {}
+  theme:
+    css/govcms_dca.css: {}
+  dependencies:
+    - core/jquery.once
+    

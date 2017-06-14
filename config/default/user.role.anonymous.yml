@@ -11,4 +11,5 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access site-wide contact form'
+  - 'use auto login url'
   - 'view media'

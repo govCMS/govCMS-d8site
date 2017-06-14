@@ -1,0 +1,113 @@
+<?php
+
+/**
+ * @file
+ * Contains govCMS Draft content access install module.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_install().
+ */
+function govcms_draft_content_access_install() {
+
+  // Create user on module install with Draft content access role.
+  // Get existing roles on the system.
+  $system_roles = user_role_names(TRUE);
+
+  // Create user but make sure role Draft content access role created.
+  if (!empty($system_roles) && array_key_exists('draft_content_access', $system_roles)) {
+
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $user = User::create();
+    $user_name = 'autologin';
+    $user_email = 'autologin@govcms.com.au';
+    $user_role = 'draft_content_access';
+    $user_password = uniqid();
+
+    // Mandatory fields.
+    $user->setPassword($user_password);
+    $user->enforceIsNew();
+    $user->setEmail($user_email);
+    $user->setUsername($user_name);
+
+    // Additional fields.
+    $user->set('init', 'email');
+    $user->set('langcode', $language);
+    $user->set('preferred_langcode', $language);
+    $user->set('preferred_admin_langcode', $language);
+    $user->addRole($user_role);
+    $user->activate();
+
+    // Save user account and log it.
+    $user_obj = $user->save();
+
+    if ($user_obj) {
+      \Drupal::logger('govcms_draft_content_access')->notice(
+        'Autologin user created with Username: @username, Email: @email, Password: @password, and Role: @role.', [
+          '@username' => $user_name,
+          '@email' => $user_email,
+          '@password' => $user_password,
+          '@role' => $user_role,
+        ]
+      );
+    }
+  }
+}
+
+/**
+ * Implements hook_schema().
+ */
+function govcms_draft_content_access_schema() {
+  $schema['auto_login_url_govcms'] = [
+    'description' => 'Auto login generated hash records.',
+    'fields' => [
+      'id' => [
+        'description' => 'ID of the record.',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Primary Key: {users}.uid for user.',
+      ],
+      'hash' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => FALSE,
+        'default' => '',
+        'description' => 'Unique hash tag for the generated link.',
+      ],
+      'destination' => [
+        'type' => 'varchar',
+        'length' => 1000,
+        'not null' => FALSE,
+        'default' => '',
+        'description' => 'The destination after user login.',
+      ],
+      'timestamp' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Timestamp of the creation of the auto login link.',
+      ],
+    ],
+    'indexes' => [
+      'hash_index' => ['hash'],
+      'timestamp_index' => ['timestamp'],
+    ],
+    'primary key' => ['id'],
+    'foreign keys' => [
+      'user' => [
+        'table' => 'users',
+        'columns' => ['uid' => 'uid'],
+      ],
+    ],
+  ];
+
+  return $schema;
+}

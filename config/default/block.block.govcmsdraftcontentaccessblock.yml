@@ -1,0 +1,20 @@
+uuid: 62c2a1a6-2cd8-4cb3-935c-561227082480
+langcode: en
+status: true
+dependencies:
+  module:
+    - govcms_draft_content_access
+  theme:
+    - govcms_uikit_starterkit
+id: govcmsdraftcontentaccessblock
+theme: govcms_uikit_starterkit
+region: pre_content
+weight: 0
+provider: null
+plugin: govcms_draft_content_access_block
+settings:
+  id: govcms_draft_content_access_block
+  label: 'govCMS Draft Content Access Block'
+  provider: govcms_draft_content_access
+  label_display: '0'
+visibility: {  }
