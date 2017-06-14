@@ -24,7 +24,7 @@ class GovcmsDraftContentAccessBlock extends BlockBase {
     // Provide default build markup to resolve cache issue.
     $build = [
       '#type' => 'markup',
-      '#markup' => $this->t('Content must be in a draft state to generate a tokenised link.'),
+      '#markup' => '',
       '#cache' => [
         'max-age' => 0,
       ],
