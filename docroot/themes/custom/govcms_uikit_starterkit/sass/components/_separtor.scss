@@ -1,0 +1,20 @@
+//
+// @file
+// Separators for govcms.gov.au.
+//
+
+.separator {
+  position: relative;
+
+  &.separator--plus::after {
+    position: absolute;
+    top: -0.85em;
+    left: calc(50% - 0.38em);
+    background-color: $white;
+    color: $uikit-colour-Hero;
+    font-size: 2em;
+    content: '+';
+    z-index: 2;
+    width: 1em;
+  }
+}
