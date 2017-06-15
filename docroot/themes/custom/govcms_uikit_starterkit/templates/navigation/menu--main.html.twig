@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ */
+#}
+{% import _self as menus %}
+
+<div class="cd-morph-dropdown">
+  <button class="uikit-btn nav-trigger toc-filter-processed"><span class="menu-text">Menu</span><span class="icon" aria-hidden="true"></span></button>
+  <nav class="main-nav">
+    {#
+      We call a macro which calls itself to render the full tree.
+      @see http://twig.sensiolabs.org/doc/tags/macro.html
+    #}
+    {{ menus.menu_links(items, attributes, 0) }}
+  </nav>
+  <div class="morph-dropdown-wrapper">
+    <div class="dropdown-list">
+      <ul>
+      {% set sub_attributes = create_attribute() %}
+      {% for item in items %}
+          {% if item.below %}
+            <li id="main-menu-{{ item.title|clean_class }}" class="dropdown links">
+              {{ link(item.title, item.url, {'class': ['label']}) }}
+              <div class="dd-content">
+                {{ menus.menu_links(item.below, sub_attributes, 1) }}
+              </div>
+            </li>
+          {% else %}
+            <li>
+              {{ link(item.title, item.url, {'class': ['label']}) }}
+            </li>
+          {% endif %}
+      {% endfor %}
+      </ul>
+      <div class="bg-layer" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass(['menu']) }}>
+    {% else %}
+      <ul class="menu">
+    {% endif %}
+      {% for item in items %}
+        {% if item.below and menu_level == 0 %}
+          <li{{ item.attributes.addClass(['has-dropdown', 'links']) }} data-content="main-menu-{{ item.title|clean_class }}">
+        {% else %}
+          <li{{ item.attributes }}>
+        {% endif %}
+          {{ link(item.title, item.url, (item.has_button_class ? {'class': ['uikit-btn', 'uikit-btn--tertiary']} : {})) }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

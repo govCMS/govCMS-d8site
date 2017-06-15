@@ -10,7 +10,10 @@ global_styles:
       css/styles.css: {}
   js:
     js/external_links.js: {}
+    js/morph_dropdown.js: {}
     js/uikit.min.js: {}
+  dependencies:
+    - core/jquery
 
 uikit:
   version: 2.0
