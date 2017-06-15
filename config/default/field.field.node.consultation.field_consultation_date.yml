@@ -1,0 +1,23 @@
+uuid: 6c3ff441-3039-47dc-aad5-2d0e37d614af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultation_date
+    - node.type.consultation
+  module:
+    - datetime_range
+_core:
+  default_config_hash: TKulHK-mMuPmWWWhX5yiT4oHZruePMCII4Si29zOoHA
+id: node.consultation.field_consultation_date
+field_name: field_consultation_date
+entity_type: node
+bundle: consultation
+label: 'Consultation Date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

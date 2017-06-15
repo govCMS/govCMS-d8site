@@ -31,6 +31,7 @@ field_settings:
           knowledge_base: default
           pricing_plan: default
           news_article: default
+          consultation: default
   label:
     label: Label
     property_path: aggregated_field

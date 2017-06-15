@@ -1,0 +1,21 @@
+uuid: b6b916c0-f80b-44d8-9c53-47712639eb1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: VgeNXHbDKXfVGpnxoHBfkfsSjYXwDkZuRCbYWzVD9GY
+id: node.field_consultation_summary
+field_name: field_consultation_summary
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,20 @@
+uuid: f7de3091-3813-4d4c-8e4a-15e85e60c50d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dGHjqq87DW6k5cSu5SPBJ6Mpo8D9YFe3v0QHgGvlgko
+id: consultation_reviewer
+label: 'Consultation reviewer'
+weight: 18
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any consultation content'
+  - 'edit any consultation content'
+  - 'use draft_published transition'
+  - 'use needs_review_draft transition'
+  - 'use needs_review_published transition'
+  - 'use published_archived transition'
+  - 'use published_published transition'
+  - 'view moderation states'

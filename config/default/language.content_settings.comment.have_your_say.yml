@@ -1,0 +1,13 @@
+uuid: b8193b0d-cba8-4549-8eaa-069dfea076ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.have_your_say
+_core:
+  default_config_hash: OH2L7c0dAcT0t_omyxMlaWnchT7zIqyuZwKv2OhCA3Q
+id: comment.have_your_say
+target_entity_type_id: comment
+target_bundle: have_your_say
+default_langcode: site_default
+language_alterable: false

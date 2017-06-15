@@ -14,6 +14,7 @@ module:
   ctools: 0
   ctools_block: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   devel: 0
   diff: 0
@@ -30,6 +31,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  govcms_consultation: 0
   govcms_dlm: 0
   govcms_linkit: 0
   govcms_password_policy: 0
