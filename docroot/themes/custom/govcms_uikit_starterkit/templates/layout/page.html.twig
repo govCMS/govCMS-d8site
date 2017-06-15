@@ -1,42 +1,42 @@
 <div{{ attributes.setAttribute('id', 'pg__c') }}>
 
+  <div class="uikit-header">
+    <!-- ______________________ BRANDING _______________________ -->
 
-  <!-- ______________________ BRANDING _______________________ -->
-
-  <header id="branding">
-    <div class="cog--mq">
-      {% if page.branding %}
-        <div id="branding-region">
-          {{ page.branding }}
-        </div>
-      {% endif %}
-    </div>
-  </header>
-  <!-- /branding -->
-
-
-  <!-- ______________________ HEADER _______________________ -->
-
-  <header id="header" class="uikit-header">
-    <div class="cog--mq">
-      {% if page.header %}
-        <div id="header-region">
-          {{ page.header }}
-        </div>
-      {% endif %}
-    </div>
-  </header>
-  <!-- /header -->
-
-  <!-- ______________________ Pre content _______________________ -->
-  {% if page.pre_content %}
-    <div class="clearfix pre-content" id="pre-content">
+    <header id="branding">
       <div class="cog--mq">
-        {{ page.pre_content }}
+        {% if page.branding %}
+          <div id="branding-region">
+            {{ page.branding }}
+          </div>
+        {% endif %}
       </div>
-    </div>
-  {% endif %}
+    </header>
+    <!-- /branding -->
 
+
+    <!-- ______________________ HEADER _______________________ -->
+
+    <header id="header">
+      <div class="cog--mq">
+        {% if page.header %}
+          <div id="header-region">
+            {{ page.header }}
+          </div>
+        {% endif %}
+      </div>
+    </header>
+    <!-- /header -->
+
+    <!-- ______________________ Pre content _______________________ -->
+    {% if page.pre_content %}
+      <div class="clearfix pre-content" id="pre-content">
+        <div class="cog--mq">
+          {{ page.pre_content }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
   <!-- ______________________ MAIN _______________________ -->
 
   <div class="clearfix" id="main">
