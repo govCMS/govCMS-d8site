@@ -250,7 +250,7 @@ class GovcmsDraftContentAccessBlock extends BlockBase implements ContainerFactor
         '#empty' => $this->t('No autologin link found for this node.'),
         '#suffix' => render($generate_url),
         '#attached' => [
-          'library' => ['govcms_draft_content_access/ea-dca'],
+          'library' => ['govcms_draft_content_access/govcms-dca'],
         ],
         '#cache' => [
           'max-age' => 0,

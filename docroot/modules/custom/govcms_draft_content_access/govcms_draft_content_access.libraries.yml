@@ -5,5 +5,5 @@ govcms-dca:
   theme:
     css/govcms_dca.css: {}
   dependencies:
+    - core/drupal
     - core/jquery.once
-    
