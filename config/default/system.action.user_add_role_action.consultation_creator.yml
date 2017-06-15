@@ -1,0 +1,16 @@
+uuid: c601277e-11d8-4925-94df-a364677b0ddd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.consultation_creator
+  module:
+    - user
+_core:
+  default_config_hash: pILVBF6W-z9jQt0pFDi7X1uCB8tnOVHsblx6FB6ZvX0
+id: user_add_role_action.consultation_creator
+label: 'Add the Consultation creator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: consultation_creator

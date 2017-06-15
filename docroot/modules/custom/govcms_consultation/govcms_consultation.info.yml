@@ -1,0 +1,9 @@
+name: 'govCMS Consultation'
+description: 'Provides a Consultation for accepting submissions.'
+type: module
+core: 8.x
+dependencies:
+  - node
+  - comment
+  - datetime_range
+version: 8.x-1.0

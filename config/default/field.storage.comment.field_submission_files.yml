@@ -1,0 +1,25 @@
+uuid: eaa351a2-5276-49eb-a1a9-75acd5266903
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - file
+_core:
+  default_config_hash: q0uV8cypZK8ZksZkCCeKHCbnxBTaKoZcY4KCsLVIavw
+id: comment.field_submission_files
+field_name: field_submission_files
+entity_type: comment
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

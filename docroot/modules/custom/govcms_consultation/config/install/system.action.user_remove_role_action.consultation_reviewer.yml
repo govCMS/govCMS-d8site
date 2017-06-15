@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.consultation_reviewer
+  module:
+    - user
+id: user_remove_role_action.consultation_reviewer
+label: 'Remove the Consultation reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: consultation_reviewer

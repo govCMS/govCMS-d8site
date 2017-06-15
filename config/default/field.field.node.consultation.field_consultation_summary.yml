@@ -1,0 +1,23 @@
+uuid: 8e653a94-c8a0-417a-9b47-adf6be308f2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultation_summary
+    - node.type.consultation
+  module:
+    - text
+_core:
+  default_config_hash: ntimWcjqkG_YRH8FPOrWAqtWmzWtxY-OrBdks-pkIs4
+id: node.consultation.field_consultation_summary
+field_name: field_consultation_summary
+entity_type: node
+bundle: consultation
+label: 'Consultation Summary'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

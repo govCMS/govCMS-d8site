@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.have_your_say
+    - field.storage.comment.field_submission_files
+  module:
+    - file
+id: comment.have_your_say.field_submission_files
+field_name: field_submission_files
+entity_type: comment
+bundle: have_your_say
+label: 'Submission Files'
+description: 'You can attach up to 4 submission files.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'have-your-say/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf doc docx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
