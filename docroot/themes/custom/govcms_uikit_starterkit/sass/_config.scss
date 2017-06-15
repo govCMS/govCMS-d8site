@@ -434,11 +434,3 @@ body {
 
   @extend .tmp-shadow;
 }
-
-@mixin clearfix {
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
-  }
-}

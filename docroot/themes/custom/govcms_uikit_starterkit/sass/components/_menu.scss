@@ -315,7 +315,7 @@
 
     > ul {
       @include uikit-media("sm") {
-        @include clearfix;
+        @include uikit-clearfix;
       }
     }
 
@@ -326,7 +326,7 @@
     }
 
     li {
-      @include clearfix;
+      @include uikit-clearfix;
     }
 
     h2 {
