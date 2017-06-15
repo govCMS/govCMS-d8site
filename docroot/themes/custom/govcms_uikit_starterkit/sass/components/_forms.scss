@@ -1,0 +1,14 @@
+//
+// @file
+// Form specific Drupal overrides for UI Kit.
+//
+
+//
+.container-inline {
+  overflow: hidden;
+  
+  input, p {
+    display: inline-block;
+    float: left;
+  }
+}
