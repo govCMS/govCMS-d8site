@@ -3,7 +3,15 @@
 namespace Drupal\govcms_draft_content_access\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Database\Connection;
+use Drupal\Core\Datetime\DateFormatterInterface;
+use Drupal\Core\Entity\EntityStorageInterface;
+use Drupal\Core\Path\CurrentPathStack;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Url;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provide govCMS Draft Content Access Block.
@@ -14,7 +22,81 @@ use Drupal\Core\Url;
  *   category = @Translation("govCMS"),
  * )
  */
-class GovcmsDraftContentAccessBlock extends BlockBase {
+class GovcmsDraftContentAccessBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
+  /**
+   * User entity storage service.
+   *
+   * @var \Drupal\Core\Entity\EntityStorageInterface
+   */
+  protected $userStorage;
+
+  /**
+   * Current route match service.
+   *
+   * @var \Drupal\Core\Routing\RouteMatchInterface
+   */
+  protected $currentRouteMatch;
+
+  /**
+   * Config Factory service.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected $configFactory;
+
+  /**
+   * Current path service.
+   *
+   * @var \Drupal\Core\Path\CurrentPathStack
+   */
+  protected $currentPath;
+
+  /**
+   * Database connection service.
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $connection;
+
+  /**
+   * Date formatter service.
+   *
+   * @var \Drupal\Core\Datetime\DateFormatterInterface
+   */
+  protected $dateFormatter;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityStorageInterface $user_storage, RouteMatchInterface $current_route_match, ConfigFactoryInterface $config_factory, CurrentPathStack $current_path, Connection $connection, DateFormatterInterface $date_formatter) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->userStorage = $user_storage;
+    $this->currentRouteMatch = $current_route_match;
+    $this->configFactory = $config_factory;
+    $this->currentPath = $current_path;
+    $this->connection = $connection;
+    $this->dateFormatter = $date_formatter;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    /** @var \Drupal\Core\Entity\EntityManagerInterface $entity_manager */
+    $entity_manager = $container->get('entity.manager');
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $entity_manager->getStorage('user'),
+      $container->get('current_route_match'),
+      $container->get('config.factory'),
+      $container->get('path.current'),
+      $container->get('database'),
+      $container->get('date.formatter')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -31,7 +113,7 @@ class GovcmsDraftContentAccessBlock extends BlockBase {
     ];
 
     // Get node and it's moderation state.
-    $node = \Drupal::routeMatch()->getParameter('node');
+    $node = $this->currentRouteMatch->getParameter('node');
     if ($node) {
       $moderation_value = $node->get('moderation_state')->getValue();
       $moderation_state = reset($moderation_value);
@@ -39,19 +121,18 @@ class GovcmsDraftContentAccessBlock extends BlockBase {
         $system_roles = user_role_names(TRUE);
         // Make sure role already created, no check on module permission.
         if (array_key_exists('draft_content_access', $system_roles)) {
-          $autologin_config = \Drupal::config('auto_login_url.settings');
+          $autologin_config = $this->configFactory->get('auto_login_url.settings');
           $autologin_config_expired = $autologin_config->get('expiration');
 
-          $user = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties(['name' => 'autologin']);
+          $user = $this->userStorage->loadByProperties(['name' => 'autologin']);
 
           if (!empty($user)) {
             $uid_data = array_keys($user);
             $uid = reset($uid_data);
-            $destination = \Drupal::service('path.current')->getPath();
+            $destination = $this->currentPath->getPath();
 
             // Check existing data or create new autologin link.
-            $connection = \Drupal::database();
-            $query = $connection->select('auto_login_url_govcms', 'a');
+            $query = $this->connection->select('auto_login_url_govcms', 'a');
             $query->fields('a');
             $query->condition('uid', $uid, '=');
             $query->condition('destination', ltrim($destination, "/"), '=');
@@ -72,7 +153,7 @@ class GovcmsDraftContentAccessBlock extends BlockBase {
 
               foreach ($result as $row) {
                 $date_interval = ($row->timestamp + $autologin_config_expired) - time();
-                $date_format_interval = ($date_interval < 0) ? $this->t('Expired') : \Drupal::service('date.formatter')->formatInterval($date_interval);
+                $date_format_interval = ($date_interval < 0) ? $this->t('Expired') : $this->dateFormatter->formatInterval($date_interval);
 
                 $autologin_link = Url::fromRoute('auto_login_url.login', [
                   'uid' => $uid,
