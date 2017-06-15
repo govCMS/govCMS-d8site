@@ -2,7 +2,10 @@
 
 namespace Drupal\govcms_draft_content_access\Controller;
 
+use Drupal\auto_login_url\AutoLoginUrlCreate;
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Database\Connection;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
@@ -11,22 +14,50 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 class GovcmsDraftContentAccessController extends ControllerBase {
 
   /**
+   * The Auto Login URL Create service.
+   *
+   * @var \Drupal\auto_login_url\AutoLoginUrlCreate
+   */
+  protected $aluCreate;
+
+  /**
+   * The Database Connection service.
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $connection;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(AutoLoginUrlCreate $alu_create, Connection $connection) {
+    $this->aluCreate = $alu_create;
+    $this->connection = $connection;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('auto_login_url.create'),
+      $container->get('database')
+    );
+  }
+
+  /**
    * {@inheritdoc}
    */
   public function generatelink($uid, $destination) {
 
     $destination = str_replace("-", "/", $destination);
-    /** @var \Drupal\auto_login_url\AutoLoginUrlCreate $alu_service */
-    $alu_service = \Drupal::service('auto_login_url.create');
     $alu_destination = ltrim($destination, "/");
-    $auto_login_url = $alu_service->create($uid, $alu_destination, TRUE);
+    $auto_login_url = $this->aluCreate->create($uid, $alu_destination, TRUE);
 
     // Add generated hash to ea alu table.
     $alu_ea_hash = explode("/", $auto_login_url);
 
-    $connection = \Drupal::database();
-
-    $alu_ea_insert = $connection->insert('auto_login_url_govcms')
+    $this->connection->insert('auto_login_url_govcms')
       ->fields(['uid', 'hash', 'destination', 'timestamp'])
       ->values([
         'uid' => $uid,
@@ -50,14 +81,13 @@ class GovcmsDraftContentAccessController extends ControllerBase {
     $config = \Drupal::config('auto_login_url.settings');
 
     // Delete record based on hash url table.
-    $connection = \Drupal::database();
-    $alu_ea_delete_record = $connection->delete('auto_login_url_govcms')
+    $this->connection->delete('auto_login_url_govcms')
       ->condition('hash', [$hash])
       ->execute();
 
     // Delete record based on alu hash table.
     $hash_db = hash('sha256', $hash . $config->get('secret'));
-    $alu_delete_record = $connection->delete('auto_login_url')
+    $this->connection->delete('auto_login_url')
       ->condition('hash', [$hash_db])
       ->execute();
 

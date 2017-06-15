@@ -200,33 +200,55 @@ class GovcmsDraftContentAccessBlock extends BlockBase implements ContainerFactor
           ],
         ]);
 
-        $rows[$row->id] = [
-          'link' => \Drupal::l($this->t('Copy'), $link_html),
-          'plain_link' => \Drupal::l($this->t('Right click and copy link'), $link_plain),
+        $rows[$row->id]['data'] = [
+          'link' => [
+            'data' => [
+              '#type' => 'link',
+              '#title' => $this->t('Copy'),
+              '#url' => $link_html,
+            ],
+          ],
+          'plain_link' => [
+            'data' => [
+              '#type' => 'link',
+              '#url' => $link_plain,
+              '#title' => $this->t('Right click and copy link'),
+            ],
+          ],
           'expired' => $date_format_interval,
-          'operation' => \Drupal::l($this->t('Revoke link'), $revoke_url),
+          'operation' => [
+            'data' => [
+              '#type' => 'link',
+              '#url' => $revoke_url,
+              '#title' => $this->t('Revoke link'),
+            ],
+          ],
         ];
       }
 
-      $generate_url = Url::fromRoute('govcms_draft_content_access.generatelink', [
-        'uid' => $uid,
-        'destination' => str_replace("/", "-", $destination),
-      ], [
-        'attributes' => [
-          'class' => [
-            'btn',
-            'btn-success',
+      $generate_url = [
+        '#type' => 'link',
+        '#url' => Url::fromRoute('govcms_draft_content_access.generatelink', [
+          'uid' => $uid,
+          'destination' => str_replace("/", "-", $destination),
+        ], [
+          'attributes' => [
+            'class' => [
+              'btn',
+              'btn-success',
+            ],
           ],
-        ],
-      ]);
+        ]),
+        '#title' => $this->t('Generate link'),
+      ];
 
       $build = [
-        '#prefix' => $this->t('<p>List of existing access link to this content. Click revoke to remove existing/expired link.</p>'),
+        '#prefix' => '<p>' . $this->t('List of existing access link to this content. Click revoke to remove existing/expired link.') . '</p>',
         '#type' => 'table',
         '#header' => $header,
         '#rows' => $rows,
         '#empty' => $this->t('No autologin link found for this node.'),
-        '#suffix' => \Drupal::l($this->t('Generate link'), $generate_url),
+        '#suffix' => render($generate_url),
         '#attached' => [
           'library' => ['govcms_draft_content_access/ea-dca'],
         ],
@@ -249,9 +271,10 @@ class GovcmsDraftContentAccessBlock extends BlockBase implements ContainerFactor
       ]);
 
       $build = [
-        '#prefix' => $this->t('<p>Click generate button to create access link to this content.</p>'),
-        '#type' => 'markup',
-        '#markup' => \Drupal::l($this->t('Generate link'), $generate_url),
+        '#prefix' => '<p>' . $this->t('Click generate button to create access link to this content.') . '</p>',
+        '#type' => 'link',
+        '#url' => $generate_url,
+        '#title' => $this->t('Generate link'),
         '#cache' => [
           'max-age' => 0,
         ],
