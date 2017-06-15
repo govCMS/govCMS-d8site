@@ -1,0 +1,8 @@
+uuid: ea73abc4-012a-40d5-8d10-7388fba7fe31
+langcode: en
+status: true
+dependencies: {  }
+id: have_your_say
+label: 'Have Your Say'
+target_entity_type_id: node
+description: 'Consultation formal submissions.'

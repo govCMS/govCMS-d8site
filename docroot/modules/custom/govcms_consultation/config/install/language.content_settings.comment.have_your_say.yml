@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.have_your_say
+id: comment.have_your_say
+target_entity_type_id: comment
+target_bundle: have_your_say
+default_langcode: site_default
+language_alterable: false

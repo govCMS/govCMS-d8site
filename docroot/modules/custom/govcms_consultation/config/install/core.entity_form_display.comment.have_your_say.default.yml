@@ -1,0 +1,42 @@
+uuid: 1ed062ca-ff98-49d4-a106-d2063cddaefc
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.have_your_say
+    - field.field.comment.have_your_say.field_anonymous
+    - field.field.comment.have_your_say.field_published_name
+    - field.field.comment.have_your_say.field_submission_files
+  module:
+    - file
+id: comment.have_your_say.default
+targetEntityType: comment
+bundle: have_your_say
+mode: default
+content:
+  field_anonymous:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_published_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_submission_files:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+hidden:
+  author: true
+  langcode: true
+  subject: true
