@@ -87,3 +87,19 @@ function govcms_uikit_base_theme_suggestions_block_alter(array &$suggestions, ar
     array_unshift($suggestions, 'block__' . $block->bundle());
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function govcms_uikit_base_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  array_unshift($suggestions, 'form_element__' . $variables['element']['#type']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function govcms_uikit_base_theme_suggestions_form_element_label_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#__element_type'])) {
+    $suggestions[] = 'form_element_label__' . $variables['element']['#__element_type'];
+  }
+}
