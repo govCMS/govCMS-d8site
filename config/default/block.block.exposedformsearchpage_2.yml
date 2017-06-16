@@ -1,0 +1,23 @@
+uuid: 20c618e6-9040-463b-878c-1bd035f8c3b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search
+  module:
+    - views
+  theme:
+    - govcms_uikit_starterkit
+id: exposedformsearchpage_2
+theme: govcms_uikit_starterkit
+region: header
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search-page'
+settings:
+  id: 'views_exposed_filter_block:search-page'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }
