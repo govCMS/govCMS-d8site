@@ -226,7 +226,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: '<div class="grid-item"><span class="int"><span class="fancyCounter do-fade faded counted">@total</span></span><h3>Live websites</h3></div>'
+          content: '<div class="grid-item"><span class="int"><span class="fancyCounter">@total</span></span><h3>Live websites</h3></div>'
           plugin_id: result
       empty: {  }
       relationships: {  }
@@ -347,7 +347,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: '<div class="grid-item"><span class="int"><span class="fancyCounter do-fade faded counted">@total</span></span><h3>In development</h3></div>'
+          content: '<div class="grid-item"><span class="int"><span class="fancyCounter">@total</span></span><h3>In development</h3></div>'
           plugin_id: result
       display_description: 'Display a count of the sites currently in development'
     cache_metadata:
