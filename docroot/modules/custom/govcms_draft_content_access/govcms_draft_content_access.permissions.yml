@@ -1,0 +1,4 @@
+use draft content access:
+  title: 'Use Draft content access'
+  description: 'Ability to revoke or generate draft access link'
+  restrict access: FALSE

@@ -13,4 +13,5 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'post comments'
+  - 'use auto login url'
   - 'view media'

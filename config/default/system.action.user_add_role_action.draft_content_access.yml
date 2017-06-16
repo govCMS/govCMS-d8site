@@ -1,0 +1,14 @@
+uuid: c094534f-031b-4c00-b008-83db2f1ff526
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.draft_content_access
+  module:
+    - user
+id: user_add_role_action.draft_content_access
+label: 'Add the Draft content access role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: draft_content_access
