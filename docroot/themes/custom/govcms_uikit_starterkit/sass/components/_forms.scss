@@ -3,12 +3,17 @@
 // Form specific Drupal overrides for UI Kit.
 //
 
-//
 .container-inline {
   overflow: hidden;
-  
-  input, p {
+
+  input,
+  p {
     display: inline-block;
     float: left;
+    margin-right: uikit-space(1);
   }
+}
+
+legend {
+  margin-bottom: uikit-space(1);
 }

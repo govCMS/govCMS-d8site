@@ -15,8 +15,8 @@
 
 {%
 set classes = [
-  'uikit-control-input__input',
+'uikit-control-input__input',
 ]
 %}
 
-<input{{ attributes.addClass(classes) }} aria-describedby="{{ element['#array_parents'][0] }}"/>{{ children }}
+<input{{ attributes.addClass(classes) }} />{{ children }}
