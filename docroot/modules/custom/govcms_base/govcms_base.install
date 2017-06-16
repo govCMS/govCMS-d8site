@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Provides install & update hooks for the govCMS Base module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function govcms_base_install() {
+  _expand_menu_links_with_children();
+}
+
+/**
+ * Update menu links with children to display as expanded.
+ */
+function _expand_menu_links_with_children() {
+  $menu_tree = \Drupal::menuTree();
+  $menu_name = 'main';
+
+  // Build the typical default set of menu tree parameters.
+  $parameters = $menu_tree->getCurrentRouteMenuTreeParameters($menu_name);
+
+  // Load the tree based on this set of parameters.
+  $main_menu_tree = $menu_tree->load($menu_name, $parameters);
+  $ids_to_update = [];
+
+  /** @var \Drupal\Core\Menu\MenuLinkTreeElement $tree_element */
+  foreach ($main_menu_tree as $id => $tree_element) {
+    if ($tree_element->hasChildren) {
+      /** @var \Drupal\menu_link_content\Plugin\Menu\MenuLinkContent $link_content */
+      $link_content = $tree_element->link;
+      $definition = $link_content->getPluginDefinition();
+      if ($definition['expanded'] == 1) {
+        continue;
+      }
+      $ids_to_update[] = $id;
+    }
+  }
+
+  // Update the table directly to expand the menu links.
+  if (!empty($ids_to_update)) {
+    $connection = \Drupal::database();
+    $connection
+      ->update('menu_tree')
+      ->fields(['expanded' => 1])
+      ->condition('id', $ids_to_update, 'IN')
+      ->execute();
+  }
+}

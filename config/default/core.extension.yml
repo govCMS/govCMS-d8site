@@ -32,6 +32,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  govcms_base: 0
   govcms_consultation: 0
   govcms_dlm: 0
   govcms_draft_content_access: 0
