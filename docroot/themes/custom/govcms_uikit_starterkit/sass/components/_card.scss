@@ -1,0 +1,55 @@
+//
+// @file
+// Card styles for different elements.
+//
+
+%card-padding {
+  padding: uikit-space(1) uikit-space(0.7);
+}
+
+.card {
+  margin-bottom: 20px;
+  background-color: $white;
+  border: 1px solid $uikit-colour-Border;
+  border-radius: 4px;
+
+  .card-title {
+    @extend %card-padding;
+
+    background-color: $uikit-colour-Background;
+    border: none;
+
+    h3 {
+      color: $uikit-colour-Primary;
+      font-size: 200%;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+  }
+
+  .card-footer {
+    @extend %card-padding;
+
+    background: $uikit-colour-Background;
+    border-top: 1px solid $uikit-colour-Border;
+
+    &.inverted {
+      background: $uikit-colour-Primary;
+      color: $white;
+
+      [class*="uikit-display"] {
+        color: $white;
+      }
+    }
+  }
+
+  .card-content {
+    @extend %card-padding;
+
+    border-top: 1px solid $uikit-colour-Border;
+  }
+
+  [class*="uikit-display"] {
+    display: inline;
+  }
+}

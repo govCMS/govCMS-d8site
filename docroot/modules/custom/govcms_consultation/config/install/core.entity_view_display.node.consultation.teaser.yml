@@ -1,0 +1,21 @@
+uuid: b633c7ca-c9a6-4ee8-950d-d764485c97aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.consultation.field_consultation_summary
+    - node.type.consultation
+  module:
+    - user
+id: node.consultation.teaser
+targetEntityType: node
+bundle: consultation
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_consultation_summary: true
+  langcode: true

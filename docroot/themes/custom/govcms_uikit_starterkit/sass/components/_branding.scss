@@ -1,8 +1,108 @@
+#branding-region {
+  position: relative;
+}
+
 // logo values
-div.site-branding a.logo {
-  width: 105px;
-  display: block;
-  padding: 5px 5px 0;
-  float: left;
+.site-branding-logo {
+  width: 100%;
+  display: inline-block;
   margin-bottom: 5px;
+
+  @include uikit-media("sm") {
+    width: 100/3 * 1%;
+    float: left;
+  }
+
+  a.logo {
+    display: block;
+    width: 250px;
+    margin: auto;
+    border-bottom: 0;
+
+    @include uikit-media("sm") {
+      padding: 0;
+      margin-left: 43px;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: transparent;
+    }
+
+    img {
+      margin-left: 26px;
+      display: inline-block;
+      max-width: 74px;
+    }
+  }
+
+  .logo-coat-of-arms {
+    background-image: url(../images/crest.svg);
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    padding-top: 58px;
+    background-size: 70px 52px;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    .logo-coat-of-arms-title {
+      display: block;
+      font-family: Times New Roman, serif;
+      font-weight: 700;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+}
+
+#pre-content {
+  margin-top: 45px;
+
+  @include uikit-media("md") {
+    margin-top: 77px;
+  }
+
+  .region-pre-content {
+    max-width: 1000px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .page-title {
+      color: white;
+      line-height: 1.1em;
+      font-weight: 300;
+      text-align: center;
+      font-size: 42px;
+
+      @include uikit-media("md") {
+        font-size: 53.2px;
+      }
+    }
+
+    .field--name-field-summary {
+      text-align: center;
+      font-weight: 300;
+      line-height: 1.3em;
+      font-size: 16px;
+      margin-top: 46px;
+
+      @include uikit-media("md") {
+        font-size: 22px;
+        margin-top: 55px;
+      }
+
+      p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.site-branding-text {
+  display: none;
 }

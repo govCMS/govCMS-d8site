@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains install & update hooks for the govCMS Consultation module.
+ */
+
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function govcms_consultation_install() {
+  // Give permission to post & access comments to anonymous.
+  $role = Role::load('anonymous');
+  $role->grantPermission('access comments');
+  $role->grantPermission('post comments');
+  $role->save();
+}

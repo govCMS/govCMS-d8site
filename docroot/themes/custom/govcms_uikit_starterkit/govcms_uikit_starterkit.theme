@@ -131,3 +131,17 @@ function govcms_uikit_starterkit_form_node_form_alter(&$form, FormStateInterface
   $form['revision_information']['#type'] = 'container';
   $form['revision_information']['#group'] = 'meta';
 }
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function govcms_uikit_starterkit_preprocess_menu(&$variables) {
+  // UI Kit.
+  if ($variables['menu_name'] === 'main') {
+    foreach ($variables['items'] as $key => $value) {
+      if ($value['title'] == "Apply now") {
+        $variables['items'][$key]['has_button_class'] = TRUE;
+      }
+    }
+  }
+}

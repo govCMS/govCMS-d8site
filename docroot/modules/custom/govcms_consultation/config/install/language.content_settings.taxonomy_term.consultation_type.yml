@@ -1,0 +1,11 @@
+uuid: c691e32f-85e4-4172-baa6-2e6059c52e35
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.consultation_type
+id: taxonomy_term.consultation_type
+target_entity_type_id: taxonomy_term
+target_bundle: consultation_type
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,435 @@
+.menu--main {
+  .uikit-link-list {
+    margin-top: 10px;
+    float: right;
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      color: $white;
+      padding: 10px 15px;
+      font-size: 17.5px;
+
+      &:not(.uikit-btn) {
+        border-bottom: 1px solid transparent;
+      }
+
+      &:hover {
+        border-bottom: 1px solid $white;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+
+      &.is-active {
+        font-weight: 700;
+        border-bottom: 1px solid $uikit-colour-Secondary-80;
+      }
+
+      &.uikit-btn {
+        background-color: transparent;
+        border-color: $white;
+        color: $white;
+        padding: 8px 14px;
+        margin: 2px auto;
+        border-radius: 4px;
+        font-weight: normal;
+
+        &:focus,
+        &:hover {
+          background-color: rgba($white, 0.95);
+          border-color: $uikit-colour-Secondary-80;
+          color: $uikit-colour-Secondary--40;
+        }
+      }
+    }
+  }
+}
+
+.uikit-header {
+  font-family: $uikit-font;
+  background-color: $uikit-colour-Secondary-80;
+  background-image: linear-gradient(11deg, $uikit-colour-Secondary-80, $uikit-colour-Primary--10);
+  background-size: cover;
+  padding-top: 11px;
+  padding-bottom: 17px;
+}
+
+// =========================================================
+// MORPH
+// =========================================================
+.cd-morph-dropdown {
+  position: relative;
+  height: 60px;
+  background-color: rgba($white, 0.95);
+  clear: both;
+  margin-top: 2em;
+  margin-left: 15px;
+  margin-right: 15px;
+
+  @include uikit-media("sm") {
+    height: 80px;
+    right: 0;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  @include uikit-media("md") {
+    position: absolute;
+  }
+
+  &::before {
+    // Never visible - used in JS to check mq
+    content: 'mobile';
+    display: none;
+
+    @include uikit-media("sm") {
+      content: 'desktop';
+    }
+  }
+
+  .nav-trigger {
+    // menu icon - visible on small screens only
+    width: 100%;
+    display: block;
+    min-height: 60px;
+    position: absolute;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+
+    @include uikit-media("sm") {
+      display: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    .menu-text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 38px;
+      text-align: center;
+      font-size: 10.36px;
+      color: black;
+    }
+
+    span.icon,
+    span.icon::after,
+    span.icon::before {
+      // these are the 3 lines of the menu icon
+      position: absolute;
+      background-color: $uikit-colour-Border--70;
+      height: 3px;
+      width: 26px;
+    }
+
+    span.icon {
+      left: 50%;
+      top: 40%;
+      bottom: auto;
+      right: auto;
+      transform: translateX(-50%) translateY(-50%);
+      transition: background-color 0.3s;
+    }
+
+    span.icon::after,
+    span.icon::before {
+      content: '';
+      left: 0;
+      transition: transform 0.3s;
+    }
+
+    span.icon::before {
+      transform: translateY(-9px);
+    }
+
+    span.icon::after {
+      transform: translateY(9px);
+    }
+  }
+
+  &.nav-open {
+    background-color: rgba($white, 0.85);
+
+    .nav-trigger span {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .main-nav {
+    display: none;
+
+    @include uikit-media("sm") {
+      display: inline-block;
+    }
+  }
+
+  .morph-dropdown-wrapper {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1.2em 5%;
+    box-sizing: border-box;
+    background-color: rgba($white, 0.95);
+    z-index: 3;
+
+    @include uikit-media("sm") {
+      // dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden
+      display: block;
+      top: 6em;
+      // overwrite mobile style
+      width: auto;
+      padding: 0;
+      box-shadow: none;
+      background-color: transparent;
+      // Force Hardware acceleration
+      will-change: transform;
+      transform: translateY(20px);
+      transition: transform 0.3s;
+    }
+  }
+
+  &.nav-open .morph-dropdown-wrapper {
+    display: block;
+    border: 1px solid $uikit-colour-Secondary-80;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .dropdown-list {
+    @include uikit-media("sm") {
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      transform: translateZ(0);
+      will-change: transform, width, height;
+      transition: visibility 0.3s;
+      box-shadow: 0 10px 20px rgba($blk, 0.08);
+    }
+
+    ul {
+      list-style: none;
+
+      a {
+        text-align: left;
+        padding-left: 0;
+        font-size: 17.5px;
+      }
+
+      h2 {
+        margin-left: 0;
+      }
+    }
+
+    > ul {
+      padding-left: 0;
+
+      > li {
+        margin-bottom: 3em;
+
+        ul {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .no-csstransitions & {
+      @include uikit-media("sm") {
+        display: none;
+      }
+    }
+
+    &::before {
+      @include uikit-media("sm") {
+        // dropdown top triangle
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        height: 0;
+        width: 0;
+        border: 8px solid transparent;
+        border-bottom-color: $white;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+    }
+
+    > ul {
+      @include uikit-media("sm") {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .label {
+    display: block;
+    margin-bottom: 0.5em;
+    padding: 0.2em 0.6em 0.3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: $uikit-colour-Text;
+    text-align: center;
+
+    @include uikit-media("sm") {
+      display: none;
+    }
+  }
+
+  .dd-content {
+    @include uikit-media("sm") {
+      width: 18em;
+      padding: 2.2em 1.8em;
+      transition: transform 0.3s;
+      text-align: left;
+      background-color: rgba($white, 0.8);
+    }
+
+    > ul {
+      @include uikit-media("sm") {
+        @include uikit-clearfix;
+      }
+    }
+
+    > ul > li {
+      @include uikit-media("sm") {
+        width: 100%;
+      }
+    }
+
+    li {
+      @include uikit-clearfix;
+    }
+
+    h2 {
+      color: $uikit-colour-Border-80;
+      margin: 20px 0 10px 14px;
+      font-size: 16px;
+
+      @include uikit-media("sm") {
+        color: $uikit-colour-Border--70;
+        margin: 0 0 0.6em;
+      }
+    }
+  }
+
+  .dropdown {
+    @include uikit-media("sm") {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      width: 100%;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    &.dd-active {
+      @include uikit-media("sm") {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &.move-left .dd-content {
+      @include uikit-media("sm") {
+        transform: translateX(-100px);
+      }
+    }
+
+    &.move-right .dd-content {
+      @include uikit-media("sm") {
+        transform: translateX(100px);
+      }
+    }
+  }
+
+  .bg-layer {
+    @include uikit-media("sm") {
+      // morph dropdown background
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 1px;
+      background: $white;
+      opacity: 0;
+      transition: opacity 0.3s;
+      transform-origin: top left;
+      transform: translateZ(0);
+      will-change: transform;
+      backface-visibility: hidden;
+    }
+  }
+  // =========================================================
+  // VISIBLE DROPDOWN
+  // =========================================================
+
+  &.is-dropdown-visible {
+    .bg-layer {
+      @include uikit-media("sm") {
+        opacity: 1;
+        transition: transform 0.3s, opacity 0.3s;
+      }
+    }
+
+    .main-nav > ul > li > a {
+      @include uikit-media("sm") {
+        opacity: 0.6;
+      }
+    }
+
+    .main-nav > ul > li.dd-active > a {
+      @include uikit-media("sm") {
+        opacity: 1;
+      }
+    }
+
+    .morph-dropdown-wrapper {
+      @include uikit-media("sm") {
+        transform: translateY(0);
+      }
+    }
+
+    .dropdown-list {
+      @include uikit-media("sm") {
+        visibility: visible;
+        transition: transform 0.3s, width 0.3s, height 0.3s;
+      }
+
+      &::before {
+        @include uikit-media("sm") {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
