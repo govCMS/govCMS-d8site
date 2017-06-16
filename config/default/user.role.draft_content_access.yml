@@ -1,0 +1,14 @@
+uuid: c456a589-43ba-4a39-b3cb-0e958d784ce5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M9lU6Viiy9-s-qvkhe1uvL8gH2XlPllm1dNwwLD-FoI
+id: draft_content_access
+label: 'Draft content access'
+weight: 17
+is_admin: null
+permissions:
+  - 'use auto login url'
+  - 'view any unpublished content'
+  - 'view latest version'

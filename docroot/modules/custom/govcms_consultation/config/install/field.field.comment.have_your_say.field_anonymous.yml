@@ -1,0 +1,23 @@
+uuid: 7207ea02-9b9d-4522-8228-14cb4bdfd09c
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.have_your_say
+    - field.storage.comment.field_anonymous
+id: comment.have_your_say.field_anonymous
+field_name: field_anonymous
+entity_type: comment
+bundle: have_your_say
+label: 'Remain anonymous'
+description: 'Please select if you prefer your submission to remain anonymous. This means your submission will display on the website with the name Anonymous and your name and/or organisation will not appear anywhere on the website.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

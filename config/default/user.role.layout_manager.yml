@@ -17,6 +17,7 @@ permissions:
   - 'administer govcms_dlm'
   - 'administer node display'
   - 'administer panelizer'
+  - 'administer panelizer node consultation defaults'
   - 'administer panelizer node knowledge_base defaults'
   - 'administer panelizer node landing_page defaults'
   - 'administer panelizer node news_article defaults'

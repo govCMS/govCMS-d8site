@@ -1,0 +1,50 @@
+uuid: f543c9f7-fd4b-4c68-8da1-41d025c53700
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.consultation.field_consultation_date
+    - field.field.node.consultation.field_consultation_submissions
+    - field.field.node.consultation.field_consultation_summary
+    - node.type.consultation
+  module:
+    - comment
+    - datetime_range
+    - text
+    - user
+id: node.consultation.default
+targetEntityType: node
+bundle: consultation
+mode: default
+content:
+  field_consultation_date:
+    weight: 103
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_consultation_submissions:
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_consultation_summary:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

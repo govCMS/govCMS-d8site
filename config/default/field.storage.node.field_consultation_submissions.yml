@@ -1,0 +1,22 @@
+uuid: 4ae35d25-db88-441b-8ff9-2f9f7bae10b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+_core:
+  default_config_hash: LzjbZ32uL16idu6UQOFd9q0IpVYItiGNl9pfkgJVLRQ
+id: node.field_consultation_submissions
+field_name: field_consultation_submissions
+entity_type: node
+type: comment
+settings:
+  comment_type: have_your_say
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

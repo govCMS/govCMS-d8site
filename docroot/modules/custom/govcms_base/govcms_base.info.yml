@@ -1,0 +1,4 @@
+name: 'govCMS Base'
+description: 'Provides basic customisations for the govCMS site.'
+type: module
+core: 8.x

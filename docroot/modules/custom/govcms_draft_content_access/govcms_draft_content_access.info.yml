@@ -1,0 +1,7 @@
+name: govCMS Draft Content Access
+type: module
+description: Access draft content without need to login
+core: 8.x
+dependencies:
+  - auto_login_url
+

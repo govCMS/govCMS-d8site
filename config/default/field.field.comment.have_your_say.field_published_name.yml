@@ -1,0 +1,21 @@
+uuid: eef6aae9-f893-4433-91f9-f997608c266a
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.have_your_say
+    - field.storage.comment.field_published_name
+_core:
+  default_config_hash: JWhuWGvs7ryAxFYOzhQaKI8mPkTT3LxRtR4dq6dAoNA
+id: comment.have_your_say.field_published_name
+field_name: field_published_name
+entity_type: comment
+bundle: have_your_say
+label: 'Published Name'
+description: 'The <b>Published name</b> below will appear with your submission on our website. This can be your name or an organisation name. You can also choose to remain anonymous or keep both your name and submission private.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

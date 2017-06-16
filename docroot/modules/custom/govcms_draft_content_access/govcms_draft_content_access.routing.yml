@@ -1,0 +1,13 @@
+govcms_draft_content_access.generatelink:
+  path: '/dca/generatelink/{uid}/{destination}'    
+  defaults:
+    _controller: '\Drupal\govcms_draft_content_access\Controller\GovcmsDraftContentAccessController::generatelink'
+  requirements:
+    _permission: 'use draft content access'
+    
+govcms_draft_content_access.revokelink:
+  path: '/dca/revokelink/{hash}/{destination}'    
+  defaults:
+    _controller: '\Drupal\govcms_draft_content_access\Controller\GovcmsDraftContentAccessController::revokelink'
+  requirements:
+    _permission: 'use draft content access'    

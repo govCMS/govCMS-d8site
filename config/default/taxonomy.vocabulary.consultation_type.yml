@@ -1,0 +1,11 @@
+uuid: 1c6c04fb-c836-4b27-b9ce-3b42eea94443
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: MJSyAeWsjbago2vw8JhqyyCG7r8Q9vrLuZxA85swbew
+name: 'Consultation Type'
+vid: consultation_type
+description: ''
+hierarchy: 0
+weight: 0

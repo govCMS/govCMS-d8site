@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "37c91df7671be47808fc57a1fff57411",
+    "content-hash": "a0909d5ff2d0a2a45e314cab63db4794",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1517,6 +1517,49 @@
             "homepage": "https://www.drupal.org/project/acquia_connector",
             "support": {
                 "source": "http://cgit.drupalcode.org/acquia_connector"
+            }
+        },
+        {
+            "name": "drupal/auto_login_url",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/auto_login_url",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/auto_login_url-8.x-1.3.zip",
+                "reference": null,
+                "shasum": "531dfecfd929ff14121cd0c6e083ccc185917708"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1491482283"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "matrixlord",
+                    "homepage": "https://www.drupal.org/user/1538394"
+                }
+            ],
+            "description": "Auto login, creates and uses tokens for auto login.",
+            "homepage": "https://www.drupal.org/project/auto_login_url",
+            "support": {
+                "source": "http://cgit.drupalcode.org/auto_login_url"
             }
         },
         {

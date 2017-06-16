@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: draft_content_access
+label: 'Draft content access'
+is_admin: null
+permissions:      
+  - 'view latest version'
+  - 'view any unpublished content'
+  - 'use auto login url'
+

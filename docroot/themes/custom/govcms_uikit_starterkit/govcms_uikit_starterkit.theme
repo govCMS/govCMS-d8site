@@ -133,6 +133,20 @@ function govcms_uikit_starterkit_form_node_form_alter(&$form, FormStateInterface
 }
 
 /**
+ * Implements hook_preprocess_menu().
+ */
+function govcms_uikit_starterkit_preprocess_menu(&$variables) {
+  // UI Kit.
+  if ($variables['menu_name'] === 'main') {
+    foreach ($variables['items'] as $key => $value) {
+      if ($value['title'] == "Apply now") {
+        $variables['items'][$key]['has_button_class'] = TRUE;
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_form_element().
  */
 function govcms_uikit_starterkit_preprocess_form_element(&$variables) {
