@@ -13,6 +13,7 @@ global_styles:
     js/morph_dropdown.js: {}
     js/uikit.min.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
 
 uikit:
