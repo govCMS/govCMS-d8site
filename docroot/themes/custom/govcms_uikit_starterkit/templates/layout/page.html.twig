@@ -40,7 +40,10 @@
   <!-- ______________________ MAIN _______________________ -->
 
   <div class="clearfix" id="main">
-    <div class="cog--mq">
+    {% if not is_front %}
+      {# set centre width on standard pages #}
+      <div class="cog--mq">
+    {% endif %}
 
       {% if page.sidebar_first %}
         <aside class="sidebar-first sidebars" id="sidebar-first">
@@ -98,8 +101,10 @@
       {% endif %}
       <!-- /sidebar-first -->
 
-    </div>
-    <!-- /cog--mq -->
+    {% if not is_front %}
+      </div>
+      <!-- /cog--mq -->
+    {% endif %}
   </div>
   <!-- /main -->
 

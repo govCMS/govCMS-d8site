@@ -11,6 +11,7 @@ global_styles:
   js:
     js/external_links.js: {}
     js/morph_dropdown.js: {}
+    js/usage_statistics_counter.js: {}
     js/uikit.min.js: {}
   dependencies:
     - core/drupal
