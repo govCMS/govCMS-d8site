@@ -133,6 +133,13 @@ function govcms_uikit_starterkit_form_node_form_alter(&$form, FormStateInterface
 }
 
 /**
+ * Implements hook_form_alter() for views_exposed_form.
+ */
+function govcms_uikit_starterkit_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['actions']['submit']['#prefix'] = '<span class="icon icon-search"></span>';
+}
+
+/**
  * Implements hook_preprocess_menu().
  */
 function govcms_uikit_starterkit_preprocess_menu(&$variables) {
