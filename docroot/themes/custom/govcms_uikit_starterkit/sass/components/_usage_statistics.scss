@@ -5,8 +5,10 @@
   background-size: cover;
   padding-top: 25px;
   padding-bottom: 25px;
-  margin-left: -15px;
+  margin: 0 -100%;
+  margin: 0 calc(50% - 50vw);
   width: calc(100% + 30px);
+  width: 100vw;
 
   .block-region-second-top {
     text-align: center;

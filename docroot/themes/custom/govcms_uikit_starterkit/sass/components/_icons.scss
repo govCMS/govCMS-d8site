@@ -14,7 +14,7 @@
   font-style: normal;
 }
 
-span[class*="icon"] {
+span[class*="icon"]:not(.ipe-icon) {
   font-family: "GovCMS Icons";
   font-size: 50px;
   font-style: normal;
