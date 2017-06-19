@@ -103,3 +103,14 @@ function govcms_uikit_base_theme_suggestions_form_element_label_alter(array &$su
     $suggestions[] = 'form_element_label__' . $variables['element']['#__element_type'];
   }
 }
+
+/**
+ * Implements hook_preprocess_menu_local_task().
+ */
+function govcms_uikit_base_preprocess_menu_local_task(&$variables) {
+  $variables['link']['#attributes']['class'][] = 'uikit-btn';
+
+  if (empty($variables['is_active'])) {
+    $variables['link']['#attributes']['class'][] = 'uikit-btn--tertiary';
+  }
+}
