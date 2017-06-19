@@ -1,12 +1,15 @@
 #block-exposedformsearchpage-2 {
   float: right;
+
   input {
     color: black;
   }
+
   .form--inline {
     > div {
       display: inline-block;
       vertical-align: middle;
+
       &.form-item-keywords {
         > label {
           display: inline-block;
@@ -15,16 +18,19 @@
           height: 0;
         }
       }
+
       &.form-actions {
         width: 28px;
         height: 28px;
         overflow: hidden;
         position: relative;
+
         .icon-search {
           position: absolute;
           font-size: 28px;
           line-height: 1;
         }
+
         .form-submit {
           position: absolute;
           text-indent: 100%;
