@@ -45,22 +45,24 @@
  */
 #}
 {%
-  set classes = [
-    'form-item',
-    'js-form-type-' ~ type|clean_class,
-    'form-type-' ~ type|clean_class,
-    'form-item-' ~ name|clean_class,
-    title_display not in ['after', 'before'] ? 'form-no-label',
-    disabled == 'disabled' ? 'form-disabled',
-    errors ? 'form-item--error',
-  ]
+set classes = [
+  'form-item',
+  'uikit-select',
+  'uikit-select-block',
+  'js-form-type-' ~ type|clean_class,
+  'form-type-' ~ type|clean_class,
+  'form-item-' ~ name|clean_class,
+  title_display not in ['after', 'before'] ? 'form-no-label',
+  disabled == 'disabled' ? 'form-disabled',
+  errors ? 'form-item--error',
+]
 %}
 {%
-  set description_classes = [
-    'description',
-    description_display == 'invisible' ? 'visually-hidden',
-    'hint',
-  ]
+set description_classes = [
+  'description',
+  description_display == 'invisible' ? 'visually-hidden',
+  'hint',
+]
 %}
 <p{{ attributes.addClass(classes) }}>
   {% if label_display in ['before', 'invisible'] %}
@@ -82,10 +84,10 @@
     {{ label }}
   {% endif %}
   {% if errors %}
-    <div class="form-item--error-message">
-      <strong>{{ errors }}</strong>
-    </div>
-  {% endif %}
+  <div class="form-item--error-message">
+    <strong>{{ errors }}</strong>
+  </div>
+{% endif %}
   {% if description_display in ['after', 'invisible'] and description.content %}
     <span{{ description.attributes.addClass(description_classes) }}>
       {{ description.content }}
