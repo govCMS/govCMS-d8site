@@ -33,10 +33,3 @@ function govcms_uikit_starterkit_form_system_theme_settings_alter(&$form, FormSt
 
   // We are editing the $form in place, so we don't need to return anything.
 }
-
-/**
- * Implements hook_preprocess_form_element().
- */
-function govcms_uikit_starterkit_preprocess_form_element(&$variables) {
-  $variables['label']['#__element_type'] = $variables['element']['#type'];
-}
