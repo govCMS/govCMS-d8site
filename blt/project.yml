@@ -24,8 +24,8 @@ target-hooks:
     dir: '${docroot}'
     command: 'echo ''No frontend-setup configured.'''
   frontend-build:
-    dir: '${docroot}'
-    command: 'echo ''No frontend-build configured.'''
+    dir: '${docroot}/themes/custom/govcms_uikit_starterkit'
+    command: 'gulp build'
   pre-config-import:
     dir: '${docroot}'
     command: 'echo ''No pre-config-import configured.'''
