@@ -5,14 +5,16 @@
  * Provides install & update hooks for the govCMS Base module.
  */
 
-use Drupal\block_content\Entity\BlockContent;
+$path = __DIR__ . '/includes/*.inc';
+foreach (glob($path) as $filename) {
+  require_once $filename;
+}
 
 /**
  * Implements hook_install().
  */
 function govcms_base_install() {
   _expand_menu_links_with_children();
-  _usage_statistics_top_bottom_block();
 }
 
 /**
@@ -51,41 +53,4 @@ function _expand_menu_links_with_children() {
       ->condition('id', $ids_to_update, 'IN')
       ->execute();
   }
-}
-
-/**
- * Create blocks for homepage usage statistics.
- */
-function _usage_statistics_top_bottom_block() {
-
-  // Check for existing blocks.
-  $blockIds = \Drupal::entityQuery('block_content')
-    ->condition('info', ['Usage statistics', 'Usage statistics - bottom'], 'IN')
-    ->execute();
-
-  // Blocks are only created if they do not currently exist.
-  if (count($blockIds) === 0) {
-    $uuid_service = \Drupal::service('uuid');
-
-    // Top block - Title.
-    $top_block = BlockContent::create([
-      'type' => 'basic',
-      'uuid' => $uuid_service->generate(),
-      'info' => 'Usage statistics',
-    ]);
-    $top_block->body->value = '';
-    $top_block->body->format = '';
-    $top_block->save();
-
-    // Bottom block - CTA.
-    $bottom_block = BlockContent::create([
-      'type' => 'basic',
-      'uuid' => $uuid_service->generate(),
-      'info' => 'Usage statistics - bottom',
-    ]);
-    $bottom_block->body->value = '<p><a class="uikit-btn hide-external" href="/dashboard">Statistics dashboard</a></p>';
-    $bottom_block->body->format = 'rich_text';
-    $bottom_block->save();
-  }
-
 }
