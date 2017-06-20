@@ -2,7 +2,9 @@
   .uikit-link-list {
     .uikit-btn.is-active {
       color: $white;
-      &:focus, &:hover {
+
+      &:focus,
+      &:hover {
         color: $uikit-colour-Text;
       }
     }
