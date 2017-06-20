@@ -1,0 +1,31 @@
+.circle-large {
+  display: none;
+  @include uikit-media("md") {
+    display: inline-block;
+    font-size: 126px;
+    font-family: $uikit-font;
+    font-weight: 200;
+    font-style: normal !important;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.3em;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    color: $uikit-colour-Secondary--20;
+    border: 3px solid $uikit-colour-Secondary--20;
+    background-color: $white;
+    background-image: -webkit-linear-gradient(25deg, $uikit-colour-Secondary--20, $uikit-colour-Secondary-80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:before {
+    @include uikit-media("md") {
+      background-image: -webkit-linear-gradient(25deg, $uikit-colour-Secondary--20, $uikit-colour-Secondary-90);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
