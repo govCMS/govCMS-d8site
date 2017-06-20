@@ -1,0 +1,10 @@
+.block-local-tasks-block {
+  .uikit-link-list {
+    .uikit-btn.is-active {
+      color: $white;
+      &:focus, &:hover {
+        color: $uikit-colour-Text;
+      }
+    }
+  }
+}
