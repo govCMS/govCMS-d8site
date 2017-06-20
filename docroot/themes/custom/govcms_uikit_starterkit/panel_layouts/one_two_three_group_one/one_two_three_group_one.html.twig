@@ -4,36 +4,30 @@
  * Template for a one-two-one-cl column panel layout.
  */
 #}
-<div class="cog-pl panel-cog-layout-one-two-three-one" {% if css_id %}{{ css_id }}{% endif %}>
+<div class="panel-layout-one-two-three-one" {% if css_id %}{{ css_id }}{% endif %}>
     <div class="panel-panel">
-        <div class="cog-panel--fullrow cog-panel--fullrow--top">
-            <div class="cog-panel--mq">
-                <div class="cog-layout--top">{{ content.top }}</div>
+        <div class="row panel--fullrow--top">
+            <div class="layout--top">{{ content.top }}</div>
+        </div>
+        <div class="row panel--fullrow--first">
+            <div class="layout--first-middle-left">{{ content.first_middle_left }}</div>
+            <div class="layout--first-middle-right">{{ content.first_middle_right }}</div>
+        </div>
+        <div class="row panel--fullrow--second">
+            <div class="container">
+                <div class="layout--second-top">{{ content.second_top }}</div>
+            </div>
+            <div class="container">
+                <div class="col-sm-4 layout--second-middle-left">{{ content.second_middle_left }}</div>
+                <div class="col-sm-4 layout--second-middle-center">{{ content.second_middle_center }}</div>
+                <div class="col-sm-4 layout--second-middle-right">{{ content.second_middle_right }}</div>
+            </div>
+            <div class="container">
+                <div class="layout--second-bottom">{{ content.second_bottom }}</div>
             </div>
         </div>
-        <div class="cog-panel--fullrow cog-panel--fullrow--first">
-            <div class="cog-panel--mq">
-                <div class="cog-layout--first-middle-left">{{ content.first_middle_left }}</div>
-                <div class="cog-layout--first-middle-right">{{ content.first_middle_right }}</div>
-            </div>
-        </div>
-        <div class="cog-panel--fullrow cog-panel--fullrow--second">
-            <div class="cog-panel--mq">
-                <div class="cog-layout--second-top">{{ content.second_top }}</div>
-            </div>
-            <div class="cog-panel--mq">
-                <div class="cog-layout--second-middle-left">{{ content.second_middle_left }}</div>
-                <div class="cog-layout--second-middle-center">{{ content.second_middle_center }}</div>
-                <div class="cog-layout--second-middle-right">{{ content.second_middle_right }}</div>
-            </div>
-            <div class="cog-panel--mq">
-                <div class="cog-layout--second-bottom">{{ content.second_bottom }}</div>
-            </div>
-        </div>
-        <div class="cog-panel--fullrow cog-panel--fullrow--bottom">
-            <div class="cog-panel--mq">
-                <div class="cog-layout--bottom">{{ content.bottom }}</div>
-            </div>
+        <div class="row panel--fullrow--bottom">
+            <div class="layout--bottom">{{ content.bottom }}</div>
         </div>
     </div>
 </div>
