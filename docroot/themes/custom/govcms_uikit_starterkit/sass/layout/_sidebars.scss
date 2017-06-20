@@ -84,14 +84,7 @@
 // Sidebar None //////////////////
 //////////////////////////////////
 .body-sidebars-none {
-  section#content {
-    @include span(12 of 12);
-
-    > * {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  }
+  // UI Kit manages padding.
 }
 //////////////////////////////////
 // General Sidebar Rules /////////
