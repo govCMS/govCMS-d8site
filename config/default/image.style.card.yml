@@ -1,0 +1,14 @@
+uuid: 998a6587-b49d-4445-aac4-0a9e27338f84
+langcode: en
+status: true
+dependencies: {  }
+name: card
+label: 'Card (351x238)'
+effects:
+  105aa476-de2f-45a8-9e6e-f060ee6c4ab6:
+    uuid: 105aa476-de2f-45a8-9e6e-f060ee6c4ab6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 351
+      height: 238

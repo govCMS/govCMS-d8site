@@ -1,0 +1,21 @@
+{% set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if title_prefix %}
+    {{ title_prefix }}
+  {% endif %}
+  <a href="{{ content.field_link.0['#url_title'] }}">
+    {% if content.field_screenshot %}
+      {{ content.field_screenshot }}
+    {% endif %}
+    <h3>{{ label }}</h3>
+  </a>
+  {% if title_suffix %}
+    {{ title_suffix }}
+  {% endif %}
+</div>
+<!-- /article #node -->

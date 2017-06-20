@@ -1,0 +1,31 @@
+.card-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .card {
+    box-sizing: border-box;
+    flex: 0 0 23%;
+    display: inline-block;
+    margin: 0 1% 4ex;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .view-our-customers & {
+      > .node > a {
+        &:after {
+          position: absolute;
+          bottom: 0;
+          right: 10px;
+          width: 17px;
+          height: 18px;
+        }
+        > h3 {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
