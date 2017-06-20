@@ -1,0 +1,51 @@
+.block-views-blockblock-trusted-logos-block-1 {
+  @include site-background-section;
+
+  padding: 3em 0;
+
+  h2 {
+    text-align: center;
+    color: $white;
+    font-weight: normal;
+    margin-bottom: 3em;
+  }
+}
+
+.view-block-trusted-logos {
+  > .view-content {
+    @include uikit-clearfix();
+
+    > .views-row {
+      img {
+        max-height: 158px;
+        width: auto;
+      }
+
+      a {
+        border-bottom: none;
+
+        &::after {
+          display: none;
+        }
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+  }
+
+  > .view-footer {
+    margin-top: 3em;
+
+    > div {
+      float: none;
+
+      > a {
+        background: none;
+        color: $white;
+        border: 1px solid $white;
+      }
+    }
+  }
+}
