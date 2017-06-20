@@ -65,7 +65,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: 'col-md-3 col-sm-6 text-center'
           default_row_class: true
       row:
         type: fields
@@ -359,7 +359,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "<div class=\"col-md-12 text-center\">\n<a class=\"btn btn-light btn-lg btn-default\" href=\"/our-customers\">Our customers</a>\n</div> "
+            value: "<div class=\"col-md-12 text-center\">\n<a class=\"uikit-btn btn-light btn-lg btn-default\" href=\"/our-customers\">Our customers</a>\n</div> "
             format: rich_text
           plugin_id: text
       empty: {  }
@@ -376,6 +376,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       group_by: false
+      css_class: uikit-grid
     cache_metadata:
       max-age: -1
       contexts:
