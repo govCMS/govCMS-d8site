@@ -1,0 +1,34 @@
+{% set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+
+<article {{ attributes.addClass(classes) }}>
+
+  {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
+    <header>
+      {{ title_prefix }}
+      {% if not page and label %}
+        <h3{{ title_attributes }}><a href="{{ url }}">{{ label }}</a></h3>
+      {% endif %}
+      {{ title_suffix }}
+
+      {% if unpublished %}
+        <p class="unpublished">{{ 'Unpublished'|t }}</p>
+      {% endif %}
+    </header>
+  {% endif %}
+
+  <div class="uikit-list--meta">
+    <time>{{ node.createdtime|format_date('long') }}</time>
+  </div>
+
+  <div class="content">
+    {{ content|without('comment', 'links', 'readmore') }}
+  </div>
+
+  <!-- /content -->
+
+</article>
+<!-- /article #node -->
