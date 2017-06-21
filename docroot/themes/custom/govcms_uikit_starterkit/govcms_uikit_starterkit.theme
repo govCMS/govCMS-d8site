@@ -136,7 +136,12 @@ function govcms_uikit_starterkit_form_node_form_alter(&$form, FormStateInterface
  * Implements hook_form_alter() for views_exposed_form.
  */
 function govcms_uikit_starterkit_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $form['actions']['submit']['#prefix'] = '<span class="icon icon-search"></span>';
+  if ($form['#id'] == "views-exposed-form-search-page") {
+    $form['actions']['submit']['#prefix'] = '<span class="icon icon-search"></span>';
+  }
+  elseif ($form['#id'] == "views-exposed-form-knowledge-base-page-1") {
+    $form['#action'] = "/support/knowledge-base";
+  }
 }
 
 /**
