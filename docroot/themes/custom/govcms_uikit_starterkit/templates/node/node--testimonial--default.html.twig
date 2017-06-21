@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Theme implementation for the testimonial default view mode.
+ *
+ * @see https://api.drupal.org/api/drupal/core!modules!node!templates!node.html.twig/8.2.x
+ */
+#}
+
+<div {{ attributes.addClass('container') }}>
+  <div class="col-md-6 col-sm-12 text-left section-one arrow">
+    {{ title_suffix }}
+    <blockquote>{{ content|without('field_position')|without('field_agency') }}</blockquote>
+    <cite><span class="cite-name">{{ label }}</span><span class="cite-pos">{{ content.field_position }}</span></cite>
+  </div>
+  <div class="col-md-6 col-sm-12 section-two text-center">
+    {{ content.field_agency }}
+  </div>
+</div>
