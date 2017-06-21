@@ -1,0 +1,50 @@
+//
+// @file
+// Styles for block quotes.
+//
+
+.entity--type-testimonial {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+blockquote {
+  border-left: 0;
+  margin: uikit-space(1) uikit-space(2) uikit-space(1) uikit-space(1);
+  quotes: "\201C" "\201D" "\2018" "\2019";
+
+  &::before,
+  &::after {
+    color: $uikit-colour-Primary;
+    font-size: 5em;
+  }
+
+  &::before {
+    content: open-quote;
+    line-height: 0;
+    margin-right: 0.05em;
+    vertical-align: -0.32em;
+    margin-left: -0.45em;
+  }
+
+  &::after {
+    content: close-quote;
+    line-height: 0.15em;
+    float: right;
+    margin-top: 0.48em;
+    margin-right: -0.41em;
+    opacity: 0.4;
+  }
+
+  + cite {
+    .cite-name {
+      color: $uikit-colour-Primary;
+    }
+
+    .cite-pos,
+    .cite-name {
+      display: block;
+    }
+  }
+}

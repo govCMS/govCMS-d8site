@@ -7,6 +7,7 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
 
 /**
  * Implements hook_preprocess_html().
@@ -78,6 +79,19 @@ function govcms_uikit_starterkit_preprocess_node(&$variables) {
   // Helper variables for multiple nodes.
   if (!empty($variables['elements']['#entity_type'])) {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('entity--type-' . $variables['elements']['#entity_type']);
+  }
+
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $variables['elements']['#node'];
+  $variables['attributes']['class'][] = Html::cleanCssIdentifier(('entity--type-' . $node->getType()));
+
+  if (!empty($variables['content']['field_agency']) && $node->getType() === 'testimonial') {
+    foreach (Element::children($variables['content']['field_agency']) as $key) {
+      $element = $variables['content']['field_agency'][$key];
+      /** @var Drupal\taxonomy\Entity\Term $term */
+      $term = $element['#taxonomy_term'];
+      $term->setName(NULL);
+    }
   }
 }
 
