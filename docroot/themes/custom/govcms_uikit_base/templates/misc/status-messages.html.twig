@@ -25,11 +25,17 @@
 #}
 {% block messages %}
 {% for type, messages in message_list %}
+  {% set ui_kit_suffix = type %}
+  {% if type == 'status' %}
+    {% set ui_kit_suffix = 'success' %}
+  {% endif %}
   {%
     set classes = [
       'messages',
       'drupal-messages',
       'messages--' ~ type,
+      'uikit-page-alerts',
+      'uikit-page-alerts--' ~ ui_kit_suffix,
     ]
   %}
   <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes.addClass(classes)|without('role', 'aria-label') }}>
