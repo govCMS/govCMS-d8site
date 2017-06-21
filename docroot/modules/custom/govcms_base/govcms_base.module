@@ -5,6 +5,7 @@
  * Contains module code for govCMS Base.
  */
 
+use Drupal\Component\Utility\Html;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\views\ViewExecutable;
 
@@ -14,24 +15,20 @@ use Drupal\views\ViewExecutable;
 function govcms_base_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
   // Filter the views by the search term in the query.
   if ($view->id() == "knowledge_base") {
-    if (empty($_GET['title'])) {
+    $title = \Drupal::request()->get('title');
+    if (empty($title)) {
       return;
     }
     // Look for the title field.
-    $found = FALSE;
     foreach ($query->where as &$where) {
       if (empty($where['conditions'])) {
         continue;
       }
       foreach ($where['conditions'] as &$condition) {
         if ($condition['field'] == "node_field_data.title") {
-          $condition['value'] = "%" . $_GET['title'] . "%";
-          $found = TRUE;
-          break;
+          $condition['value'] = "%" . Html::escape($title) . "%";
+          break 2;
         }
-      }
-      if ($found) {
-        break;
       }
     }
   }
