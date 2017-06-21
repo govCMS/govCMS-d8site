@@ -17,3 +17,19 @@
 legend {
   margin-bottom: uikit-space(1);
 }
+
+#views-exposed-form-knowledge-base-page-1 {
+  text-align: center;
+}
+
+#views-exposed-form-knowledge-base-page-1,
+#views-exposed-form-search-page {
+  p {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .form-actions {
+    display: inline-block;
+  }
+}
