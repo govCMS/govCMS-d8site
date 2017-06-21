@@ -1,23 +1,9 @@
-.panel--fullrow--second {
-  color: $white;
-  background-color: $uikit-colour-Secondary-80;
-  background-image: linear-gradient(11deg, $uikit-colour-Secondary-80, $uikit-colour-Primary--10);
-  background-size: cover;
-  padding-top: 25px;
-  padding-bottom: 25px;
+//
+// @file
+// Usage statistics view.
+//
 
-  .block-region-second-top {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 40px;
-
-    h2 {
-      color: $white;
-      font-size: 30px;
-      font-weight: 500;
-    }
-  }
-
+%circle {
   .int {
     transition: all 0.2s;
     border: 2px solid;
@@ -52,6 +38,29 @@
   .fancyCounter.faded,
   .faded {
     opacity: 1;
+  }
+}
+
+.panel--fullrow--second {
+  color: $white;
+  background-color: $uikit-colour-Secondary-80;
+  background-image: linear-gradient(11deg, $uikit-colour-Secondary-80, $uikit-colour-Primary--10);
+  background-size: cover;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @extend %circle;
+
+  .block-region-second-top {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    h2 {
+      color: $white;
+      font-size: 30px;
+      font-weight: 500;
+    }
   }
 
   h3 {
@@ -95,4 +104,12 @@
       }
     }
   }
+}
+
+.view-block-usage,
+.view-block-usage-agencies,
+.block-block-contentab653178-1b57-483e-90bd-6193e19d2959 {
+  text-align: center;
+
+  @extend %circle;
 }
