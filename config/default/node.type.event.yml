@@ -1,0 +1,20 @@
+uuid: 71ffd453-837b-491a-ab67-0d26b3b9f6c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: YToS2HIYC0AQ0sIwdwwXVUT7NcQVpGRL-lpFMi6YgOc
+name: Event
+type: event
+description: 'Contains events.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,18 @@
+uuid: 704b4c8c-1975-4679-9afa-024a1cfb0ed9
+langcode: en
+status: true
+dependencies: {  }
+id: event_reviewer
+label: 'Event reviewer'
+weight: 20
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any event content'
+  - 'edit any event content'
+  - 'use draft_published transition'
+  - 'use needs_review_draft transition'
+  - 'use needs_review_published transition'
+  - 'use published_archived transition'
+  - 'use published_published transition'
+  - 'view moderation states'

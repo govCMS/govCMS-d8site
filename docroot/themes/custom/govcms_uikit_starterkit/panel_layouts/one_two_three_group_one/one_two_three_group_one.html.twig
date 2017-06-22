@@ -1,33 +1,140 @@
 {#
 /**
  * @file
- * Template for a one-two-one-cl column panel layout.
+ * Template for a one-two-three-group-one column panel layout.
  */
 #}
 <div class="panel-layout-one-two-three-one" {% if css_id %}{{ css_id }}{% endif %}>
     <div class="panel-panel">
-        <div class="row panel--fullrow--top">
-            <div class="layout--top">{{ content.top }}</div>
-        </div>
-        <div class="row panel--fullrow--first">
-            <div class="layout--first-middle-left">{{ content.first_middle_left }}</div>
-            <div class="layout--first-middle-right">{{ content.first_middle_right }}</div>
-        </div>
-        <div class="row panel--fullrow--second">
-            <div class="container">
-                <div class="layout--second-top">{{ content.second_top }}</div>
+
+        {# Top Fixed #}
+        {% set has_top = content.top is defined and content.top|render|striptags|trim %}
+
+        {% if has_top or is_admin %}
+            <div class="row panel--fullrow--top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 layout--top">{{ content.top }}</div>
+                    </div>
+                </div>
             </div>
-            <div class="container">
-                <div class="col-sm-4 layout--second-middle-left">{{ content.second_middle_left }}</div>
-                <div class="col-sm-4 layout--second-middle-center">{{ content.second_middle_center }}</div>
-                <div class="col-sm-4 layout--second-middle-right">{{ content.second_middle_right }}</div>
+        {% endif %}
+
+        {# Top Fluid #}
+        {% set has_top_fluid = content.top_fluid is defined and content.top_fluid|render|striptags|trim %}
+
+        {% if has_top_fluid or is_admin %}
+            <div class="row panel--fullrow--top">
+                <div class="col-sm-12 layout--top">{{ content.top_fluid }}</div>
             </div>
-            <div class="container">
-                <div class="layout--second-bottom">{{ content.second_bottom }}</div>
+        {% endif %}
+
+        {# First Middle Fixed #}
+        {% set has_first_middle_left = content.first_middle_left is defined and content.first_middle_left|render|striptags|trim %}
+        {% set has_first_middle_right = content.first_middle_right is defined and content.first_middle_right|render|striptags|trim %}
+
+        {% if has_first_middle_left or has_first_middle_right or is_admin %}
+            <div class="row panel--fullrow--first">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 layout--first-middle-left">{{ content.first_middle_left }}</div>
+                        <div class="col-sm-6 layout--first-middle-right">{{ content.first_middle_right }}</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row panel--fullrow--bottom">
-            <div class="layout--bottom">{{ content.bottom }}</div>
-        </div>
+        {% endif %}
+
+        {# First Middle Fluid #}
+        {% set has_first_middle_left_fluid = content.first_middle_left_fluid is defined and content.first_middle_left_fluid|render|striptags|trim %}
+        {% set has_first_middle_right_fluid = content.first_middle_right_fluid is defined and content.first_middle_right_fluid|render|striptags|trim %}
+
+        {% if has_first_middle_left_fluid or has_first_middle_right_fluid or is_admin %}
+            <div class="row panel--fullrow--first">
+                <div class="col-sm-6 layout--first-middle-left">{{ content.first_middle_left_fluid }}</div>
+                <div class="col-sm-6 layout--first-middle-right">{{ content.first_middle_right_fluid }}</div>
+            </div>
+        {% endif %}
+
+        {# Second Middle Fixed #}
+        {% set has_second_top = content.second_top is defined and content.second_top|render|striptags|trim %}
+        {% set has_second_middle_left = content.second_middle_left is defined and content.second_middle_left|render|striptags|trim %}
+        {% set has_second_middle_center = content.second_middle_center is defined and content.second_middle_center|render|striptags|trim %}
+        {% set has_second_middle_right = content.second_middle_right is defined and content.second_middle_right|render|striptags|trim %}
+        {% set has_second_bottom = content.second_bottom is defined and content.second_bottom|render|striptags|trim %}
+
+        {% if has_second_top or has_second_middle_left or has_second_middle_center or has_second_middle_right or has_second_bottom or is_admin %}
+            <div class="row panel--fullrow--second">
+                {% if has_second_top or is_admin %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 layout--second-top">{{ content.second_top }}</div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if has_second_middle_left or has_second_middle_center or has_second_middle_right or is_admin %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-4 layout--second-middle-left">{{ content.second_middle_left }}</div>
+                            <div class="col-sm-4 layout--second-middle-center">{{ content.second_middle_center }}</div>
+                            <div class="col-sm-4 layout--second-middle-right">{{ content.second_middle_right }}</div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if has_second_bottom or is_admin %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 layout--second-bottom">{{ content.second_bottom }}</div>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {# Second Middle Fluid #}
+        {% set has_second_top_fluid = content.second_top_fluid is defined and content.second_top_fluid|render|striptags|trim %}
+        {% set has_second_middle_left_fluid = content.second_middle_left_fluid is defined and content.second_middle_left_fluid|render|striptags|trim %}
+        {% set has_second_middle_center_fluid = content.second_middle_center_fluid is defined and content.second_middle_center_fluid|render|striptags|trim %}
+        {% set has_second_middle_right_fluid = content.second_middle_right_fluid is defined and content.second_middle_right_fluid|render|striptags|trim %}
+        {% set has_second_bottom_fluid = content.second_bottom_fluid is defined and content.second_bottom_fluid|render|striptags|trim %}
+
+        {% if has_second_top_fluid or has_second_middle_left_fluid or has_second_middle_center_fluid or has_second_middle_right_fluid or has_second_bottom_fluid or is_admin %}
+            <div class="row panel--fullrow--second">
+                {% if has_second_top_fluid or is_admin %}
+                    <div class="col-sm-12 layout--second-top">{{ content.second_top_fluid }}</div>
+                {% endif %}
+                {% if has_second_middle_left_fluid or has_second_middle_center_fluid or has_second_middle_right_fluid or is_admin %}
+                    <div>
+                        <div class="col-sm-4 layout--second-middle-left">{{ content.second_middle_left_fluid }}</div>
+                        <div class="col-sm-4 layout--second-middle-center">{{ content.second_middle_center_fluid }}</div>
+                        <div class="col-sm-4 layout--second-middle-right">{{ content.second_middle_right_fluid }}</div>
+                    </div>
+                {% endif %}
+                {% if has_second_bottom_fluid or is_admin %}
+                    <div class="col-sm-12 layout--second-bottom">{{ content.second_bottom_fluid }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {# Bottom Fixed #}
+        {% set has_bottom = content.bottom is defined and content.bottom|render|striptags|trim %}
+
+        {% if has_bottom or is_admin %}
+            <div class="row panel--fullrow--bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 layout--bottom">{{ content.bottom }}</div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {# Bottom Fluid #}
+        {% set has_bottom_fluid = content.bottom_fluid is defined and content.bottom_fluid|render|striptags|trim %}
+
+        {% if has_bottom_fluid or is_admin %}
+            <div class="row panel--fullrow--bottom">
+                <div class="col-sm-12 layout--bottom">{{ content.bottom_fluid }}</div>
+            </div>
+        {% endif %}
     </div>
 </div>
