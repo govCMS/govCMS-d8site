@@ -6,6 +6,7 @@
  */
 
 use Drupal\Component\Utility\Html;
+use Drupal\node\NodeInterface;
 use Drupal\views\Plugin\views\query\QueryPluginBase;
 use Drupal\views\ViewExecutable;
 
@@ -31,5 +32,18 @@ function govcms_base_views_query_alter(ViewExecutable $view, QueryPluginBase $qu
         }
       }
     }
+  }
+}
+
+/**
+ * Implements hook_node_links_alter().
+ */
+function govcms_base_node_links_alter(array &$links, NodeInterface $entity, array &$context) {
+  // Use direction-links module for node links.
+  if (empty($links['node']['#links'])) {
+    return;
+  }
+  foreach ($links['node']['#links'] as &$link) {
+    $link['attributes']['class'][] = 'uikit-direction-link';
   }
 }
