@@ -1,0 +1,17 @@
+name: 'govCMS Events'
+description: 'Contains the govCMS Events configuration.'
+type: module
+core: 8.x
+dependencies:
+  - calendar
+  - datetime
+  - field
+  - language
+  - menu_ui
+  - node
+  - panelizer
+  - path
+  - text
+  - user
+  - views
+  - workbench_moderation

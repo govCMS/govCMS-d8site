@@ -32,6 +32,7 @@ field_settings:
           pricing_plan: default
           news_article: default
           consultation: default
+          event: default
   label:
     label: Label
     property_path: aggregated_field
