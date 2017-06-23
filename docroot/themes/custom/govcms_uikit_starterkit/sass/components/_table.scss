@@ -1,0 +1,45 @@
+//
+// @file
+// Styles to massage some Drupal components when used in tables.
+//
+
+table {
+  p {
+    display: inline-block;
+    margin: 0 !important;
+
+    @media (max-width: $uikit-media-sm) {
+      font-size: 0.8em;
+    }
+  }
+
+  td {
+    @media (max-width: $uikit-media-sm) {
+      text-align: left !important;
+
+      &::before {
+        display: block;
+        float: none !important;
+        text-align: left;
+      }
+    }
+  }
+
+  .touchevents & {
+    .draggable td {
+      padding: uikit-space(0.6);
+    }
+  }
+
+  .draggable a.tabledrag-handle {
+    @media (max-width: $uikit-media-md) {
+      display: none;
+    }
+  }
+
+  .webform-multiple-table & {
+    td input[type="image"] {
+      display: inline-block;
+    }
+  }
+}

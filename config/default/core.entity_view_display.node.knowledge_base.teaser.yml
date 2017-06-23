@@ -13,6 +13,12 @@ dependencies:
   module:
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.knowledge_base.teaser
 targetEntityType: node
 bundle: knowledge_base

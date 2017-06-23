@@ -11,6 +11,153 @@ dependencies:
     - node.type.pricing_plan
   module:
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          e14d6430-ff79-4d81-8902-19ac11f50337:
+            id: 'entity_field:node:uid'
+            label: 'Authored by'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: author
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: e14d6430-ff79-4d81-8902-19ac11f50337
+          0a47a77e-bbc1-4c4b-b0ba-7e3d38fd732c:
+            id: 'entity_field:node:created'
+            label: 'Authored on'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: timestamp
+              settings:
+                date_format: medium
+                custom_date_format: ''
+                timezone: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: 0a47a77e-bbc1-4c4b-b0ba-7e3d38fd732c
+          f862593d-9945-4eb8-ac95-1b31a86cddad:
+            id: 'entity_field:node:field_additional_sites_per_year'
+            label: 'Additional sites per year'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 104
+            uuid: f862593d-9945-4eb8-ac95-1b31a86cddad
+          72279b25-aea0-4655-9ba5-2a84ca81b0df:
+            id: 'entity_field:node:field_additional_site_cap'
+            label: 'Additional site cap'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 106
+            uuid: 72279b25-aea0-4655-9ba5-2a84ca81b0df
+          2b07b8de-757c-495b-b456-81a69d867f70:
+            id: 'entity_field:node:field_cost_per_year'
+            label: 'Cost per year'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 103
+            uuid: 2b07b8de-757c-495b-b456-81a69d867f70
+          0c5ede35-ef07-47c3-8fd8-04887e1d0bdf:
+            id: 'entity_field:node:field_page_views_per_month'
+            label: 'Page views per month'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 102
+            uuid: 0c5ede35-ef07-47c3-8fd8-04887e1d0bdf
+          8931d598-3645-47bf-b4ba-04c9183bc9f3:
+            id: 'entity_field:node:field_setup_fee'
+            label: 'Setup fee'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 105
+            uuid: 8931d598-3645-47bf-b4ba-04c9183bc9f3
+        id: panels_variant
+        label: Default
+        uuid: e0ccd745-989f-449e-a226-d8884bf560d9
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: ''
+        storage_id: ''
+        builder: ipe
+        pattern: panelizer
 id: node.pricing_plan.default
 targetEntityType: node
 bundle: pricing_plan
