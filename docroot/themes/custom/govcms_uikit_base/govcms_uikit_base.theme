@@ -122,9 +122,11 @@ function govcms_uikit_base_preprocess_table(&$variables) {
   $headers = array_keys($variables['header']);
 
   foreach ($variables['rows'] as $row) {
-    foreach ($row['cells'] as $index => $cell) {
+    $index = 0;
+    foreach ($row['cells'] as $cell) {
       $label = $variables['header'][$headers[$index]]['content'];
       $cell['attributes']->setAttribute('data-label', $label);
+      $index++;
     }
   }
 
