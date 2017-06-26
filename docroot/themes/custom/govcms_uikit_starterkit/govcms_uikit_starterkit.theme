@@ -8,6 +8,8 @@
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
+use Drupal\Core\Template\Attribute;
+use Drupal\block\Entity\Block;
 
 /**
  * Implements hook_preprocess_html().
@@ -55,12 +57,51 @@ function govcms_uikit_starterkit_preprocess_page(&$variables) {
   else {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('page-standard');
   }
+
+  // Sidebars.
+  $variables['has_sidebar'] = FALSE;
+  $variables['main_attributes'] = new Attribute();
+  $variables['sidebar_first_attributes'] = new Attribute();
+  $variables['content_attributes'] = new Attribute();
+  $variables['sidebar_second_attributes'] = new Attribute();
+  $has_first = !empty($variables['page']['sidebar_first']);
+  $has_second = !empty($variables['page']['sidebar_second']);
+
+  if ($has_first || $has_second) {
+    $variables['has_sidebar'] = TRUE;
+    // Main wrapper.
+    $variables['attributes']['class'][] = 'uikit-grid';
+    $variables['main_attributes']->addClass('container');
+
+    if ($has_first && !$has_second) {
+      // Only first.
+      $variables['sidebar_first_attributes']->addClass('col-md-3');
+      $variables['content_attributes']->addClass('col-md-9');
+    }
+    elseif (!$has_first && $has_second) {
+      // Only second.
+      $variables['sidebar_second_attributes']->addClass('col-md-3');
+      $variables['content_attributes']->addClass('col-md-9');
+    }
+    elseif ($has_first && $has_second) {
+      // First and second.
+      $variables['sidebar_first_attributes']->addClass('col-md-2');
+      $variables['sidebar_second_attributes']->addClass('col-md-2');
+      $variables['content_attributes']->addClass('col-md-8');
+    }
+  }
 }
 
 /**
  * Implements template_preprocess_block().
  */
 function govcms_uikit_starterkit_preprocess_block(&$variables) {
+  // Main navigation block to use a unique template for the top menu.
+  if ($variables['attributes']['id'] === 'block-govcms-uikit-starterkit-main-menu') {
+    $block = Block::load($variables['elements']['#id']);
+    $region = $block->getRegion();
+    $variables['content']['#attributes']['block'] = $region;
+  }
   // Custom block type helper classes.
   if (isset($variables['elements']['content']['#block_content'])) {
     $bundle = $variables['elements']['content']['#block_content']->bundle();
@@ -177,4 +218,16 @@ function govcms_uikit_starterkit_preprocess_menu(&$variables) {
  */
 function govcms_uikit_starterkit_preprocess_form_element(&$variables) {
   $variables['label']['#__element_type'] = $variables['element']['#type'];
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function govcms_uikit_starterkit_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  // Remove the block and replace dashes with underscores in the block ID to
+  // use for the hook name.
+  if (isset($variables['attributes']['block'])) {
+    $hook = str_replace(['block-', '-'], ['', '_'], $variables['attributes']['block']);
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+  }
 }
