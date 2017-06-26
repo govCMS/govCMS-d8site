@@ -4,6 +4,10 @@
 //
 
 .view {
+  .views-infinite-scroll-content-wrapper {
+    display: flex;
+  }
+
   ul {
     padding-left: 0;
   }
