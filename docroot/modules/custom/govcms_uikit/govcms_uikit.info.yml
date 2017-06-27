@@ -1,0 +1,6 @@
+name: 'govCMS UI Kit'
+description: 'Functionality required by the UI Kit to render elements correctly'
+type: module
+core: 8.x
+package: govcms
+version: 8.x-1.0

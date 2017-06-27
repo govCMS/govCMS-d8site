@@ -6,37 +6,38 @@
   }
 
   .form--inline {
-    > div {
+    .form-item-keywords,
+    .form-actions {
       display: inline-block;
       vertical-align: middle;
+    }
 
-      &.form-item-keywords {
-        > label {
-          display: inline-block;
-          visibility: hidden;
-          width: 0;
-          height: 0;
-        }
+    .form-item-keywords {
+      > label {
+        display: inline-block;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    .form-actions {
+      width: 28px;
+      height: 28px;
+      overflow: hidden;
+      position: relative;
+
+      .icon-search {
+        position: absolute;
+        font-size: 28px;
+        line-height: 1;
       }
 
-      &.form-actions {
-        width: 28px;
-        height: 28px;
-        overflow: hidden;
-        position: relative;
-
-        .icon-search {
-          position: absolute;
-          font-size: 28px;
-          line-height: 1;
-        }
-
-        .form-submit {
-          position: absolute;
-          text-indent: 100%;
-          border: none;
-          background: none;
-        }
+      .form-submit {
+        position: absolute;
+        text-indent: 100%;
+        border: none;
+        background: none;
       }
     }
   }
