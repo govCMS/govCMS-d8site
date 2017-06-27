@@ -38,17 +38,20 @@
     {% endif %}
   </div>
   <!-- ______________________ MAIN _______________________ -->
+  <div{{ main_attributes.setAttribute('id', 'main').addClass('clearfix') }}>
 
-  <div class="clearfix" id="main">
+    {% if has_sidebar %}
+      <div class="row">
+    {% endif %}
 
     {% if page.sidebar_first %}
-      <aside class="sidebar-first sidebars" id="sidebar-first">
+      <aside {{ sidebar_first_attributes.setAttribute('id', 'sidebar-first').addClass(['sidebar-first', 'sidebars']) }}>
         {{ page.sidebar_first }}
       </aside>
     {% endif %}
     <!-- /sidebar-first -->
 
-    <section id="content">
+    <section {{ content_attributes.setAttribute('id', 'content') }}>
 
       {% if breadcrumb or title or messages or tabs or action_links %}
         <div id="content-header">
@@ -95,11 +98,15 @@
     <!-- /content-inner /content -->
 
     {% if page.sidebar_second %}
-      <aside class="sidebar-second sidebars" id="sidebar-second">
+      <aside {{ sidebar_second_attributes.setAttribute('id', 'sidebar-second').addClass(['sidebar-second', 'sidebars']) }}>
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
     <!-- /sidebar-first -->
+
+    {% if has_sidebar %}
+      </div>
+    {% endif %}
 
   </div>
   <!-- /main -->

@@ -18,6 +18,11 @@
   }
 }
 
+// Fix an uikit issue with nested containers extending past their parent.
+.uikit-grid .container, .uikit-grid .container-fluid {
+  max-width: 100%;
+}
+
 .row {
   margin-top: uikit-space(1);
   margin-bottom: uikit-space(1);
