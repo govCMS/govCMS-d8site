@@ -41,6 +41,7 @@ module:
   govcms_events: 0
   govcms_linkit: 0
   govcms_password_policy: 0
+  govcms_uikit: 0
   govcms_user_actions: 0
   help: 0
   history: 0

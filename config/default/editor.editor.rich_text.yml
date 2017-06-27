@@ -58,6 +58,13 @@ settings:
       styles: ''
     linkit:
       linkit_profile: wysiwyg
+    video_embed:
+      defaults:
+        children:
+          autoplay: false
+          responsive: true
+          width: '854'
+          height: '480'
 image_upload:
   status: true
   scheme: public
