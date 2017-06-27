@@ -6,6 +6,7 @@
 .view {
   .views-infinite-scroll-content-wrapper {
     display: flex;
+    flex-wrap: wrap;
   }
 
   ul {

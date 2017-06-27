@@ -10,6 +10,14 @@
     display: inline-block;
     margin: 0 1% 4ex;
 
+    &:nth-child(4n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
+
     img {
       width: 100%;
       height: auto;
