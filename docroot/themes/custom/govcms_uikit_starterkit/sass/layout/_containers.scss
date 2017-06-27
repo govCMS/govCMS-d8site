@@ -17,3 +17,14 @@
     align-items: center;
   }
 }
+
+.row {
+  margin-top: uikit-space(1);
+  margin-bottom: uikit-space(1);
+
+  .row {
+    // Nested rows should not apply vertical spacing.
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
