@@ -8,8 +8,15 @@ dependencies:
     - field.field.node.event.field_date
     - node.type.event
   module:
-    - text
+    - datetime
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 _core:
   default_config_hash: 9yfXZ_gcP6a7pBZ8V7YLBk4A_9d3BE9iHb5r5VJrlUw
 id: node.event.teaser
@@ -17,17 +24,20 @@ targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  body:
+  field_date:
+    type: datetime_default
+    weight: 1
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
-    region: content
   links:
-    weight: 100
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  field_date: true
+  body: true
   langcode: true
