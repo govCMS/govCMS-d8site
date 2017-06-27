@@ -5,6 +5,7 @@ dependencies:
   module:
     - editor
     - entity_embed
+    - govcms_uikit
 _core:
   default_config_hash: xNqrUFmyyyy8JFxTT_Zd1CLPZ3fyIR8wqQkEfPrYj9o
 name: 'Rich Text'
@@ -54,24 +55,30 @@ filters:
     id: filter_autop
     provider: filter
     status: false
-    weight: -43
+    weight: -42
     settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -44
+    weight: -43
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
     status: false
-    weight: -41
+    weight: -40
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: false
-    weight: -42
+    weight: -41
     settings:
       filter_url_length: 72
+  filter_uikit_tables:
+    id: filter_uikit_tables
+    provider: govcms_uikit
+    status: true
+    weight: 0
+    settings: {  }
