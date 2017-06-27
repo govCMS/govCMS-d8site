@@ -14,7 +14,7 @@
             <div class="row panel--fullrow--top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12 layout--top">{{ content.top }}</div>
+                        <div class="grids col-sm-12 layout--top">{{ content.top }}</div>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
 
         {% if has_top_fluid or is_admin %}
             <div class="row panel--fullrow--top">
-                <div class="col-sm-12 layout--top">{{ content.top_fluid }}</div>
+                <div class="grids col-sm-12 layout--top">{{ content.top_fluid }}</div>
             </div>
         {% endif %}
 
@@ -37,8 +37,8 @@
             <div class="row panel--fullrow--first">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 layout--first-middle-left">{{ content.first_middle_left }}</div>
-                        <div class="col-sm-6 layout--first-middle-right">{{ content.first_middle_right }}</div>
+                        <div class="grids col-sm-6 layout--first-middle-left">{{ content.first_middle_left }}</div>
+                        <div class="grids col-sm-6 layout--first-middle-right">{{ content.first_middle_right }}</div>
                     </div>
                 </div>
             </div>
@@ -50,9 +50,28 @@
 
         {% if has_first_middle_left_fluid or has_first_middle_right_fluid or is_admin %}
             <div class="row panel--fullrow--first">
-                <div class="col-sm-6 layout--first-middle-left">{{ content.first_middle_left_fluid }}</div>
-                <div class="col-sm-6 layout--first-middle-right">{{ content.first_middle_right_fluid }}</div>
+                <div class="grids col-sm-6 layout--first-middle-left">{{ content.first_middle_left_fluid }}</div>
+                <div class="grids col-sm-6 layout--first-middle-right">{{ content.first_middle_right_fluid }}</div>
             </div>
+        {% endif %}
+
+
+        {% set has_first_3_col_left = content.first_three_left is defined and content.first_three_left|render|striptags|trim %}
+        {% set has_first_3_col_mid = content.first_three_mid is defined and content.first_three_mid|render|striptags|trim %}
+        {% set has_first_3_col_right = content.first_three_right is defined and content.first_three_right|render|striptags|trim %}
+
+        {% if has_first_3_col_left or has_first_3_col_mid or has_first_3_col_right or is_admin %}
+
+          <div class="row panel--fullrow--first">
+            <div class="container">
+              <div class="row">
+                <div class="grids col-sm-4 layout--first-grids col--left">{{ content.first_three_left }}</div>
+                <div class="grids col-sm-4 layout--first-grids col--mid">{{ content.first_three_mid }}</div>
+                <div class="grids col-sm-4 layout--first-grids col--right">{{ content.first_three_right }}</div>
+              </div>
+            </div>
+          </div>
+
         {% endif %}
 
         {# Second Middle Fixed #}
@@ -67,23 +86,23 @@
                 {% if has_second_top or is_admin %}
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-12 layout--second-top">{{ content.second_top }}</div>
+                            <div class="grids col-sm-12 layout--second-top">{{ content.second_top }}</div>
                         </div>
                     </div>
                 {% endif %}
                 {% if has_second_middle_left or has_second_middle_center or has_second_middle_right or is_admin %}
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-4 layout--second-middle-left">{{ content.second_middle_left }}</div>
-                            <div class="col-sm-4 layout--second-middle-center">{{ content.second_middle_center }}</div>
-                            <div class="col-sm-4 layout--second-middle-right">{{ content.second_middle_right }}</div>
+                            <div class="grids col-sm-4 layout--second-middle-left">{{ content.second_middle_left }}</div>
+                            <div class="grids col-sm-4 layout--second-middle-center">{{ content.second_middle_center }}</div>
+                            <div class="grids col-sm-4 layout--second-middle-right">{{ content.second_middle_right }}</div>
                         </div>
                     </div>
                 {% endif %}
                 {% if has_second_bottom or is_admin %}
                     <div class="container">
                         <div class="row">
-                            <div class="col-sm-12 layout--second-bottom">{{ content.second_bottom }}</div>
+                            <div class="grids col-sm-12 layout--second-bottom">{{ content.second_bottom }}</div>
                         </div>
                     </div>
                 {% endif %}
@@ -100,17 +119,17 @@
         {% if has_second_top_fluid or has_second_middle_left_fluid or has_second_middle_center_fluid or has_second_middle_right_fluid or has_second_bottom_fluid or is_admin %}
             <div class="row panel--fullrow--second">
                 {% if has_second_top_fluid or is_admin %}
-                    <div class="col-sm-12 layout--second-top">{{ content.second_top_fluid }}</div>
+                    <div class="grids col-sm-12 layout--second-top">{{ content.second_top_fluid }}</div>
                 {% endif %}
                 {% if has_second_middle_left_fluid or has_second_middle_center_fluid or has_second_middle_right_fluid or is_admin %}
                     <div>
-                        <div class="col-sm-4 layout--second-middle-left">{{ content.second_middle_left_fluid }}</div>
-                        <div class="col-sm-4 layout--second-middle-center">{{ content.second_middle_center_fluid }}</div>
-                        <div class="col-sm-4 layout--second-middle-right">{{ content.second_middle_right_fluid }}</div>
+                        <div class="grids col-sm-4 layout--second-middle-left">{{ content.second_middle_left_fluid }}</div>
+                        <div class="grids col-sm-4 layout--second-middle-center">{{ content.second_middle_center_fluid }}</div>
+                        <div class="grids col-sm-4 layout--second-middle-right">{{ content.second_middle_right_fluid }}</div>
                     </div>
                 {% endif %}
                 {% if has_second_bottom_fluid or is_admin %}
-                    <div class="col-sm-12 layout--second-bottom">{{ content.second_bottom_fluid }}</div>
+                    <div class="grids col-sm-12 layout--second-bottom">{{ content.second_bottom_fluid }}</div>
                 {% endif %}
             </div>
         {% endif %}
@@ -122,7 +141,7 @@
             <div class="row panel--fullrow--bottom">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-12 layout--bottom">{{ content.bottom }}</div>
+                        <div class="grids col-sm-12 layout--bottom">{{ content.bottom }}</div>
                     </div>
                 </div>
             </div>
@@ -133,7 +152,7 @@
 
         {% if has_bottom_fluid or is_admin %}
             <div class="row panel--fullrow--bottom">
-                <div class="col-sm-12 layout--bottom">{{ content.bottom_fluid }}</div>
+                <div class="grids col-sm-12 layout--bottom">{{ content.bottom_fluid }}</div>
             </div>
         {% endif %}
     </div>

@@ -140,6 +140,12 @@ one_two_three_group_one:
       label: First Content Left (fluid)
     first_middle_right_fluid:
       label: First Content Right (fluid)
+    first_three_left:
+      label: First Three Columns Left
+    first_three_mid:
+      label: First Three Columns Middle
+    first_three_right:
+      label: First Three Columns Right
     second_top:
       label: Second Top (fixed)
     second_middle_left:
