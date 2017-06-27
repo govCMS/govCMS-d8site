@@ -97,7 +97,7 @@ function govcms_uikit_starterkit_preprocess_page(&$variables) {
  */
 function govcms_uikit_starterkit_preprocess_block(&$variables) {
   // Main navigation block to use a unique template for the top menu.
-  if ($variables['attributes']['id'] === 'block-govcms-uikit-starterkit-main-menu') {
+  if (!empty($variables['attributes']['id']) && $variables['attributes']['id'] === 'block-govcms-uikit-starterkit-main-menu') {
     $block = Block::load($variables['elements']['#id']);
     $region = $block->getRegion();
     $variables['content']['#attributes']['block'] = $region;

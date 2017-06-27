@@ -58,11 +58,7 @@
 }
 
 #pre-content {
-  margin-top: 45px;
-
-  @include uikit-media("md") {
-    margin-top: 77px;
-  }
+  margin-top: 25px;
 
   .region-pre-content {
     max-width: 1000px;
