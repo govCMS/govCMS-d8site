@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_agency
     - field.storage.node.field_link
     - field.storage.taxonomy_term.field_logo
+    - image.style.logo
     - node.type.site
     - taxonomy.vocabulary.status
   content:
@@ -185,7 +186,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: ''
+            image_style: logo
             image_link: ''
           group_column: ''
           group_columns: {  }
