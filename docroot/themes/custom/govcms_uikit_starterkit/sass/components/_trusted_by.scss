@@ -42,9 +42,7 @@
       float: none;
 
       > a {
-        background: none;
-        color: $white;
-        border: 1px solid $white;
+        @extend %site-background-section--btn;
       }
     }
   }
