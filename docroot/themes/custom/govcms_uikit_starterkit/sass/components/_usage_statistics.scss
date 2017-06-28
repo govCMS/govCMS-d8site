@@ -42,43 +42,38 @@
 }
 
 .panel--fullrow--second {
-  color: $white;
-  background-color: $uikit-colour-Secondary-80;
-  background-image: linear-gradient(11deg, $uikit-colour-Secondary-80, $uikit-colour-Primary--10);
-  background-size: cover;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  .view-id-block_usage,
+  .block-views-blockblock-usage-agencies-block-1,
+  .block-views-blockblock-usage-block-2 {
+    @extend %circle;
 
-  @extend %circle;
+    h3 {
+      font-size: 18px;
+      margin-top: 18px;
+      margin-bottom: 40px;
 
-  .block-region-second-top {
+      @include uikit-media("lg") {
+        margin-bottom: 10px;
+      }
+    }
+
+    .grid-item {
+      text-align: center;
+    }
+  }
+
+  .block--usage-statistics {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 40px;
 
     h2 {
-      color: $white;
       font-size: 30px;
       font-weight: 500;
     }
   }
 
-  h3 {
-    color: $white;
-    font-size: 18px;
-    margin-top: 18px;
-    margin-bottom: 40px;
-
-    @include uikit-media("lg") {
-      margin-bottom: 10px;
-    }
-  }
-
-  .block-views .grid-item {
-    text-align: center;
-  }
-
-  .block-region-second-bottom {
+  .block--usage-statistics---bottom {
     margin-top: 35px;
     text-align: center;
 
