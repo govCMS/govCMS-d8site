@@ -377,7 +377,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       group_by: false
-      css_class: uikit-grid
+      css_class: 'uikit-grid container'
     cache_metadata:
       max-age: -1
       contexts:
