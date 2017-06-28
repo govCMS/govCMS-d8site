@@ -1,0 +1,13 @@
+//
+// @file
+// Styles for panel layouts.
+//
+
+.panel--fullrow--second {
+  @include site-background-section;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @extend %site-background-section-fonts;
+}
