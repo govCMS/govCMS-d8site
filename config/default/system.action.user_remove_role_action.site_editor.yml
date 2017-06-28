@@ -1,0 +1,14 @@
+uuid: b30a1b8e-4308-43fb-8dd3-a3c286c43c50
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.site_editor
+  module:
+    - user
+id: user_remove_role_action.site_editor
+label: 'Remove the Site Editor role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: site_editor
