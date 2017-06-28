@@ -5,8 +5,11 @@
 
 .view {
   .views-infinite-scroll-content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    @include uikit-media("sm") {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
   ul {

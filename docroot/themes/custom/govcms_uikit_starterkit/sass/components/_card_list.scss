@@ -1,21 +1,25 @@
 .card-list {
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+  @include uikit-media("sm") {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   .card {
     box-sizing: border-box;
-    flex: 0 0 23%;
-    display: inline-block;
-    margin: 0 1% 4ex;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 4ex;
 
-    &:nth-child(4n+1) {
-      margin-left: 0;
+    @include uikit-media("sm") {
+      display: inline-block;
+      flex-basis: calc(50% - 2%);
     }
 
-    &:nth-child(4n+4) {
-      margin-right: 0;
+    @include uikit-media("md") {
+      flex-basis: calc(25% - 2%);
     }
 
     img {

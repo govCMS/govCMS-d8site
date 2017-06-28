@@ -231,3 +231,13 @@ function govcms_uikit_starterkit_theme_suggestions_menu_alter(array &$suggestion
     $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
   }
 }
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function govcms_uikit_starterkit_preprocess_views_view(&$variables) {
+  if ($variables['id'] === 'our_customers') {
+    $idx = array_search('clearfix', $variables['rows']['#attributes']['class']);
+    array_splice($variables['rows']['#attributes']['class'], $idx, 1);
+  }
+}
