@@ -1,3 +1,8 @@
+//
+// @file
+// Styles for header branding sections (logo, pre-content).
+//
+
 #branding-region {
   position: relative;
 }
@@ -58,6 +63,8 @@
 }
 
 #pre-content {
+  @extend %site-background-section-fonts;
+
   margin-top: 25px;
 
   .region-pre-content {
@@ -101,10 +108,4 @@
 
 .site-branding-text {
   display: none;
-}
-
-@mixin site-background-section {
-  background-color: $uikit-colour-Secondary-80;
-  background-image: linear-gradient(11deg, $uikit-colour-Secondary-80, $uikit-colour-Primary--10);
-  background-size: cover;
 }

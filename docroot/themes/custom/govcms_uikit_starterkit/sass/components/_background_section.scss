@@ -1,0 +1,46 @@
+//
+// @file
+// Styles for gradient colour background and fonts.
+//
+
+@mixin site-background-section {
+  background-color: $uikit-colour-Secondary-80;
+  background-image: linear-gradient(11deg, $uikit-colour-Secondary-80, $uikit-colour-Primary--10);
+  background-size: cover;
+}
+
+%site-background-section-fonts {
+  color: $white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
+
+  a {
+    color: $white;
+    transition: color 0.1s ease-in-out;
+    border-bottom-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $uikit-colour-Text;
+    }
+  }
+
+  table tr:nth-child(even) {
+    color: $uikit-colour-Text;
+  }
+
+  blockquote::before {
+    color: $white;
+  }
+
+  hr {
+    border-top-color: $white;
+  }
+}

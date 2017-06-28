@@ -60,9 +60,13 @@ function govcms_uikit_base_preprocess_block(&$variables) {
     $bundle = $variables['elements']['content']['#block_content']->bundle();
     $bundle_class = str_replace('_', '-', $bundle);
     if (isset($variables['attributes']['class'])) {
-      $variables['attributes']['class'] = Html::cleanCssIdentifier('block--' . $bundle_class);
+      $variables['attributes']['class'][] = Html::cleanCssIdentifier('block--' . $bundle_class);
       $variables['attributes']['data-bundle-class'] = $bundle_class;
     }
+  }
+  // Custom block label helper class.
+  if (!empty($variables['configuration']['label'])) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('block--' . strtolower($variables['configuration']['label']));
   }
 }
 

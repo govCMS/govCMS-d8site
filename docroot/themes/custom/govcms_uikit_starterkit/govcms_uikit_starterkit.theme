@@ -102,15 +102,6 @@ function govcms_uikit_starterkit_preprocess_block(&$variables) {
     $region = $block->getRegion();
     $variables['content']['#attributes']['block'] = $region;
   }
-  // Custom block type helper classes.
-  if (isset($variables['elements']['content']['#block_content'])) {
-    $bundle = $variables['elements']['content']['#block_content']->bundle();
-    $bundle_class = str_replace('_', '-', $bundle);
-    if (isset($variables['attributes']['class'])) {
-      $variables['attributes']['class'] = Html::cleanCssIdentifier('block--' . $bundle_class);
-      $variables['attributes']['data-bundle-class'] = $bundle_class;
-    }
-  }
 }
 
 /**
