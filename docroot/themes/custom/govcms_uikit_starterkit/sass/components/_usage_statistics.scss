@@ -82,21 +82,7 @@
     }
 
     a {
-      font-family: $uikit-font;
-      color: $white;
-      background-color: transparent;
-      border: 1px solid $white;
-      padding: 10px 16px;
-      font-size: 18px;
-      font-weight: 400;
-      border-radius: 6px;
-
-      &:focus,
-      &:hover {
-        color: $white;
-        border-color: $uikit-colour-Secondary-80;
-        background-color: rgba(0, 0, 0, 0.1);
-      }
+      @extend %site-background-section--btn;
     }
   }
 }
