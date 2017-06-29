@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "313965c9f3fb40d8ea58d634f6bf0358",
+    "content-hash": "27ebeaef206cd71df2957d9814a57dcc",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2175,6 +2175,7 @@
                     "2884801: Views contextual duplication": "./patches/drupal/core/views-block-context-duplication.patch",
                     "2661880: Quickedit undefined": "https://www.drupal.org/files/issues/quickedit-undefined-attr-2661880-14.patch",
                     "2482783: File upload errors not set or shown correctly": "https://www.drupal.org/files/issues/2482783-81.patch",
+                    "2346893: Duplicate AJAX wrapper file managed": "https://www.drupal.org/files/issues/duplicate_ajax_wrapper-2346893-205.patch",
                     "Clear Twig caches on deploys": "https://www.drupal.org/files/issues/no_reliable_method-2752961-29.patch",
                     "2652138 - ImageFormatter does not support SVGs": "https://www.drupal.org/files/issues/2652138-41.patch",
                     "1356276 - Allow profiles to provide a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/1356276-303.patch"
