@@ -64,7 +64,9 @@
             "drupal/core": {
                 "2033275: Contextual links broken because of JS error": "https://www.drupal.org/files/issues/contextual_links_broken-2033275-10.patch",
                 "2884801: Views contextual duplication": "./patches/drupal/core/views-block-context-duplication.patch",
-                "2661880: Quickedit undefined": "https://www.drupal.org/files/issues/quickedit-undefined-attr-2661880-14.patch"
+                "2661880: Quickedit undefined": "https://www.drupal.org/files/issues/quickedit-undefined-attr-2661880-14.patch",
+                "2482783: File upload errors not set or shown correctly": "https://www.drupal.org/files/issues/2482783-81.patch",
+                "2346893: Duplicate AJAX wrapper file managed": "https://www.drupal.org/files/issues/duplicate_ajax_wrapper-2346893-205.patch"
             },
             "drupal/govcms_dlm": {
                 "2883963: Hook Help": "https://www.drupal.org/files/issues/hook-help-d8-api-2883963-1.patch",
