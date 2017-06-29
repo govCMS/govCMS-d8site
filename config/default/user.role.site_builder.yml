@@ -1,0 +1,16 @@
+uuid: a719410a-769f-42fb-a238-dbf56b26ed97
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: site_builder
+label: 'Site Builder'
+weight: 21
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'view the administration theme'

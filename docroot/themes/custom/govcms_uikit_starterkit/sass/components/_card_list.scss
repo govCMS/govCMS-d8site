@@ -1,21 +1,44 @@
 .card-list {
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+  @include uikit-media("sm") {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 
   .card {
     box-sizing: border-box;
-    flex: 0 0 23%;
-    display: inline-block;
-    margin: 0 1% 4ex;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 4ex;
 
-    &:nth-child(4n+1) {
-      margin-left: 0;
+    @include uikit-media("sm") {
+      display: inline-block;
+      width: 48%;
+      margin-right: 4%;
     }
 
-    &:nth-child(4n+4) {
-      margin-right: 0;
+    &:nth-child(2n) {
+      @include uikit-media("sm") {
+        margin-right: 0;
+      }
+
+      @include uikit-media("md") {
+        margin-right: 4%;
+      }
+    }
+
+    @include uikit-media("md") {
+      width: 22%;
+      margin-right: 4%;
+    }
+
+    &:nth-child(4n) {
+      @include uikit-media("md") {
+        margin-right: 0;
+      }
     }
 
     img {

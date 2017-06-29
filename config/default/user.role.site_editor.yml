@@ -1,0 +1,16 @@
+uuid: cfe1ed64-97bb-4344-8933-637c6d932b61
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: site_editor
+label: 'Site Editor'
+weight: 22
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'view the administration theme'

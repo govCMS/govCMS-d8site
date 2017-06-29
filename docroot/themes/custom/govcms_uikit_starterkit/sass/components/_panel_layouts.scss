@@ -10,4 +10,8 @@
   padding-bottom: 25px;
 
   @extend %site-background-section-fonts;
+  
+  .uikit-btn {
+    @extend %site-background-section--btn;
+  }
 }
