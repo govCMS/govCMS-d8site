@@ -30,3 +30,26 @@
     }
   }
 }
+
+.circle-large-solid {
+  border-radius: 50%;
+  font-size: 96px !important;
+  display: inline-block;
+  width: 145px;
+  height: 145px;
+  padding: 1px;
+  position: relative;
+  background-color: $white;
+
+  &::before {
+    background-image: -webkit-linear-gradient(25deg, $uikit-colour-Primary--40, $uikit-colour-Secondary--10);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $uikit-colour-Primary--40;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
