@@ -53,3 +53,22 @@
     bottom: 0;
   }
 }
+
+.circle-large-dark {
+  transition: all 0.2s;
+  border: 2px solid;
+  border-radius: 100%;
+  position: relative;
+  line-height: 2em;
+  vertical-align: middle;
+  display: inline-block;
+  min-width: 104px;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
