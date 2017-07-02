@@ -99,6 +99,7 @@ permissions:
   - 'use archived_published transition'
   - 'use draft content access'
   - 'use draft_draft transition'
+  - 'use draft_published transition'
   - 'use needs_review_draft transition'
   - 'use needs_review_needs_review transition'
   - 'use needs_review_published transition'
