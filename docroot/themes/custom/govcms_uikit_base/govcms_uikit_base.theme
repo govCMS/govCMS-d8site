@@ -68,6 +68,21 @@ function govcms_uikit_base_preprocess_block(&$variables) {
   if (!empty($variables['configuration']['label'])) {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('block--' . strtolower($variables['configuration']['label']));
   }
+
+  if ($variables['plugin_id'] === 'system_main_block') {
+    $page_404 = t('The requested page could not be found.')->render();
+    $page_403 = t('You are not authorized to access this page.')->render();
+    $sys_msg_format = '<div class="container"><div class="row"><div class="col-sm-12">%s</div></div></div>';
+
+    // 404 Page.
+    if ($variables['content']['#markup'] == $page_404) {
+      $variables['content']['#markup'] = sprintf($sys_msg_format, $page_404);
+    }
+    // 403 Page.
+    elseif ($variables['content']['#markup'] == $page_403) {
+      $variables['content']['#markup'] = sprintf($sys_msg_format, $page_403);
+    }
+  }
 }
 
 /**
