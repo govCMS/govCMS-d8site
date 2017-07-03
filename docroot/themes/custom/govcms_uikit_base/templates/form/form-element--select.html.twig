@@ -64,10 +64,10 @@ set description_classes = [
   'hint',
 ]
 %}
+{% if label_display in ['before', 'invisible'] %}
+  {{ label }}
+{% endif %}
 <p{{ attributes.addClass(classes) }}>
-  {% if label_display in ['before', 'invisible'] %}
-    {{ label }}
-  {% endif %}
   {% if prefix is not empty %}
     <span class="field-prefix">{{ prefix }}</span>
   {% endif %}
@@ -80,17 +80,17 @@ set description_classes = [
   {% if suffix is not empty %}
     <span class="field-suffix">{{ suffix }}</span>
   {% endif %}
-  {% if label_display == 'after' %}
-    {{ label }}
-  {% endif %}
   {% if errors %}
   <div class="form-item--error-message">
     <strong>{{ errors }}</strong>
   </div>
-{% endif %}
+  {% endif %}
   {% if description_display in ['after', 'invisible'] and description.content %}
     <span{{ description.attributes.addClass(description_classes) }}>
       {{ description.content }}
     </span>
   {% endif %}
 </p>
+{% if label_display == 'after' %}
+  {{ label }}
+{% endif %}

@@ -14,4 +14,8 @@
   .uikit-btn {
     @extend %site-background-section--btn;
   }
+
+  .panel-layout-one-two-three-one & {
+    margin-bottom: 0;
+  }
 }

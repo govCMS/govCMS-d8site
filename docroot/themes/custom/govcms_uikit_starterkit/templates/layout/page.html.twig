@@ -69,11 +69,14 @@
           {% endif %}
 
           {{ title_suffix }}
-          {{ messages }}
-          {{ page.help }}
 
           {% if tabs %}
             <div class="tabs">{{ tabs }}</div>
+          {% endif %}
+
+          {% if messages %}
+            {{ messages }}
+            {{ page.help }}
           {% endif %}
 
           {% if action_links %}

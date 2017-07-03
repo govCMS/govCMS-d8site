@@ -1,0 +1,3 @@
+services:
+  govcms.uikit.table:
+    class: \Drupal\govcms_uikit\Service\Table

@@ -323,6 +323,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       title: Search
+      css_class: container
     cache_metadata:
       max-age: -1
       contexts:

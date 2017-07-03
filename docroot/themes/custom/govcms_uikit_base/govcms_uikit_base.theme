@@ -37,6 +37,10 @@ function govcms_uikit_base_preprocess_html(&$variables) {
 function govcms_uikit_base_preprocess_page(&$variables) {
   // UI Kit.
   $variables['attributes']['class'][] = 'uikit-body';
+
+  if (isset($variables['node']) && $variables['node']->get('panelizer')) {
+    $variables['attributes']['class'][] = 'panels-page';
+  }
 }
 
 /**
@@ -132,23 +136,6 @@ function govcms_uikit_base_preprocess_menu_local_task(&$variables) {
   if (empty($variables['is_active'])) {
     $variables['link']['#attributes']['class'][] = 'uikit-btn--tertiary';
   }
-}
-
-/**
- * Implements hook_preprocess_table().
- */
-function govcms_uikit_base_preprocess_table(&$variables) {
-  $headers = array_keys($variables['header']);
-
-  foreach ($variables['rows'] as $row) {
-    $index = 0;
-    foreach ($row['cells'] as $cell) {
-      $label = $variables['header'][$headers[$index]]['content'];
-      $cell['attributes']->setAttribute('data-label', $label);
-      $index++;
-    }
-  }
-
 }
 
 /**

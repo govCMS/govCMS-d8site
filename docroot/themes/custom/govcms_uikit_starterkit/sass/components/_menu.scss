@@ -57,6 +57,13 @@
   background-size: cover;
   padding-top: 11px;
   padding-bottom: 17px;
+
+  input[type="button"],
+  button,
+  input[type="submit"],
+  .uikit-btn {
+    @extend %site-background-section--btn;
+  }
 }
 
 // =========================================================

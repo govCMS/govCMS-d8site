@@ -1,3 +1,8 @@
+//
+// @file
+// Search form styles.
+//
+
 #block-exposedformsearchpage-2 {
   display: inline-block;
   vertical-align: top;
@@ -159,6 +164,20 @@
           font-size: 43px;
         }
       }
+    }
+  }
+}
+
+#block-govcms-uikit-starterkit-exposedformsearchpage {
+  text-align: center;
+
+  .form--inline {
+    label {
+      text-align: left;
+    }
+
+    .form-actions {
+      .icon-search { display: none; }
     }
   }
 }

@@ -34,3 +34,9 @@
     margin-bottom: 0;
   }
 }
+
+.region-content {
+  .uikit-body:not(.panels-page) & {
+    margin-bottom: uikit-space(1);
+  }
+}
