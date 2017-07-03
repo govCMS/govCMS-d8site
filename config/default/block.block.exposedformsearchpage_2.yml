@@ -5,12 +5,13 @@ dependencies:
   config:
     - views.view.search
   module:
+    - system
     - views
   theme:
     - govcms_uikit_starterkit
 id: exposedformsearchpage_2
 theme: govcms_uikit_starterkit
-region: header
+region: branding
 weight: 0
 provider: null
 plugin: 'views_exposed_filter_block:search-page'
@@ -20,4 +21,9 @@ settings:
   provider: views
   label_display: '0'
   views_label: ''
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '*'
+    negate: true
+    context_mapping: {  }

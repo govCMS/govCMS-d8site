@@ -184,6 +184,7 @@ function govcms_uikit_starterkit_form_node_form_alter(&$form, FormStateInterface
 function govcms_uikit_starterkit_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form['#id'] == "views-exposed-form-search-page") {
     $form['actions']['submit']['#prefix'] = '<span class="icon icon-search"></span>';
+    $form['keywords']['#attributes']['placeholder'] = 'Search...';
   }
   elseif ($form['#id'] == "views-exposed-form-knowledge-base-page-1") {
     $form['#action'] = "/support/knowledge-base";
@@ -202,6 +203,20 @@ function govcms_uikit_starterkit_preprocess_menu(&$variables) {
       }
     }
   }
+}
+
+/**
+ * Implements hook_preprocess_menu__main__branding().
+ *
+ * @see menu--main--branding.html.twig
+ */
+function govcms_uikit_starterkit_preprocess_menu__main__branding(&$variables) {
+  // Add the Search Exposed form inside the main menu.
+  $block = Block::load('exposedformsearchpage_2');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['search_block'] = $block_content;
 }
 
 /**
