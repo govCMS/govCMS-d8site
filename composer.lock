@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "875b16f08f587131fbbf9f7e6afe4c23",
+    "content-hash": "3def510b6bc6f025834e0ae04185450f",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4973,28 +4973,6 @@
                 "html"
             ],
             "time": "2017-03-13T06:30:53+00:00"
-        },
-        {
-            "name": "govcms/govcms-ui",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/govCMS/govcms-ui.git",
-                "reference": "146e8b342fa4c63626a00489a55dc0bbd2743335"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/govCMS/govcms-ui/zipball/146e8b342fa4c63626a00489a55dc0bbd2743335",
-                "reference": "146e8b342fa4c63626a00489a55dc0bbd2743335",
-                "shasum": ""
-            },
-            "type": "drupal-theme",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "A Drupal 8 theme for govCMS incorporating the DTA ui toolkit",
-            "time": "2017-04-12 01:22:14"
         },
         {
             "name": "grasmash/drupal-security-warning",
@@ -10158,7 +10136,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "govcms/govcms-ui": 20,
         "drupal/password_policy": 15,
         "drupal/webform": 10,
         "drupal/log_entity": 15,

@@ -1,4 +1,4 @@
-# Cog: Acquia D8 Theme
+# govCMS Starterkit
 
 * [Installation](#installation)
   * [Create Cog Sub-Theme](#create-cog-sub-theme)
@@ -19,9 +19,9 @@
 
 ## Installation
 
-The Cog theme is set up to utilize the `base => sub-theme` relationship. The steps below will create your custom sub-theme that is cloned from `STARTERKIT/` folder, along with installing the proper dependencies to setup in a matter of minutes. This approach supports release updates, in addition to providing source references for required and optional pieces.
+The govCMS uikit base theme is set up to utilize the `base => sub-theme` relationship. The steps below will create your custom sub-theme that is cloned from `STARTERKIT/` folder, along with installing the proper dependencies to setup in a matter of minutes. This approach supports release updates, in addition to providing source references for required and optional pieces.
 
-### Create Cog Sub-Theme
+### Create govCMS Sub-Theme
 
 * In your `themes/` directory create the `contrib/` and `custom/` directories
 * Download Cog into the `themes/contrib` folder and enable using `drush en cog`
@@ -60,7 +60,7 @@ Cog is created with the intent of being used as a traditional base theme. By fol
 
 ```
 contrib/ (theme folder)
-|-- cog/
+|-- govcms_uikit_base/
 |---- STARTERKIT/ 
 
 custom/ (theme folder)
