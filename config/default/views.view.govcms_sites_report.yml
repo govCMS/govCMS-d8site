@@ -523,6 +523,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: container
     cache_metadata:
       max-age: 0
       contexts:
