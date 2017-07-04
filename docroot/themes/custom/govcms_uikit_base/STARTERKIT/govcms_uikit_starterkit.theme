@@ -69,6 +69,11 @@ function govcms_uikit_starterkit_preprocess_block(&$variables) {
       $variables['attributes']['data-bundle-class'] = $bundle_class;
     }
   }
+
+  if ($block = Block::load($variables['elements']['#id'])) {
+    $region = $block->getRegion();
+    $variables['content']['#attributes']['block'] = $region;
+  }
 }
 
 /**

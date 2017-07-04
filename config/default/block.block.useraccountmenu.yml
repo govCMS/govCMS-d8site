@@ -1,29 +1,29 @@
-uuid: 46cb601b-1ae3-4b64-adc9-494f7b7d6ccd
+uuid: 270c81e9-4dcf-4adc-8925-fd0f22140440
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.main
+    - system.menu.account
   module:
     - system
   theme:
     - govcms_uikit_starterkit
-id: mainnavigation
+id: useraccountmenu
 theme: govcms_uikit_starterkit
-region: sidebar_first
-weight: -9
+region: sidebar_second
+weight: -10
 provider: null
-plugin: 'system_menu_block:main'
+plugin: 'system_menu_block:account'
 settings:
-  id: 'system_menu_block:main'
-  label: 'Main navigation'
+  id: 'system_menu_block:account'
+  label: 'User account menu'
   provider: system
   label_display: '0'
-  level: 2
+  level: 1
   depth: 0
 visibility:
   request_path:
     id: request_path
-    pages: "/support\r\n/support/*\r\n/request-support\r\n/features/*"
+    pages: "/user\r\n/user/*"
     negate: false
     context_mapping: {  }

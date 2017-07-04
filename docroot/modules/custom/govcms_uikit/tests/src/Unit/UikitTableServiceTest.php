@@ -37,9 +37,9 @@ class UikitTableServiceTest extends UnitTestCase {
    * @dataProvider renderArrayProvider
    * @group govcms_uikit
    */
-  public function testAlter($rows, $headers, $index) {
-    $this->service->alter($rows, $headers, $index);
-    foreach ($rows as $row) {
+  public function testAlter($alterable, $index) {
+    $this->service->alter($alterable);
+    foreach ($alterable['rows'] as $row) {
       foreach ($row[$index] as $cell) {
         /** @var \Drupal\Core\Template\Attribute $attribute */
         $attribute = $cell['attributes'];
@@ -52,11 +52,11 @@ class UikitTableServiceTest extends UnitTestCase {
   /**
    * Ensure that the service throws a catchable.
    *
-   * @expectedException \Exception
-   * @dataProvider renderArrayProvider
+   * @expectedException \Drupal\govcms_uikit\Error\UikitInvalidRenderArray
+   * @dataProvider invalidRenderArray
    */
-  public function testInvalidColumnError($rows, $headers, $index) {
-    $this->service->alter($rows, $headers, 'failure');
+  public function testInvalidColumnError($alterable) {
+    $this->service->alter($alterable);
   }
 
   /**
@@ -69,26 +69,44 @@ class UikitTableServiceTest extends UnitTestCase {
     return [
       [
         [
-          ['cells' => [['attributes' => new Attribute()], ['attributes' => new Attribute()]]],
-          ['cells' => [['attributes' => new Attribute()], ['attributes' => new Attribute()]]],
-        ],
-        [
-          ['content' => 'Test'],
-          ['content' => 'Test 2'],
+          'rows' => [
+            ['cells' => [['attributes' => new Attribute()], ['attributes' => new Attribute()]]],
+            ['cells' => [['attributes' => new Attribute()], ['attributes' => new Attribute()]]],
+          ],
+          'headers' => [
+            ['content' => 'Test'],
+            ['content' => 'Test 2'],
+          ],
         ],
         'cells',
       ],
       [
         [
-          ['columns' => [['attributes' => new Attribute()], ['attributes' => new Attribute()]]],
-          ['columns' => [['attributes' => new Attribute()], ['attributes' => new Attribute()]]],
-        ],
-        [
-          ['content' => 'Test'],
-          ['content' => 'Test 2'],
+          'rows' => [
+            ['columns' => [['attributes' => new Attribute()], ['attributes' => new Attribute()]]],
+            ['columns' => [['attributes' => new Attribute()], ['attributes' => new Attribute()]]],
+          ],
+          'headers' => [
+            ['content' => 'Test'],
+            ['content' => 'Test 2'],
+          ],
         ],
         'columns',
       ],
+    ];
+  }
+
+  /**
+   * Provide unexpected render arrays to the alter method.
+   *
+   * @return array
+   *   Arrays that don't match tables.
+   */
+  public function invalidRenderArray() {
+    return [
+      [['no_rows' => [], 'no_headers' => []]],
+      [['rows' => [], 'no_headers' => []]],
+      [['no_rows' => [], 'headers' => []]],
     ];
   }
 

@@ -152,3 +152,16 @@ function govcms_uikit_base_theme_suggestions_form_alter(array &$suggestions, arr
 
   $suggestions = array_merge($themes, $suggestions);
 }
+
+/**
+ * Implements hook_theme_suggestions_menu_alter().
+ */
+function govcms_uikit_base_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  // Remove the block and replace dashes with underscores in the block ID to
+  // use for the hook name.
+  if (isset($variables['attributes']['block'])) {
+    $hook = str_replace(['block-', '-'], ['', '_'], $variables['attributes']['block']);
+    $suggestions[] = 'menu__' . $hook;
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+  }
+}

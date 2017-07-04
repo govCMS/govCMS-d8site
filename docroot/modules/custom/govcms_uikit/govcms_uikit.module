@@ -11,7 +11,7 @@
 function govcms_uikit_preprocess_views_view_table(&$variables) {
   /** @var \Drupal\govcms_uikit\Service\Table $service */
   $service = \Drupal::service('govcms.uikit.table');
-  $service->alter($variables['rows'], $variables['header'], 'columns');
+  $service->alter($variables);
 }
 
 /**
@@ -20,5 +20,5 @@ function govcms_uikit_preprocess_views_view_table(&$variables) {
 function govcms_uikit_preprocess_table(&$variables) {
   /** @var \Drupal\govcms_uikit\Service\Table $service */
   $service = \Drupal::service('govcms.uikit.table');
-  $service->alter($variables['rows'], $variables['headers']);
+  $service->alter($variables);
 }
