@@ -9,4 +9,12 @@
       margin: uikit-space(1) 0 0;
     }
   }
+
+  .block-region-top-fluid {
+    .block {
+      &:last-child {
+        padding: uikit-space(1) 0;
+      }
+    }
+  }
 }

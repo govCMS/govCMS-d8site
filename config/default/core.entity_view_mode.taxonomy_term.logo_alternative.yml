@@ -1,0 +1,14 @@
+uuid: cfd8fc00-f997-42e7-8432-516e400f97e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - taxonomy
+third_party_settings:
+  lightning_core:
+    description: 'Display a taxonomy term with an alternative image field.'
+id: taxonomy_term.logo_alternative
+label: 'Logo Alternative'
+targetEntityType: taxonomy_term
+cache: true

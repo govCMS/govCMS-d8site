@@ -65,7 +65,7 @@
 #pre-content {
   @extend %site-background-section-fonts;
 
-  margin-top: 25px;
+  margin-top: uikit-space(2);
 
   .region-pre-content {
     max-width: 1000px;

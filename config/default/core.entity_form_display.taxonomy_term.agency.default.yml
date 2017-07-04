@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.agency.field_alt_logo
     - field.field.taxonomy_term.agency.field_logo
     - image.style.thumbnail
     - taxonomy.vocabulary.agency
@@ -16,15 +17,23 @@ bundle: agency
 mode: default
 content:
   description:
-    type: text_textfield
-    weight: 0
+    type: text_textarea
+    weight: 1
     region: content
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
+  field_alt_logo:
+    type: image_image
+    weight: 6
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
   field_logo:
-    weight: 31
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -39,7 +48,7 @@ content:
     third_party_settings: {  }
   name:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -47,7 +56,12 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

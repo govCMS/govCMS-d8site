@@ -1,8 +1,9 @@
-uuid: 58742008-98c7-4fe0-b978-4d09c2eb9a94
+uuid: b8ed6bce-6185-4c5e-af2c-965cc2876f70
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.logo_alternative
     - field.field.taxonomy_term.agency.field_alt_logo
     - field.field.taxonomy_term.agency.field_logo
     - taxonomy.vocabulary.agency
@@ -15,21 +16,21 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-id: taxonomy_term.agency.default
+id: taxonomy_term.agency.logo_alternative
 targetEntityType: taxonomy_term
 bundle: agency
-mode: default
+mode: logo_alternative
 content:
-  field_logo:
+  field_alt_logo:
+    type: image
     weight: 0
+    region: content
     label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
 hidden:
   description: true
-  field_alt_logo: true
+  field_logo: true
   langcode: true

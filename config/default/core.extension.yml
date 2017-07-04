@@ -124,9 +124,7 @@ theme:
   stable: 0
   classy: 0
   seven: 0
-  govcmsui: 0
   cog: 0
-  govcms: 0
   govcms_uikit_base: 0
   govcms_uikit_starterkit: 0
 profile: lightning
