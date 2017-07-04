@@ -1,0 +1,12 @@
+//
+// @file
+// Custom overrides for the homepage.
+//
+
+.frontpage {
+  .block--body {
+    .uikit-cta-link {
+      margin: uikit-space(1) 0 0;
+    }
+  }
+}

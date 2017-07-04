@@ -82,6 +82,11 @@
       position: absolute;
       right: 0;
 
+      &:hover {
+        border-color: $uikit-colour-Secondary-80;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
       .icon-search {
         position: absolute;
         right: 10px;
