@@ -37,9 +37,14 @@ function govcms_uikit_base_preprocess_html(&$variables) {
 function govcms_uikit_base_preprocess_page(&$variables) {
   // UI Kit.
   $variables['attributes']['class'][] = 'uikit-body';
+  if (isset($variables['node'])) {
+    try {
+      $variables['node']->get('panelizer');
+      $variables['attributes']['class'][] = 'panels-page';
+    }
+    catch (InvalidArgumentException $exception) {
 
-  if (isset($variables['node']) && $variables['node']->get('panelizer')) {
-    $variables['attributes']['class'][] = 'panels-page';
+    }
   }
 }
 
